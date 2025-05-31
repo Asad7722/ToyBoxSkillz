@@ -1,0 +1,980 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2a9596f6-ba7c-4fee-86cc-b7c20fedfaa3\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"FirstGoMap\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 2\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"837c395b-00e1-46ea-82d4-a702bb7bef86\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"Tutorial\",\r\n      \"type\": \"bool\",\r\n      \"value\": true\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"9fb74680-3929-4cbd-b10e-e5407cd2f042\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"GiftWheelEvent\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"03da6bb8-ee88-4e91-825e-69077517a01f\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"GemboxEvent\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"b6c06a02-5089-4b0d-8584-0f36e723ced9\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"DailyGiftEvent\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"baa2d0b4-a9c8-4ac1-afe4-3079e1c7caa0\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"LevelChallengeEvent\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"caf3eb30-76ee-4232-bba5-8272a857309c\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"StarChallengeEvent\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"1bd32267-93b1-428a-b18a-86afad7befdf\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"MissionChallengeEvent\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"bdc98dbf-5ec6-48cd-91af-2e1642e1874d\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"LevelBoxEvent\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"c9618eff-799e-4158-968e-8b92e1e07af5\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"EpisodeBoxEvent\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"3d66f53d-7fac-4163-b99c-e6ccf23cc585\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"MediationInter\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"17863072-9c80-49ae-81f8-ff2ccbbe9daa\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"MediationReward\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"0a648cfd-6db3-4ba5-89f4-788b6f8ac77e\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"InterAdsKey\",\r\n      \"type\": \"int\",\r\n      \"value\": 123\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"d946c7ff-d5d9-44f7-8dd3-a88ead435553\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"RewardAdsKey\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 123\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"d020276a-e190-4990-99c1-63d9862611dd\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobAdsInter\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"dae4dbcd-a370-4464-9909-b4b6c9c74017\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdmobAdsReward\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"e148743e-4851-42a7-af97-37543000185e\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdmobAdsBanner\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"21e5bc40-7467-421c-8cea-d8439861c1e6\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"UnityAdsReward\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"5b1c8282-970d-446c-acb1-50773083105b\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityAdsInter\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"b1bc32cd-1be5-4ff1-aa92-f4bd3aa2d9d0\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"ShowAdsEvery\",\r\n      \"type\": \"int\",\r\n      \"value\": 1\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"67355161-c963-4330-852b-c3d0327e1f74\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"FirstShowAds\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 5\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"078799db-c5a3-48b2-8bc6-112720b36465\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"ChrAdsReward\",\r\n      \"type\": \"bool\",\r\n      \"value\": false\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4fbd4e16-0209-4585-a471-9c1fa7dfcbe9\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"ChrAdsInter\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"bf5b590e-62d2-425d-b26f-5b518e9a0a0d\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"MessageBoardTitle\",\r\n      \"type\": \"string\",\r\n      \"value\":
+    \"Level Up Party Time!\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
+    \"entityId\": \"e19ebc37-5bae-4059-8213-0eb164a08267\"\r\n    },\r\n    \"rs\":
+    {\r\n      \"key\": \"MessageBoardInfo\",\r\n      \"type\": \"string\",\r\n     
+    \"value\": \"Try to pass the maximum level with unlimited lives!\"\r\n    }\r\n 
+    },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"0a7cbb93-ad07-4805-9513-98fed4ae074b\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"MessagePopup\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"c7b4a6dd-50d7-493c-802c-017a2923ef52\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AILive\",\r\n      \"type\": \"bool\",\r\n      \"value\": true\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8e7fd5a5-1923-4e49-98fd-9496fd444a04\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AISimplicity\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 1500\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"d08f4d63-6cbf-4ebb-a83b-06afe3c92d1d\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AIBoostersCorrection\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8d53c1d4-ef19-4f94-8b50-54ffe7feec2d\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AIOfflinePunishment\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"7b1342df-755b-47b1-9ad0-66eeec06d44c\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"LifeDailyRewardTimeLive\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"5e02005b-7849-4929-9ba8-f0b1e3c7571d\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"LifeDailyRewardTime\",\r\n      \"type\": \"int\",\r\n      \"value\":
+    3600\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"fb15fe44-28b2-4191-909c-d581a2b0d3be\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"LifeReplenishTime\",\r\n      \"type\":
+    \"int\",\r\n      \"value\": 1800\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"395528b2-cb7e-4922-9824-8b2b95c67070\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"LiferecoveryCostPerLife\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 20\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"222ffb73-2320-40c5-a89a-f5166656d4fd\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobInterFloorA\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"dc0563c7-3335-4667-b24d-44c83985d1ad\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdmobInterFloorB\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"86a13824-d337-4923-acf1-ccb5f04b0afd\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdmobInterFloorC\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"62604bc9-e66d-4329-9ae4-9dfcf9e1f4a2\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobInterFloorD\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"1c5a35ba-fd96-44be-a72a-186d47fae40a\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdmobInterFloorE\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"a443e342-39d0-49c0-aa22-ab2267738984\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdmobInterFloorF\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"9345d3d6-2552-4428-99b1-7f029ce75e9b\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobInterFloorG\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8818e8e1-815b-4e56-997c-6dbe94ee8657\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdmobInterFloorH\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"6c5b0a21-0c32-42ca-8497-f548580880e8\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdmobRewardFloorA\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"0fda5d65-a1dd-4486-9232-e72192679ff3\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobRewardFloorB\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e2bf07f9-a16f-47a0-8398-8d472901edad\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdmobRewardFloorC\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"79db62be-ec9e-46a7-9ec8-1d76ac29fe73\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdmobRewardFloorD\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"c0560698-b308-446d-a1dd-d8353b3ac769\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobRewardFloorE\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4896d6f5-d568-4c29-a80e-dba43656d581\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdmobRewardFloorF\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"4e943cca-0aac-43d0-9b1c-7a9d431e331e\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdmobRewardFloorG\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"6671def4-3106-4613-9d4f-9b8438384b23\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobRewardFloorH\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8c8ad601-08b6-4627-9260-5254b2efdc72\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityInterFloorA\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"a3ea020d-a6aa-43be-8c58-b02db60d12ee\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"UnityInterFloorB\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"3eb0e60f-460d-4d66-b6b6-ae16848e3286\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"UnityInterFloorC\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"fe470c3d-1c00-4e1d-a10e-dcd47c3073cb\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityInterFloorD\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"dad8ee93-b5a3-4e55-a2be-a55d37ede9f2\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"UnityInterFloorE\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"b7aeea5f-624d-4f16-b289-a8b5c605cbda\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"UnityInterFloorF\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e62ea058-9c1f-401b-bc04-cb16953edb2d\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityInterFloorG\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"4fb11c7c-5732-4edc-91d3-d84b50b667a7\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"UnityInterFloorH\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"95c9c2d5-2758-440e-8733-0a5b2a17c458\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"UnityRewardFloorA\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"23b571c5-73fc-40b3-9451-effbb97a228c\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityRewardFloorB\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"1b9b4d91-1be3-4305-9ff3-32963e6e3b82\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"UnityRewardFloorC\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"ae0036b0-adc2-4f6f-9f7d-0e30eaf6e667\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"UnityRewardFloorD\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"6551dbcc-1393-4993-ae1a-23221c2377a5\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityRewardFloorE\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"c460c33b-7e5e-4e5a-a55a-fd27869bfcc1\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"UnityRewardFloorF\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"9a369b8c-b986-4c3e-80a7-183766e3e4f8\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"UnityRewardFloorG\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"177aba0e-1ed7-44fb-b84c-e2f545bc6b91\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityRewardFloorH\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"12829d40-e3c9-44d6-a0ac-71ea52ab0275\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"promosyon0\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"d27b93a5-1b74-4647-819b-95a3efb171ac\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"promosyon1\",\r\n      \"type\": \"bool\",\r\n      \"value\": false\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e00891be-0e88-4baf-ba98-50134e457ae8\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"promosyon2\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"017d8117-88f4-46bd-b4ea-0ae93ace51d2\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"MenuSceneBypass\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"6c028d98-6f92-4231-be58-74c781d7cd6c\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"WaitMenuInitSeconds\",\r\n      \"type\":
+    \"float\",\r\n      \"value\": 8.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"adf53ef1-d8c9-4357-a7af-6cd275ab096c\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AmzInterAds\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2a9596f6-ba7c-4fee-86cc-b7c20fedfaa3\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"FirstGoMap\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 2\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"837c395b-00e1-46ea-82d4-a702bb7bef86\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"Tutorial\",\r\n      \"type\": \"bool\",\r\n      \"value\": true\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"9fb74680-3929-4cbd-b10e-e5407cd2f042\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"GiftWheelEvent\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"03da6bb8-ee88-4e91-825e-69077517a01f\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"GemboxEvent\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"b6c06a02-5089-4b0d-8584-0f36e723ced9\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"DailyGiftEvent\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"baa2d0b4-a9c8-4ac1-afe4-3079e1c7caa0\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"LevelChallengeEvent\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"caf3eb30-76ee-4232-bba5-8272a857309c\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"StarChallengeEvent\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"1bd32267-93b1-428a-b18a-86afad7befdf\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"MissionChallengeEvent\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"bdc98dbf-5ec6-48cd-91af-2e1642e1874d\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"LevelBoxEvent\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"c9618eff-799e-4158-968e-8b92e1e07af5\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"EpisodeBoxEvent\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"3d66f53d-7fac-4163-b99c-e6ccf23cc585\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"MediationInter\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"17863072-9c80-49ae-81f8-ff2ccbbe9daa\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"MediationReward\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"0a648cfd-6db3-4ba5-89f4-788b6f8ac77e\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"InterAdsKey\",\r\n      \"type\": \"int\",\r\n      \"value\": 123\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"d946c7ff-d5d9-44f7-8dd3-a88ead435553\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"RewardAdsKey\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 123\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"d020276a-e190-4990-99c1-63d9862611dd\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobAdsInter\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"dae4dbcd-a370-4464-9909-b4b6c9c74017\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdmobAdsReward\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"e148743e-4851-42a7-af97-37543000185e\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdmobAdsBanner\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"21e5bc40-7467-421c-8cea-d8439861c1e6\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"UnityAdsReward\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"5b1c8282-970d-446c-acb1-50773083105b\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityAdsInter\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"b1bc32cd-1be5-4ff1-aa92-f4bd3aa2d9d0\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"ShowAdsEvery\",\r\n      \"type\": \"int\",\r\n      \"value\": 1\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"67355161-c963-4330-852b-c3d0327e1f74\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"FirstShowAds\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 5\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"078799db-c5a3-48b2-8bc6-112720b36465\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"ChrAdsReward\",\r\n      \"type\": \"bool\",\r\n      \"value\": false\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4fbd4e16-0209-4585-a471-9c1fa7dfcbe9\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"ChrAdsInter\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"bf5b590e-62d2-425d-b26f-5b518e9a0a0d\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"MessageBoardTitle\",\r\n      \"type\": \"string\",\r\n      \"value\":
+    \"Level Up Party Time!\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
+    \"entityId\": \"e19ebc37-5bae-4059-8213-0eb164a08267\"\r\n    },\r\n    \"rs\":
+    {\r\n      \"key\": \"MessageBoardInfo\",\r\n      \"type\": \"string\",\r\n     
+    \"value\": \"Try to pass the maximum level with unlimited lives!\"\r\n    }\r\n 
+    },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"0a7cbb93-ad07-4805-9513-98fed4ae074b\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"MessagePopup\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"c7b4a6dd-50d7-493c-802c-017a2923ef52\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AILive\",\r\n      \"type\": \"bool\",\r\n      \"value\": true\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8e7fd5a5-1923-4e49-98fd-9496fd444a04\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AISimplicity\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 1500\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"d08f4d63-6cbf-4ebb-a83b-06afe3c92d1d\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AIBoostersCorrection\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8d53c1d4-ef19-4f94-8b50-54ffe7feec2d\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AIOfflinePunishment\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"7b1342df-755b-47b1-9ad0-66eeec06d44c\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"LifeDailyRewardTimeLive\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"5e02005b-7849-4929-9ba8-f0b1e3c7571d\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"LifeDailyRewardTime\",\r\n      \"type\": \"int\",\r\n      \"value\":
+    3600\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"fb15fe44-28b2-4191-909c-d581a2b0d3be\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"LifeReplenishTime\",\r\n      \"type\":
+    \"int\",\r\n      \"value\": 1800\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"395528b2-cb7e-4922-9824-8b2b95c67070\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"LiferecoveryCostPerLife\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 20\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"222ffb73-2320-40c5-a89a-f5166656d4fd\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobInterFloorA\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"dc0563c7-3335-4667-b24d-44c83985d1ad\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdmobInterFloorB\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"86a13824-d337-4923-acf1-ccb5f04b0afd\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdmobInterFloorC\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"62604bc9-e66d-4329-9ae4-9dfcf9e1f4a2\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobInterFloorD\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"1c5a35ba-fd96-44be-a72a-186d47fae40a\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdmobInterFloorE\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"a443e342-39d0-49c0-aa22-ab2267738984\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdmobInterFloorF\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"9345d3d6-2552-4428-99b1-7f029ce75e9b\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobInterFloorG\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8818e8e1-815b-4e56-997c-6dbe94ee8657\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdmobInterFloorH\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"6c5b0a21-0c32-42ca-8497-f548580880e8\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdmobRewardFloorA\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"0fda5d65-a1dd-4486-9232-e72192679ff3\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobRewardFloorB\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e2bf07f9-a16f-47a0-8398-8d472901edad\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdmobRewardFloorC\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"79db62be-ec9e-46a7-9ec8-1d76ac29fe73\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdmobRewardFloorD\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"c0560698-b308-446d-a1dd-d8353b3ac769\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobRewardFloorE\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4896d6f5-d568-4c29-a80e-dba43656d581\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdmobRewardFloorF\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"4e943cca-0aac-43d0-9b1c-7a9d431e331e\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdmobRewardFloorG\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"6671def4-3106-4613-9d4f-9b8438384b23\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"AdmobRewardFloorH\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8c8ad601-08b6-4627-9260-5254b2efdc72\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityInterFloorA\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"a3ea020d-a6aa-43be-8c58-b02db60d12ee\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"UnityInterFloorB\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"3eb0e60f-460d-4d66-b6b6-ae16848e3286\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"UnityInterFloorC\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"fe470c3d-1c00-4e1d-a10e-dcd47c3073cb\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityInterFloorD\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"dad8ee93-b5a3-4e55-a2be-a55d37ede9f2\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"UnityInterFloorE\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"b7aeea5f-624d-4f16-b289-a8b5c605cbda\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"UnityInterFloorF\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e62ea058-9c1f-401b-bc04-cb16953edb2d\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityInterFloorG\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"4fb11c7c-5732-4edc-91d3-d84b50b667a7\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"UnityInterFloorH\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"95c9c2d5-2758-440e-8733-0a5b2a17c458\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"UnityRewardFloorA\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"23b571c5-73fc-40b3-9451-effbb97a228c\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityRewardFloorB\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"1b9b4d91-1be3-4305-9ff3-32963e6e3b82\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"UnityRewardFloorC\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"ae0036b0-adc2-4f6f-9f7d-0e30eaf6e667\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"UnityRewardFloorD\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"6551dbcc-1393-4993-ae1a-23221c2377a5\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityRewardFloorE\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"c460c33b-7e5e-4e5a-a55a-fd27869bfcc1\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"UnityRewardFloorF\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"9a369b8c-b986-4c3e-80a7-183766e3e4f8\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"UnityRewardFloorG\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"177aba0e-1ed7-44fb-b84c-e2f545bc6b91\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"UnityRewardFloorH\",\r\n      \"type\":
+    \"bool\",\r\n      \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"12829d40-e3c9-44d6-a0ac-71ea52ab0275\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"promosyon0\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"d27b93a5-1b74-4647-819b-95a3efb171ac\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"promosyon1\",\r\n      \"type\": \"bool\",\r\n      \"value\": false\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e00891be-0e88-4baf-ba98-50134e457ae8\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"promosyon2\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"017d8117-88f4-46bd-b4ea-0ae93ace51d2\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"MenuSceneBypass\",\r\n      \"type\": \"bool\",\r\n      \"value\":
+    true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"6c028d98-6f92-4231-be58-74c781d7cd6c\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"WaitMenuInitSeconds\",\r\n      \"type\":
+    \"float\",\r\n      \"value\": 8.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"adf53ef1-d8c9-4357-a7af-6cd275ab096c\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AmzInterAds\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": false\r\n    }\r\n  }\r\n]"
+  _environments: "[\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"name\": \"production\",\r\n    \"id\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n   
+    \"isDefault\": true,\r\n    \"createdAt\": \"2021-01-09T09:56:37Z\",\r\n    \"updatedAt\":
+    \"2021-08-09T21:22:36Z\"\r\n  }\r\n]"
+  _rulesList: "[\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n    \"configId\":
+    \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"New Players\",\r\n   
+    \"enabled\": true,\r\n    \"condition\": \"true\",\r\n    \"rolloutPercentage\":
+    100,\r\n    \"value\": [\r\n      {\r\n        \"id\": \"Variant 1\",\r\n       
+    \"weight\": null,\r\n        \"values\": [\r\n          {\r\n            \"metadata\":
+    {\r\n              \"entityId\": \"12829d40-e3c9-44d6-a0ac-71ea52ab0275\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"promosyon0\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      },\r\n      {\r\n       
+    \"id\": \"Variant 2\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"12829d40-e3c9-44d6-a0ac-71ea52ab0275\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"promosyon0\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"c8587e5f-7fe1-4f2d-9881-239e56c3283d\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"17fd5c4f-2380-4ac2-8de1-b17880ab3e8e\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [\r\n      \"newPlayers\"\r\n    ],\r\n    \"kpi\": null,\r\n   
+    \"createdAt\": \"2021-10-22T21:20:30Z\",\r\n    \"updatedAt\": \"2021-10-23T09:10:05Z\"\r\n 
+    },\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n    \"configId\":
+    \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"Lapsed Spenders
+    (30 g\xFCnd\xFCr Sat\u0131n alma yapmam\u0131s Spenders)\",\r\n    \"enabled\":
+    true,\r\n    \"condition\": \"true\",\r\n    \"rolloutPercentage\": 100,\r\n   
+    \"value\": [\r\n      {\r\n        \"id\": \"Variant 1\",\r\n        \"weight\":
+    null,\r\n        \"values\": [\r\n          {\r\n            \"metadata\": {\r\n             
+    \"entityId\": \"d27b93a5-1b74-4647-819b-95a3efb171ac\"\r\n            },\r\n           
+    \"rs\": {\r\n              \"key\": \"promosyon1\",\r\n              \"type\":
+    \"bool\",\r\n              \"value\": true\r\n            }\r\n          }\r\n       
+    ],\r\n        \"type\": \"variant\"\r\n      },\r\n      {\r\n        \"id\":
+    \"Variant 2\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"d27b93a5-1b74-4647-819b-95a3efb171ac\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"promosyon1\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"335a8dbd-1544-428b-b159-8df60a499a02\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"e8f16375-812a-4106-8d91-0caa00f8fdc0\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [\r\n      \"lapsedSpenders\"\r\n    ],\r\n    \"kpi\": null,\r\n   
+    \"createdAt\": \"2021-10-22T21:23:48Z\",\r\n    \"updatedAt\": \"2021-10-23T09:09:16Z\"\r\n 
+    },\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n    \"configId\":
+    \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"Recent Spenders
+    (Son 7 g\xFCn i\xE7indeki Spenders)\",\r\n    \"enabled\": true,\r\n    \"condition\":
+    \"true\",\r\n    \"rolloutPercentage\": 100,\r\n    \"value\": [\r\n      {\r\n       
+    \"id\": \"Variant 1\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"e00891be-0e88-4baf-ba98-50134e457ae8\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"promosyon2\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      },\r\n      {\r\n       
+    \"id\": \"Variant 2\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"e00891be-0e88-4baf-ba98-50134e457ae8\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"promosyon2\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"28fe8484-2ad4-46c1-8be8-7e473683a0cd\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"da005c81-8ff8-4123-bb4c-756a52c68e0a\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [\r\n      \"recentSpenders\"\r\n    ],\r\n    \"kpi\": null,\r\n   
+    \"createdAt\": \"2021-10-22T21:27:17Z\",\r\n    \"updatedAt\": \"2021-10-23T09:10:27Z\"\r\n 
+    },\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n    \"configId\":
+    \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"ALLSpenders\",\r\n   
+    \"enabled\": true,\r\n    \"condition\": \"true\",\r\n    \"rolloutPercentage\":
+    100,\r\n    \"value\": [\r\n      {\r\n        \"id\": \"Variant 1\",\r\n       
+    \"weight\": null,\r\n        \"values\": [\r\n          {\r\n            \"metadata\":
+    {\r\n              \"entityId\": \"d020276a-e190-4990-99c1-63d9862611dd\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"AdmobAdsInter\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"5b1c8282-970d-446c-acb1-50773083105b\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"UnityAdsInter\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": false\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"4fbd4e16-0209-4585-a471-9c1fa7dfcbe9\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"ChrAdsInter\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"e148743e-4851-42a7-af97-37543000185e\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"AdmobAdsBanner\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": false\r\n            }\r\n          }\r\n        ],\r\n        \"type\":
+    \"variant\"\r\n      }\r\n    ],\r\n    \"id\": \"8d82652d-d94e-41c8-b835-91dc6e713d62\",\r\n   
+    \"priority\": 250,\r\n    \"type\": \"variant\",\r\n    \"version\": \"3f87d468-8180-4865-8673-908d0358fba4\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [\r\n      \"allSpenders\"\r\n    ],\r\n    \"kpi\": null,\r\n   
+    \"createdAt\": \"2021-10-22T21:13:50Z\",\r\n    \"updatedAt\": \"2021-10-22T21:13:57Z\"\r\n 
+    },\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n    \"configId\":
+    \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"Veteran Players
+    (M\xFCdavimler)\",\r\n    \"enabled\": true,\r\n    \"condition\": \"true\",\r\n   
+    \"rolloutPercentage\": 100,\r\n    \"value\": [\r\n      {\r\n        \"id\":
+    \"Variant 1\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"7b1342df-755b-47b1-9ad0-66eeec06d44c\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTimeLive\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"0a7cbb93-ad07-4805-9513-98fed4ae074b\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"MessagePopup\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": true\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"bf5b590e-62d2-425d-b26f-5b518e9a0a0d\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"MessageBoardTitle\",\r\n             
+    \"type\": \"string\",\r\n              \"value\": \"Level Up Party Time!\"\r\n           
+    }\r\n          },\r\n          {\r\n            \"metadata\": {\r\n             
+    \"entityId\": \"e19ebc37-5bae-4059-8213-0eb164a08267\"\r\n            },\r\n           
+    \"rs\": {\r\n              \"key\": \"MessageBoardInfo\",\r\n              \"type\":
+    \"string\",\r\n              \"value\": \"Try to pass the maximum level with
+    unlimited lives!\"\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"5e02005b-7849-4929-9ba8-f0b1e3c7571d\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTime\",\r\n             
+    \"type\": \"int\",\r\n              \"value\": 3600\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      },\r\n      {\r\n       
+    \"id\": \"Variant 2\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"7b1342df-755b-47b1-9ad0-66eeec06d44c\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTimeLive\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"0a7cbb93-ad07-4805-9513-98fed4ae074b\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"MessagePopup\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": false\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"bf5b590e-62d2-425d-b26f-5b518e9a0a0d\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"MessageBoardTitle\",\r\n             
+    \"type\": \"string\",\r\n              \"value\": \"Level Up Party Time!\"\r\n           
+    }\r\n          },\r\n          {\r\n            \"metadata\": {\r\n             
+    \"entityId\": \"e19ebc37-5bae-4059-8213-0eb164a08267\"\r\n            },\r\n           
+    \"rs\": {\r\n              \"key\": \"MessageBoardInfo\",\r\n              \"type\":
+    \"string\",\r\n              \"value\": \"Try to pass the maximum level with
+    unlimited lives!\"\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"5e02005b-7849-4929-9ba8-f0b1e3c7571d\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTime\",\r\n             
+    \"type\": \"int\",\r\n              \"value\": 3600\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"86feb105-8416-4fc9-9ca0-227b1891f521\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"bdb5c6ef-3d3b-4b78-8a17-c599bb05e9d8\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [\r\n      \"veteranPlayers\"\r\n    ],\r\n    \"kpi\": null,\r\n   
+    \"createdAt\": \"2021-10-22T21:48:05Z\",\r\n    \"updatedAt\": \"2021-10-22T22:34:28Z\"\r\n 
+    },\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n    \"configId\":
+    \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"AMZ\",\r\n    \"enabled\":
+    true,\r\n    \"condition\": \"unity.appVersion == '551amz'\",\r\n    \"rolloutPercentage\":
+    100,\r\n    \"value\": [\r\n      {\r\n        \"id\": \"Variant 1\",\r\n       
+    \"weight\": null,\r\n        \"values\": [\r\n          {\r\n            \"metadata\":
+    {\r\n              \"entityId\": \"e148743e-4851-42a7-af97-37543000185e\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"AdmobAdsBanner\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"d020276a-e190-4990-99c1-63d9862611dd\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"AdmobAdsInter\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": false\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"5b1c8282-970d-446c-acb1-50773083105b\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"UnityAdsInter\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"078799db-c5a3-48b2-8bc6-112720b36465\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"ChrAdsReward\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": true\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"4fbd4e16-0209-4585-a471-9c1fa7dfcbe9\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"ChrAdsInter\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"21e5bc40-7467-421c-8cea-d8439861c1e6\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"UnityAdsReward\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": true\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"dae4dbcd-a370-4464-9909-b4b6c9c74017\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"AdmobAdsReward\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"0a648cfd-6db3-4ba5-89f4-788b6f8ac77e\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"InterAdsKey\",\r\n              \"type\": \"int\",\r\n             
+    \"value\": 321\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"d946c7ff-d5d9-44f7-8dd3-a88ead435553\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"RewardAdsKey\",\r\n             
+    \"type\": \"int\",\r\n              \"value\": 321\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"5bb3bbe9-3ceb-4eb6-87e1-9628f204317c\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"43322b93-7eda-469a-ad70-beca74b4a4bf\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [],\r\n    \"kpi\": null,\r\n    \"createdAt\": \"2021-10-19T11:01:28Z\",\r\n   
+    \"updatedAt\": \"2021-10-19T11:05:40Z\"\r\n  },\r\n  {\r\n    \"projectId\":
+    \"029443c4-098e-493a-91b7-892817b0376f\",\r\n    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n   
+    \"configId\": \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"tutorial\",\r\n   
+    \"enabled\": true,\r\n    \"condition\": \"true\",\r\n    \"rolloutPercentage\":
+    100,\r\n    \"value\": [\r\n      {\r\n        \"id\": \"Variant 1\",\r\n       
+    \"weight\": null,\r\n        \"values\": [\r\n          {\r\n            \"metadata\":
+    {\r\n              \"entityId\": \"837c395b-00e1-46ea-82d4-a702bb7bef86\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"Tutorial\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      },\r\n      {\r\n       
+    \"id\": \"Variant 2\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"837c395b-00e1-46ea-82d4-a702bb7bef86\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"Tutorial\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"e805f2a4-5111-427c-8453-61dfe31cd76e\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"96ae056e-fc55-46eb-a1d0-356b11047b5e\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [],\r\n    \"kpi\": null,\r\n    \"createdAt\": \"2021-10-22T21:30:02Z\",\r\n   
+    \"updatedAt\": \"2021-10-24T20:45:29Z\"\r\n  },\r\n  {\r\n    \"projectId\":
+    \"029443c4-098e-493a-91b7-892817b0376f\",\r\n    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n   
+    \"configId\": \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"UDP\",\r\n   
+    \"enabled\": true,\r\n    \"condition\": \"unity.appVersion == '551udp'\",\r\n   
+    \"rolloutPercentage\": 100,\r\n    \"value\": [\r\n      {\r\n        \"id\":
+    \"Variant 1\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"e148743e-4851-42a7-af97-37543000185e\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"AdmobAdsBanner\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"d020276a-e190-4990-99c1-63d9862611dd\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"AdmobAdsInter\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": false\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"5b1c8282-970d-446c-acb1-50773083105b\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"UnityAdsInter\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"078799db-c5a3-48b2-8bc6-112720b36465\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"ChrAdsReward\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": true\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"4fbd4e16-0209-4585-a471-9c1fa7dfcbe9\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"ChrAdsInter\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"21e5bc40-7467-421c-8cea-d8439861c1e6\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"UnityAdsReward\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": true\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"dae4dbcd-a370-4464-9909-b4b6c9c74017\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"AdmobAdsReward\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"0a648cfd-6db3-4ba5-89f4-788b6f8ac77e\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"InterAdsKey\",\r\n              \"type\": \"int\",\r\n             
+    \"value\": 321\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"d946c7ff-d5d9-44f7-8dd3-a88ead435553\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"RewardAdsKey\",\r\n             
+    \"type\": \"int\",\r\n              \"value\": 321\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"74e74e50-3aee-451f-9aa2-1e49e88468c0\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"499fe64c-2f95-4393-9f6c-68688e8b61da\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [],\r\n    \"kpi\": null,\r\n    \"createdAt\": \"2021-10-19T11:06:55Z\",\r\n   
+    \"updatedAt\": \"2021-10-19T11:10:02Z\"\r\n  },\r\n  {\r\n    \"projectId\":
+    \"029443c4-098e-493a-91b7-892817b0376f\",\r\n    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n   
+    \"configId\": \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"Existing
+    Players (2 g\xFCnd\xFCr Oynayanlar)\",\r\n    \"enabled\": true,\r\n    \"condition\":
+    \"true\",\r\n    \"rolloutPercentage\": 100,\r\n    \"value\": [\r\n      {\r\n       
+    \"id\": \"Variant 1\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"7b1342df-755b-47b1-9ad0-66eeec06d44c\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTimeLive\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"bf5b590e-62d2-425d-b26f-5b518e9a0a0d\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"MessageBoardTitle\",\r\n              \"type\":
+    \"string\",\r\n              \"value\": \"Unlimited Life Party!\"\r\n           
+    }\r\n          },\r\n          {\r\n            \"metadata\": {\r\n             
+    \"entityId\": \"0a7cbb93-ad07-4805-9513-98fed4ae074b\"\r\n            },\r\n           
+    \"rs\": {\r\n              \"key\": \"MessagePopup\",\r\n              \"type\":
+    \"bool\",\r\n              \"value\": true\r\n            }\r\n          },\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"e19ebc37-5bae-4059-8213-0eb164a08267\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"MessageBoardInfo\",\r\n             
+    \"type\": \"string\",\r\n              \"value\": \"Thank You For Playing! We
+    have a gift for you! 30m Unlimited Life!\"\r\n            }\r\n          },\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"5e02005b-7849-4929-9ba8-f0b1e3c7571d\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTime\",\r\n             
+    \"type\": \"int\",\r\n              \"value\": 1800\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      },\r\n      {\r\n       
+    \"id\": \"Variant 2\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"7b1342df-755b-47b1-9ad0-66eeec06d44c\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTimeLive\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"bf5b590e-62d2-425d-b26f-5b518e9a0a0d\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"MessageBoardTitle\",\r\n              \"type\":
+    \"string\",\r\n              \"value\": \"Level Up Party Time!\"\r\n           
+    }\r\n          },\r\n          {\r\n            \"metadata\": {\r\n             
+    \"entityId\": \"0a7cbb93-ad07-4805-9513-98fed4ae074b\"\r\n            },\r\n           
+    \"rs\": {\r\n              \"key\": \"MessagePopup\",\r\n              \"type\":
+    \"bool\",\r\n              \"value\": false\r\n            }\r\n          },\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"e19ebc37-5bae-4059-8213-0eb164a08267\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"MessageBoardInfo\",\r\n             
+    \"type\": \"string\",\r\n              \"value\": \"Try to pass the maximum level
+    with unlimited lives!\"\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"5e02005b-7849-4929-9ba8-f0b1e3c7571d\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTime\",\r\n             
+    \"type\": \"int\",\r\n              \"value\": 3600\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"f554d676-7793-405f-95a1-b18db1df5ff3\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"c882e593-1926-40e5-b741-b6e17e32d6fd\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [\r\n      \"existingPlayers\"\r\n    ],\r\n    \"kpi\": null,\r\n   
+    \"createdAt\": \"2021-10-22T21:55:07Z\",\r\n    \"updatedAt\": \"2021-10-22T21:55:17Z\"\r\n 
+    }\r\n]"
+  _lastCachedRulesList: "[\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n    \"configId\":
+    \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"New Players\",\r\n   
+    \"enabled\": true,\r\n    \"condition\": \"true\",\r\n    \"rolloutPercentage\":
+    100,\r\n    \"value\": [\r\n      {\r\n        \"id\": \"Variant 1\",\r\n       
+    \"weight\": null,\r\n        \"values\": [\r\n          {\r\n            \"metadata\":
+    {\r\n              \"entityId\": \"12829d40-e3c9-44d6-a0ac-71ea52ab0275\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"promosyon0\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      },\r\n      {\r\n       
+    \"id\": \"Variant 2\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"12829d40-e3c9-44d6-a0ac-71ea52ab0275\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"promosyon0\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"c8587e5f-7fe1-4f2d-9881-239e56c3283d\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"17fd5c4f-2380-4ac2-8de1-b17880ab3e8e\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [\r\n      \"newPlayers\"\r\n    ],\r\n    \"kpi\": null,\r\n   
+    \"createdAt\": \"2021-10-22T21:20:30Z\",\r\n    \"updatedAt\": \"2021-10-23T09:10:05Z\"\r\n 
+    },\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n    \"configId\":
+    \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"Lapsed Spenders
+    (30 g\xFCnd\xFCr Sat\u0131n alma yapmam\u0131s Spenders)\",\r\n    \"enabled\":
+    true,\r\n    \"condition\": \"true\",\r\n    \"rolloutPercentage\": 100,\r\n   
+    \"value\": [\r\n      {\r\n        \"id\": \"Variant 1\",\r\n        \"weight\":
+    null,\r\n        \"values\": [\r\n          {\r\n            \"metadata\": {\r\n             
+    \"entityId\": \"d27b93a5-1b74-4647-819b-95a3efb171ac\"\r\n            },\r\n           
+    \"rs\": {\r\n              \"key\": \"promosyon1\",\r\n              \"type\":
+    \"bool\",\r\n              \"value\": true\r\n            }\r\n          }\r\n       
+    ],\r\n        \"type\": \"variant\"\r\n      },\r\n      {\r\n        \"id\":
+    \"Variant 2\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"d27b93a5-1b74-4647-819b-95a3efb171ac\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"promosyon1\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"335a8dbd-1544-428b-b159-8df60a499a02\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"e8f16375-812a-4106-8d91-0caa00f8fdc0\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [\r\n      \"lapsedSpenders\"\r\n    ],\r\n    \"kpi\": null,\r\n   
+    \"createdAt\": \"2021-10-22T21:23:48Z\",\r\n    \"updatedAt\": \"2021-10-23T09:09:16Z\"\r\n 
+    },\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n    \"configId\":
+    \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"Recent Spenders
+    (Son 7 g\xFCn i\xE7indeki Spenders)\",\r\n    \"enabled\": true,\r\n    \"condition\":
+    \"true\",\r\n    \"rolloutPercentage\": 100,\r\n    \"value\": [\r\n      {\r\n       
+    \"id\": \"Variant 1\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"e00891be-0e88-4baf-ba98-50134e457ae8\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"promosyon2\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      },\r\n      {\r\n       
+    \"id\": \"Variant 2\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"e00891be-0e88-4baf-ba98-50134e457ae8\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"promosyon2\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"28fe8484-2ad4-46c1-8be8-7e473683a0cd\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"da005c81-8ff8-4123-bb4c-756a52c68e0a\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [\r\n      \"recentSpenders\"\r\n    ],\r\n    \"kpi\": null,\r\n   
+    \"createdAt\": \"2021-10-22T21:27:17Z\",\r\n    \"updatedAt\": \"2021-10-23T09:10:27Z\"\r\n 
+    },\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n    \"configId\":
+    \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"ALLSpenders\",\r\n   
+    \"enabled\": true,\r\n    \"condition\": \"true\",\r\n    \"rolloutPercentage\":
+    100,\r\n    \"value\": [\r\n      {\r\n        \"id\": \"Variant 1\",\r\n       
+    \"weight\": null,\r\n        \"values\": [\r\n          {\r\n            \"metadata\":
+    {\r\n              \"entityId\": \"d020276a-e190-4990-99c1-63d9862611dd\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"AdmobAdsInter\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"5b1c8282-970d-446c-acb1-50773083105b\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"UnityAdsInter\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": false\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"4fbd4e16-0209-4585-a471-9c1fa7dfcbe9\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"ChrAdsInter\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"e148743e-4851-42a7-af97-37543000185e\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"AdmobAdsBanner\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": false\r\n            }\r\n          }\r\n        ],\r\n        \"type\":
+    \"variant\"\r\n      }\r\n    ],\r\n    \"id\": \"8d82652d-d94e-41c8-b835-91dc6e713d62\",\r\n   
+    \"priority\": 250,\r\n    \"type\": \"variant\",\r\n    \"version\": \"3f87d468-8180-4865-8673-908d0358fba4\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [\r\n      \"allSpenders\"\r\n    ],\r\n    \"kpi\": null,\r\n   
+    \"createdAt\": \"2021-10-22T21:13:50Z\",\r\n    \"updatedAt\": \"2021-10-22T21:13:57Z\"\r\n 
+    },\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n    \"configId\":
+    \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"Veteran Players
+    (M\xFCdavimler)\",\r\n    \"enabled\": true,\r\n    \"condition\": \"true\",\r\n   
+    \"rolloutPercentage\": 100,\r\n    \"value\": [\r\n      {\r\n        \"id\":
+    \"Variant 1\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"7b1342df-755b-47b1-9ad0-66eeec06d44c\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTimeLive\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"0a7cbb93-ad07-4805-9513-98fed4ae074b\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"MessagePopup\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": true\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"bf5b590e-62d2-425d-b26f-5b518e9a0a0d\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"MessageBoardTitle\",\r\n             
+    \"type\": \"string\",\r\n              \"value\": \"Level Up Party Time!\"\r\n           
+    }\r\n          },\r\n          {\r\n            \"metadata\": {\r\n             
+    \"entityId\": \"e19ebc37-5bae-4059-8213-0eb164a08267\"\r\n            },\r\n           
+    \"rs\": {\r\n              \"key\": \"MessageBoardInfo\",\r\n              \"type\":
+    \"string\",\r\n              \"value\": \"Try to pass the maximum level with
+    unlimited lives!\"\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"5e02005b-7849-4929-9ba8-f0b1e3c7571d\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTime\",\r\n             
+    \"type\": \"int\",\r\n              \"value\": 3600\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      },\r\n      {\r\n       
+    \"id\": \"Variant 2\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"7b1342df-755b-47b1-9ad0-66eeec06d44c\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTimeLive\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"0a7cbb93-ad07-4805-9513-98fed4ae074b\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"MessagePopup\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": false\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"bf5b590e-62d2-425d-b26f-5b518e9a0a0d\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"MessageBoardTitle\",\r\n             
+    \"type\": \"string\",\r\n              \"value\": \"Level Up Party Time!\"\r\n           
+    }\r\n          },\r\n          {\r\n            \"metadata\": {\r\n             
+    \"entityId\": \"e19ebc37-5bae-4059-8213-0eb164a08267\"\r\n            },\r\n           
+    \"rs\": {\r\n              \"key\": \"MessageBoardInfo\",\r\n              \"type\":
+    \"string\",\r\n              \"value\": \"Try to pass the maximum level with
+    unlimited lives!\"\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"5e02005b-7849-4929-9ba8-f0b1e3c7571d\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTime\",\r\n             
+    \"type\": \"int\",\r\n              \"value\": 3600\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"86feb105-8416-4fc9-9ca0-227b1891f521\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"bdb5c6ef-3d3b-4b78-8a17-c599bb05e9d8\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [\r\n      \"veteranPlayers\"\r\n    ],\r\n    \"kpi\": null,\r\n   
+    \"createdAt\": \"2021-10-22T21:48:05Z\",\r\n    \"updatedAt\": \"2021-10-22T22:34:28Z\"\r\n 
+    },\r\n  {\r\n    \"projectId\": \"029443c4-098e-493a-91b7-892817b0376f\",\r\n   
+    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n    \"configId\":
+    \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"AMZ\",\r\n    \"enabled\":
+    true,\r\n    \"condition\": \"unity.appVersion == '551amz'\",\r\n    \"rolloutPercentage\":
+    100,\r\n    \"value\": [\r\n      {\r\n        \"id\": \"Variant 1\",\r\n       
+    \"weight\": null,\r\n        \"values\": [\r\n          {\r\n            \"metadata\":
+    {\r\n              \"entityId\": \"e148743e-4851-42a7-af97-37543000185e\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"AdmobAdsBanner\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"d020276a-e190-4990-99c1-63d9862611dd\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"AdmobAdsInter\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": false\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"5b1c8282-970d-446c-acb1-50773083105b\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"UnityAdsInter\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"078799db-c5a3-48b2-8bc6-112720b36465\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"ChrAdsReward\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": true\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"4fbd4e16-0209-4585-a471-9c1fa7dfcbe9\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"ChrAdsInter\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"21e5bc40-7467-421c-8cea-d8439861c1e6\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"UnityAdsReward\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": true\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"dae4dbcd-a370-4464-9909-b4b6c9c74017\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"AdmobAdsReward\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"0a648cfd-6db3-4ba5-89f4-788b6f8ac77e\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"InterAdsKey\",\r\n              \"type\": \"int\",\r\n             
+    \"value\": 321\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"d946c7ff-d5d9-44f7-8dd3-a88ead435553\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"RewardAdsKey\",\r\n             
+    \"type\": \"int\",\r\n              \"value\": 321\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"5bb3bbe9-3ceb-4eb6-87e1-9628f204317c\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"43322b93-7eda-469a-ad70-beca74b4a4bf\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [],\r\n    \"kpi\": null,\r\n    \"createdAt\": \"2021-10-19T11:01:28Z\",\r\n   
+    \"updatedAt\": \"2021-10-19T11:05:40Z\"\r\n  },\r\n  {\r\n    \"projectId\":
+    \"029443c4-098e-493a-91b7-892817b0376f\",\r\n    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n   
+    \"configId\": \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"tutorial\",\r\n   
+    \"enabled\": true,\r\n    \"condition\": \"true\",\r\n    \"rolloutPercentage\":
+    100,\r\n    \"value\": [\r\n      {\r\n        \"id\": \"Variant 1\",\r\n       
+    \"weight\": null,\r\n        \"values\": [\r\n          {\r\n            \"metadata\":
+    {\r\n              \"entityId\": \"837c395b-00e1-46ea-82d4-a702bb7bef86\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"Tutorial\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      },\r\n      {\r\n       
+    \"id\": \"Variant 2\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"837c395b-00e1-46ea-82d4-a702bb7bef86\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"Tutorial\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"e805f2a4-5111-427c-8453-61dfe31cd76e\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"96ae056e-fc55-46eb-a1d0-356b11047b5e\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [],\r\n    \"kpi\": null,\r\n    \"createdAt\": \"2021-10-22T21:30:02Z\",\r\n   
+    \"updatedAt\": \"2021-10-24T20:45:29Z\"\r\n  },\r\n  {\r\n    \"projectId\":
+    \"029443c4-098e-493a-91b7-892817b0376f\",\r\n    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n   
+    \"configId\": \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"UDP\",\r\n   
+    \"enabled\": true,\r\n    \"condition\": \"unity.appVersion == '551udp'\",\r\n   
+    \"rolloutPercentage\": 100,\r\n    \"value\": [\r\n      {\r\n        \"id\":
+    \"Variant 1\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"e148743e-4851-42a7-af97-37543000185e\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"AdmobAdsBanner\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"d020276a-e190-4990-99c1-63d9862611dd\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"AdmobAdsInter\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": false\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"5b1c8282-970d-446c-acb1-50773083105b\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"UnityAdsInter\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"078799db-c5a3-48b2-8bc6-112720b36465\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"ChrAdsReward\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": true\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"4fbd4e16-0209-4585-a471-9c1fa7dfcbe9\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"ChrAdsInter\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"21e5bc40-7467-421c-8cea-d8439861c1e6\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"UnityAdsReward\",\r\n              \"type\": \"bool\",\r\n             
+    \"value\": true\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"dae4dbcd-a370-4464-9909-b4b6c9c74017\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"AdmobAdsReward\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"0a648cfd-6db3-4ba5-89f4-788b6f8ac77e\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"InterAdsKey\",\r\n              \"type\": \"int\",\r\n             
+    \"value\": 321\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"d946c7ff-d5d9-44f7-8dd3-a88ead435553\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"RewardAdsKey\",\r\n             
+    \"type\": \"int\",\r\n              \"value\": 321\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"74e74e50-3aee-451f-9aa2-1e49e88468c0\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"499fe64c-2f95-4393-9f6c-68688e8b61da\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [],\r\n    \"kpi\": null,\r\n    \"createdAt\": \"2021-10-19T11:06:55Z\",\r\n   
+    \"updatedAt\": \"2021-10-19T11:10:02Z\"\r\n  },\r\n  {\r\n    \"projectId\":
+    \"029443c4-098e-493a-91b7-892817b0376f\",\r\n    \"environmentId\": \"59b2672a-0913-4445-bc0c-170c732c91d3\",\r\n   
+    \"configId\": \"f448b8cc-f5a4-4e2b-8b34-bd6734406898\",\r\n    \"name\": \"Existing
+    Players (2 g\xFCnd\xFCr Oynayanlar)\",\r\n    \"enabled\": true,\r\n    \"condition\":
+    \"true\",\r\n    \"rolloutPercentage\": 100,\r\n    \"value\": [\r\n      {\r\n       
+    \"id\": \"Variant 1\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"7b1342df-755b-47b1-9ad0-66eeec06d44c\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTimeLive\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": true\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"bf5b590e-62d2-425d-b26f-5b518e9a0a0d\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"MessageBoardTitle\",\r\n              \"type\":
+    \"string\",\r\n              \"value\": \"Unlimited Life Party!\"\r\n           
+    }\r\n          },\r\n          {\r\n            \"metadata\": {\r\n             
+    \"entityId\": \"0a7cbb93-ad07-4805-9513-98fed4ae074b\"\r\n            },\r\n           
+    \"rs\": {\r\n              \"key\": \"MessagePopup\",\r\n              \"type\":
+    \"bool\",\r\n              \"value\": true\r\n            }\r\n          },\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"e19ebc37-5bae-4059-8213-0eb164a08267\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"MessageBoardInfo\",\r\n             
+    \"type\": \"string\",\r\n              \"value\": \"Thank You For Playing! We
+    have a gift for you! 30m Unlimited Life!\"\r\n            }\r\n          },\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"5e02005b-7849-4929-9ba8-f0b1e3c7571d\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTime\",\r\n             
+    \"type\": \"int\",\r\n              \"value\": 1800\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      },\r\n      {\r\n       
+    \"id\": \"Variant 2\",\r\n        \"weight\": null,\r\n        \"values\": [\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"7b1342df-755b-47b1-9ad0-66eeec06d44c\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTimeLive\",\r\n             
+    \"type\": \"bool\",\r\n              \"value\": false\r\n            }\r\n         
+    },\r\n          {\r\n            \"metadata\": {\r\n              \"entityId\":
+    \"bf5b590e-62d2-425d-b26f-5b518e9a0a0d\"\r\n            },\r\n            \"rs\":
+    {\r\n              \"key\": \"MessageBoardTitle\",\r\n              \"type\":
+    \"string\",\r\n              \"value\": \"Level Up Party Time!\"\r\n           
+    }\r\n          },\r\n          {\r\n            \"metadata\": {\r\n             
+    \"entityId\": \"0a7cbb93-ad07-4805-9513-98fed4ae074b\"\r\n            },\r\n           
+    \"rs\": {\r\n              \"key\": \"MessagePopup\",\r\n              \"type\":
+    \"bool\",\r\n              \"value\": false\r\n            }\r\n          },\r\n         
+    {\r\n            \"metadata\": {\r\n              \"entityId\": \"e19ebc37-5bae-4059-8213-0eb164a08267\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"MessageBoardInfo\",\r\n             
+    \"type\": \"string\",\r\n              \"value\": \"Try to pass the maximum level
+    with unlimited lives!\"\r\n            }\r\n          },\r\n          {\r\n           
+    \"metadata\": {\r\n              \"entityId\": \"5e02005b-7849-4929-9ba8-f0b1e3c7571d\"\r\n           
+    },\r\n            \"rs\": {\r\n              \"key\": \"LifeDailyRewardTime\",\r\n             
+    \"type\": \"int\",\r\n              \"value\": 3600\r\n            }\r\n         
+    }\r\n        ],\r\n        \"type\": \"variant\"\r\n      }\r\n    ],\r\n   
+    \"id\": \"f554d676-7793-405f-95a1-b18db1df5ff3\",\r\n    \"priority\": 500,\r\n   
+    \"type\": \"variant\",\r\n    \"version\": \"c882e593-1926-40e5-b741-b6e17e32d6fd\",\r\n   
+    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"metadata\": null,\r\n   
+    \"audience\": [\r\n      \"existingPlayers\"\r\n    ],\r\n    \"kpi\": null,\r\n   
+    \"createdAt\": \"2021-10-22T21:55:07Z\",\r\n    \"updatedAt\": \"2021-10-22T21:55:17Z\"\r\n 
+    }\r\n]"

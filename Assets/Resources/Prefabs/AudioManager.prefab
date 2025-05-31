@@ -1,0 +1,266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1687684587984350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4993731930533834}
+  - component: {fileID: 114267127093656774}
+  - component: {fileID: 82135925530026534}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4993731930533834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687684587984350}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6826.666, y: 6826.666, z: 6826.666}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114267127093656774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687684587984350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58dc09e50b399834aa29c3ee15d25770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSoundEnabled: 1
+  isMusicEnabled: 1
+  isNotifEnabled: 1
+  audioSource: {fileID: 82135925530026534}
+  SFX_ButtonClick: {fileID: 8300000, guid: ae7fdccaaf3854148a6889deb5818891, type: 3}
+  SFX_BlockPlace: {fileID: 0}
+  SFX_GameOver: {fileID: 0}
+  tap: {fileID: 8300000, guid: ce70557ff2e8a554a86b554b73a20a6e, type: 3}
+  tapBck: {fileID: 8300000, guid: 391a0b87188b08148b3254489314c53b, type: 3}
+  itemCrush:
+  - {fileID: 8300000, guid: ea599e2a325448b47baecdace59c78cb, type: 3}
+  - {fileID: 8300000, guid: 6123640c79cb66545876de894b38958c, type: 3}
+  - {fileID: 8300000, guid: 46e3a655e39e3dc4588406818f6d8444, type: 3}
+  - {fileID: 8300000, guid: 8d91adcf2f6e9404aa36704a300be854, type: 3}
+  - {fileID: 8300000, guid: 3384ab4cfd79dda45b3024d80a89d127, type: 3}
+  - {fileID: 8300000, guid: ea599e2a325448b47baecdace59c78cb, type: 3}
+  - {fileID: 8300000, guid: 6123640c79cb66545876de894b38958c, type: 3}
+  - {fileID: 8300000, guid: 46e3a655e39e3dc4588406818f6d8444, type: 3}
+  - {fileID: 8300000, guid: 8d91adcf2f6e9404aa36704a300be854, type: 3}
+  - {fileID: 8300000, guid: 3384ab4cfd79dda45b3024d80a89d127, type: 3}
+  drop:
+  - {fileID: 8300000, guid: 0ed872c0f5d501941baade032912ba53, type: 3}
+  - {fileID: 8300000, guid: 74825ff41111ebf439d3d6b9e292072d, type: 3}
+  - {fileID: 8300000, guid: 30de182813a4d464d867badcc961cfc6, type: 3}
+  - {fileID: 8300000, guid: ce70557ff2e8a554a86b554b73a20a6e, type: 3}
+  collectTarget:
+  - {fileID: 8300000, guid: ea599e2a325448b47baecdace59c78cb, type: 3}
+  - {fileID: 8300000, guid: 6123640c79cb66545876de894b38958c, type: 3}
+  - {fileID: 8300000, guid: 46e3a655e39e3dc4588406818f6d8444, type: 3}
+  - {fileID: 8300000, guid: 8d91adcf2f6e9404aa36704a300be854, type: 3}
+  - {fileID: 8300000, guid: 3384ab4cfd79dda45b3024d80a89d127, type: 3}
+  bomb: {fileID: 8300000, guid: de4d5a056a6b06d47a68eff77feead95, type: 3}
+  bombExplode: {fileID: 8300000, guid: c826aaecb9a3cba4dae82d02cf29a313, type: 3}
+  medbombExplode: {fileID: 8300000, guid: 6c36702051a036d489ffa1d6b0b6c797, type: 3}
+  bigbombExplode: {fileID: 8300000, guid: 8b33d18956d35e744a9080bcaeeefed6, type: 3}
+  colRowBreaker: {fileID: 8300000, guid: de4d5a056a6b06d47a68eff77feead95, type: 3}
+  colRowBreakerExplode: {fileID: 8300000, guid: dd976eea8b86ff44fb197501157f0456,
+    type: 3}
+  rainbow: {fileID: 8300000, guid: f0db0350e1bf76c4c8e90856e2025785, type: 3}
+  rainbowExplode: {fileID: 8300000, guid: 92040a12bed6759499c5972d70af2e58, type: 3}
+  UIPopupLevelSkipped: {fileID: 8300000, guid: 6bde58ac714779045886d881be9081c7, type: 3}
+  gingerbread:
+  - {fileID: 8300000, guid: d426c8217af04444ab4110ff7ca418fe, type: 3}
+  - {fileID: 8300000, guid: 668df4833972a77448fa5cbdfc31a4f3, type: 3}
+  - {fileID: 8300000, guid: d8593086995688640a3b47bd5ccdf87b, type: 3}
+  - {fileID: 8300000, guid: 5444c9167b9564340a17756ed478d135, type: 3}
+  - {fileID: 8300000, guid: 09d70edcbc921ab4da98af76c18b5df2, type: 3}
+  - {fileID: 8300000, guid: 9c522db6e4d367243b70dba68425be4f, type: 3}
+  - {fileID: 8300000, guid: 97eb8a46ebc1a2c42a78798f3dc76373, type: 3}
+  - {fileID: 8300000, guid: e1774ec299198124bb2ef35b31e3ac44, type: 3}
+  gingerbreadExplode: {fileID: 8300000, guid: 97eb8a46ebc1a2c42a78798f3dc76373, type: 3}
+  waffleExplode: {fileID: 8300000, guid: 9f115f876c3c78740810b33087313dbe, type: 3}
+  cageExplode: {fileID: 8300000, guid: 5f9e68ddf1a42e942822c1da8a274256, type: 3}
+  marshmallowExplode: {fileID: 8300000, guid: 66775fd3dc9ad924c99c1b6a4f57f8c6, type: 3}
+  collectibleExplode: {fileID: 8300000, guid: 5444c9167b9564340a17756ed478d135, type: 3}
+  chocolateExplode: {fileID: 8300000, guid: 5f9e68ddf1a42e942822c1da8a274256, type: 3}
+  rockCandyExplode: {fileID: 8300000, guid: 05731e9ae4b09e34289abcbd4ebe991a, type: 3}
+  coinPay: {fileID: 8300000, guid: ccc8bec27f88a8a41a7c29d2a4ca3dd1, type: 3}
+  coinAdd: {fileID: 8300000, guid: 9cc4a22e882cd274da4aaad6427ee239, type: 3}
+  amazing: {fileID: 8300000, guid: fa327e0232cd93f4891990f41cb37179, type: 3}
+  exellent: {fileID: 8300000, guid: f2817ab619439d04c9d389a46bf5639b, type: 3}
+  great: {fileID: 8300000, guid: 9e3292a6749d4cf42b9e11ac76238c63, type: 3}
+  star1: {fileID: 8300000, guid: e26ed6810445d364b973323e466304c6, type: 3}
+  star2: {fileID: 8300000, guid: 17b24952d61748948874eed988de25d3, type: 3}
+  star3: {fileID: 8300000, guid: eca30eb0bd790394b95e213de585d67d, type: 3}
+  girlWowSound:
+  - {fileID: 8300000, guid: fa327e0232cd93f4891990f41cb37179, type: 3}
+  - {fileID: 8300000, guid: b287c4fc03624b44f8d4e667c4baf243, type: 3}
+  - {fileID: 8300000, guid: f2817ab619439d04c9d389a46bf5639b, type: 3}
+  - {fileID: 8300000, guid: fbbd77446ca2f844693b488c7094636f, type: 3}
+  - {fileID: 8300000, guid: 9afd654b969e9bc4dab60b41a0d8f3f6, type: 3}
+  - {fileID: 8300000, guid: d39cfbca6c98c5846b4433b57dc539ee, type: 3}
+  - {fileID: 8300000, guid: fa327e0232cd93f4891990f41cb37179, type: 3}
+  - {fileID: 8300000, guid: a277ec2d497f75f4aa5aa2796d94a795, type: 3}
+  - {fileID: 8300000, guid: 9e3292a6749d4cf42b9e11ac76238c63, type: 3}
+  - {fileID: 8300000, guid: a277ec2d497f75f4aa5aa2796d94a795, type: 3}
+  - {fileID: 8300000, guid: 9e3292a6749d4cf42b9e11ac76238c63, type: 3}
+  - {fileID: 8300000, guid: 9147128b5a55909498dacbff854468bb, type: 3}
+  - {fileID: 8300000, guid: 8f93ae49c2aa7074585f4c52599c969d, type: 3}
+  girlTickSound:
+  - {fileID: 8300000, guid: 6bc40f534baa1424c85b4b7d1812aa55, type: 3}
+  - {fileID: 8300000, guid: 1f39f176edf4de64ca549df307f4d573, type: 3}
+  - {fileID: 8300000, guid: 9ac9195a628bbc24a985bb223b5a9917, type: 3}
+  Click: {fileID: 8300000, guid: ae7fdccaaf3854148a6889deb5818891, type: 3}
+  Target: {fileID: 8300000, guid: 504d2d2a23629fb4ba6edd12a4ff65a8, type: 3}
+  completed: {fileID: 8300000, guid: b50730e09d6beca40a9e2818f335b8a9, type: 3}
+  Win: {fileID: 8300000, guid: c13104152f3514649bdf097e6c63b1fc, type: 3}
+  Lose: {fileID: 8300000, guid: c77544d2a7742f24e9761b2a1b34ac0f, type: 3}
+  NoMatch: {fileID: 8300000, guid: 44d945d2c0fd11d4790b426800cf0e21, type: 3}
+  Gift: {fileID: 8300000, guid: 9c44f5fae449e3f4c8754008def2d126, type: 3}
+  giftgiris: {fileID: 8300000, guid: b4bbb21f353441c42a078705e6f3e5db, type: 3}
+  giftvar: {fileID: 8300000, guid: 24c35f92f06607d4da7ea3823f6eb2bd, type: 3}
+  completedMusic:
+  - {fileID: 8300000, guid: 5ff02f0871bc56644a0413dd4b3dfc13, type: 3}
+  - {fileID: 8300000, guid: 5ff02f0871bc56644a0413dd4b3dfc13, type: 3}
+  bostikirti: {fileID: 8300000, guid: 543da98f8f9eb3649a80fb2b295a46e0, type: 3}
+  dolutikirti: {fileID: 8300000, guid: b943b30f2b8251f41b1acaf9d6ba656a, type: 3}
+  swosh: {fileID: 8300000, guid: 4561347137d3d664ca6334b81736aa88, type: 3}
+  bonuscoins: {fileID: 8300000, guid: 9c44f5fae449e3f4c8754008def2d126, type: 3}
+  singleBooster: {fileID: 8300000, guid: e975d3082b125e9469fe68b9caabdc17, type: 3}
+  rowBooster: {fileID: 8300000, guid: f434bc18bd3e99e468f6c46c307efc99, type: 3}
+  columnBooster: {fileID: 8300000, guid: 062529db78edd1c4c95ca1d0e3b7886f, type: 3}
+  rainbowBooster: {fileID: 8300000, guid: f434bc18bd3e99e468f6c46c307efc99, type: 3}
+  ovenBooster: {fileID: 8300000, guid: 79781e33b1e8b1b46b60e61936907aac, type: 3}
+  playingCookieCrush: 0
+  playingBomb: 0
+  playingBombExplode: 0
+  playingColRowBreaker: 0
+  playingColRowBreakerExplode: 0
+  playingRainbow: 0
+  playingRainbowExplode: 0
+  playingDrop: 0
+  playingWaffleExplode: 0
+  playingCageExplode: 0
+  playingMarshmallowExplode: 0
+  playingChocolateExplode: 0
+  playingRockCandyExplode: 0
+  Fantastic:
+  - {fileID: 8300000, guid: ff9b8a953d764a6429e085b939e02006, type: 3}
+  - {fileID: 8300000, guid: 7d4480b8ace697847b0aa2464bf630af, type: 3}
+  - {fileID: 8300000, guid: cfebf0faded74db44bd7eafd21a79707, type: 3}
+  Sweet:
+  - {fileID: 8300000, guid: 80399270e30f27b4f99bfc8d11da5c60, type: 3}
+  - {fileID: 8300000, guid: d006f89507f83aa4aa28a392bf60a182, type: 3}
+--- !u!82 &82135925530026534
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687684587984350}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0

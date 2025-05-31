@@ -1,0 +1,350 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &109314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 447706}
+  - component: {fileID: 11451106}
+  - component: {fileID: 3851427263479836157}
+  - component: {fileID: 4607792032740024255}
+  m_Layer: 0
+  m_Name: Configure
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &447706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11451106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f7ce994284aed42899d3206bf9062d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PurchasedId: 0
+  Loaded: 0
+  rewardType: 0
+  Lang: EN
+  Amazon: 0
+  Udp: 0
+  pause: 0
+  Tutorial: 1
+  RemoteConfigOk: 0
+  EpisodePopup: 0
+  MenuSceneBypass: 0
+  WaitMenuInitSeconds: 8
+  WinLevel: 0
+  LoseLevel: 0
+  CurrentScene: 0
+  MessagePopup: 0
+  MessageBoardTitle: Unlimited Life Week!
+  MessageBoardInfo: Enjoy unlimited lives this week!
+  lifeReplenishTime: 1200
+  DailyRewardTimeLive: 0
+  DailyRewardTime: 7200
+  WinChallengeRewardTime: 1800
+  recoveryCostPerLife: 20
+  activeFreeBox: 0
+  GiftBoxTitle: 
+  FreeBox1Time: 7200
+  FreeBox2Time: 28800
+  FreeBox3Time: 86400
+  _ReadyFreeBoxesCount: 0
+  _ActiveFreeBoxesCount: 0
+  DailyGiftCall: 1
+  StarChallengeCall: 1
+  LifeCall: 1
+  RepeatCall: 1
+  RepeatHour: 20
+  repeatTitle: Started Party
+  repeatSubtitle: Blast Time
+  repeatMessage: Starting Blast Party! Come and open gift boxes
+  RepeatCalled: 0
+  StarChallengeEvent: 1
+  MissionChallengeEvent: 1
+  LevelChallengeEvent: 1
+  DailyGiftEvent: 1
+  GiftWheelEvent: 1
+  GemboxEvent: 1
+  LevelBoxEvent: 0
+  EpisodeBoxEvent: 1
+  Bildirim: 1
+  GameServices: 0
+  NoSleep: 0
+  MoreGames: 1
+  OfflinePunishment: 0
+  BoostersCorrection: 0
+  LevelBeginReward: 1
+  GamePlayReward: 1
+  LifePopupReward: 0
+  MoreMovesReward: 1
+  LimitedMoreMovesReward: 1
+  DoubleStarReward: 1
+  DoubleScoreReward: 1
+  Promo0: 1
+  Promo1: 1
+  Promo2: 1
+  AmzInterAds: 1
+  ShowAdsEvery: 1
+  FirstShowAds: 5
+  FirstGoMap: 2
+  BeginLevelDailyBonus: 8
+  BeginLevelStarChallenge: 10
+  BeginLevelMissionChallenge: 18
+  BeginLevelFortuneWheel: 16
+  BeginLevelLevelChallenge: 20
+  BeginLevelGembox: 25
+  BeginLevelRateUs: 12
+  ShowRateUsEvery: 9
+  RateShowed: 0
+  PromoShowed: 0
+  RateKey: Ratedus8
+  StarBoxFullAmount: 20
+  ScoreBoxFullAmount: 35000
+  GiftGemsAmountMin: 5
+  GiftGemsAmountMax: 12
+  GiftAmountMax: 2
+  GiftAmountMin: 1
+  GiftTiklanmadi: 0
+  ShowLevelBoxEvery: 10
+  LevelBoxGiftAmount: 25
+  GiftBoxGiftAmount: 30
+  GiftBoxWinNum: 0
+  GiftBoxRequiredWinLevel: 5
+  LevelGiftBoxRangeA: 32000000a0000000fa00000026020000ee0200004c040000ee020000b6030000e80300004c040000b0040000
+  LevelGiftBoxRangeB: 96000000fa000000f4010000ee0200004c040000dc050000f0050000fa050000fa050000fa050000fa050000
+  StarChallengeStarAmount: 60
+  StarChallengeGiftAmount: 100
+  Request1_Min: 120
+  Request1_Max: 220
+  Request2_Min: 3
+  Request2_Max: 12
+  Request3_Min: 1
+  Request3_Max: 4
+  Request4_Min: 3
+  Request4_Max: 7
+  Request5_Min: 2
+  Request5_Max: 5
+  gemboxMinAmount: 500
+  gemboxEveryLevelBonusAmount: 100
+  gemboxMaxAmount: 600
+  GemboxActive: 1
+  GemboxDeactive: 0
+  reenable: 25
+  Pack1_cost: 1.99$
+  Pack2_cost: 5.99$
+  Pack3_cost: 19.99$
+  Pack4_cost: 39.99$
+  Gems_60_cost: 1.99$
+  Gems_600_cost: 5.99$
+  Gems_1200_cost: 10.99$
+  Gems_2500_cost: 19.99$
+  Gems_5200_cost: 38.99$
+  Gems_12000_cost: 75.99$
+  RemoveAds_cost: 2.99$
+  UnlimitedLife_cost: 5.99$
+  promo0_cost: 10.99$
+  promo1_cost: 5.99$
+  promo2_cost: 4.99$
+  maxLevel: 1530
+  EpisodemaxLevel: 2793
+  episode: 140
+  EpisodesRange: 00000000050000000900000008000000080000000a000000090000000a0000000e0000000a0000000a00000007000000080000000a0000000b0000000c0000000c0000000d0000000d0000000d0000000c000000090000000b0000000e0000000e0000000b0000000a0000000b0000000b0000000a000000090000000e0000000b0000000c0000000e0000000e0000000d0000000d00000010000000140000001100000015000000180000001700000017000000190000001a0000001b0000001d0000001a0000001e0000001c0000001a000000190000001a0000001c00000017000000190000001b000000170000001a000000150000001a0000001f0000001d000000170000001f000000190000001c0000001b000000140000002200000024000000230000001e0000002200000021000000200000002000000022000000100000000b0000000f000000120000000e0000000e0000000d0000000f0000000e0000000c0000000b0000000d0000000f0000000e0000001000000011000000100000000e0000000f00000010000000110000000d00000011000000120000000e000000130000001600000013000000160000001600000015000000170000001300000016000000130000001700000017000000100000001700000019000000180000001900000017000000190000001d0000001a0000001f000000210000001f0000001b0000001c0000001d000000220000001f000000210000001e0000001f0000001f0000001d0000001d000000
+  EpisodesLabel: []
+  ArenaModePlayEnable: 0
+  ArenaPopupGosterildi: 0
+  ArenaWinCoinsMax: 0
+  ArenaWinCoinsMin: 0
+  ArenaLoseCoinsMax: 0
+  ArenaLoseCoinsMin: 0
+  GiftAmountText: 
+  GerekliStarText: 
+  LevelArenaRangeA: 
+  LevelArenaRangeB: 
+  CurrentEpisode: 1
+  playing: 0
+  RandomPlay: 0
+  EpisodePlay: 0
+  ArenaMode: 0
+  GiftBox: 0
+  StarChallenge: 0
+  RewardPlay: 0
+  OneTimePlay: 0
+  gift1: 0
+  giftnum: 0
+  swapTime: 0.15
+  destroyTime: 0.12
+  dropTime: 0.8
+  changingTime: 0.35
+  hintDelay: 3
+  destroyDelay: 0.35
+  scoreItem: 15
+  finishedScoreItem: 20
+  bonus1Star: 0
+  bonus2Star: 0
+  bonus3Star: 0
+  package1Amount: 3
+  package2Amount: 10
+  beginFiveMovesLevel: 6
+  beginRainbowLevel: 6
+  beginBombBreakerLevel: 6
+  beginFiveMovesCost1: 90
+  beginFiveMovesCost2: 250
+  beginRainbowCost1: 90
+  beginRainbowCost2: 250
+  beginBombBreakerCost1: 90
+  beginBombBreakerCost2: 250
+  keepPlayingCost: 100
+  skipLevelCost: 250
+  singleBreakerCost1: 90
+  singleBreakerCost2: 250
+  rowBreakerCost1: 90
+  rowBreakerCost2: 250
+  columnBreakerCost1: 90
+  columnBreakerCost2: 250
+  rainbowBreakerCost1: 90
+  rainbowBreakerCost2: 250
+  ovenBreakerCost1: 90
+  ovenBreakerCost2: 250
+  plusMoves: 5
+  showHint: 1
+  product1Price: 0.99
+  product2Price: 1.99
+  product3Price: 2.99
+  product4Price: 3.99
+  product5Price: 4.99
+  product1Coin: 60
+  product2Coin: 128
+  product3Coin: 218
+  product4Coin: 400
+  product5Coin: 600
+  watchVideoCoin: 1
+  autoPopup: 0
+  WinStarAmount: 0
+  WinScoreAmount: 0
+  beginFiveMoves: 0
+  beginRainbow: 0
+  beginBombBreaker: 0
+  touchIsSwallowed: 0
+  checkSwap: 1
+  encouragingPopup: 3
+  usedgame: 0
+  CloseClick: 0
+  MenuToMap: 0
+  MenuScene: 1
+  PlayedLevel: 0
+  SkipTutuorial: 0
+  CurruentEpisodeObje: {fileID: 0}
+  LeveltoPlay: 0
+--- !u!114 &3851427263479836157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f4ae7a7b3160a449e7feb9cddc62a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCoin: 100
+  openedLevel: 0
+  playerStars: 0
+  playerPuan: 0
+  giftAmount: 0
+  toplamScore: 0
+  Loaded: 0
+  singleBreaker: 3
+  rowBreaker: 3
+  columnBreaker: 3
+  rainbowBreaker: 3
+  ovenBreaker: 3
+  beginFiveMoves: 3
+  beginRainbow: 3
+  beginBombBreaker: 3
+--- !u!114 &4607792032740024255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a2a93adfd5fc54eb68f489609f3a88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Reward: 0
+  StageReady: 0
+  Stage: 0
+  column: 0
+  row: 0
+  moves: 0
+  Loaded: 0
+  BreakableChangeLevels: 40
+  LegoChangeLevels: 50
+  ChocolateChangeLevels: 40
+  BubblesChangeLevels: 45
+  tileLayerData: 
+  itemLayerData: 
+  breakableLayerData: 
+  lockLayerData: 
+  usingItems: 
+  usingColors: 
+  itemWeight: 
+  rocketToys: 
+  rockettoysWeight: 
+  rocketToysMarkers: 
+  maxRockettoys: 0
+  target1Type: 0
+  target2Type: 0
+  target3Type: 0
+  target4Type: 0
+  target1Amount: 0
+  target2Amount: 0
+  target3Amount: 0
+  target4Amount: 0
+  target1Color: 0
+  target2Color: 0
+  target3Color: 0
+  target4Color: 0
+  FriendBlockColorNumber: 0
+  score_Star_1: 0
+  score_Star_2: 0
+  score_Star_3: 0
+  targetlbl: 
+  collectibleCollectColumnMarkers: 
+  collectibleCollectNodeMarkers: 
+  collectibleGenerateMarkers: 
+  collectibleMaxOnBoard: 0
+  marshmallowMoreThanTarget: 0
+  doll: 0
+  debug: 0
+  random: 0
+  debuglevel: 2000
+  randomCookie: 
