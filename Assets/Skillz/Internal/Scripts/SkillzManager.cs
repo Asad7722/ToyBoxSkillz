@@ -20,6 +20,11 @@ public class SkillzManager : SkillzEventsHandler
   public SceneField progressionRoomScene;
   public UnityEvent onProgressionRoomEnter;
 
+  [Header("On Tutorial Screen Enter")]
+  [Tooltip("Scene that will launch when the user sign in and play game for the first time")]
+  public SceneField tutorialScreenScene;
+  public UnityEvent onTutorialScreenEnter;
+
   static SkillzManager instance;
 
   void Awake()
@@ -48,7 +53,7 @@ public class SkillzManager : SkillzEventsHandler
   {
     onMatchWillBegin.Invoke(match);
 
-    if (gameScene != "")
+    if (gameScene != null)
     {
       SceneManager.LoadScene(gameScene);
     }
@@ -58,7 +63,7 @@ public class SkillzManager : SkillzEventsHandler
   {
     onSkillzWillExit.Invoke();
 
-    if (startMenuScene != "")
+    if (startMenuScene != null)
     {
       SceneManager.LoadScene(startMenuScene);
     }
@@ -69,9 +74,19 @@ public class SkillzManager : SkillzEventsHandler
   {
     onProgressionRoomEnter.Invoke();
 
-    if (progressionRoomScene != "")
+    if (progressionRoomScene != null)
     {
       SceneManager.LoadScene(progressionRoomScene);
+    }
+  }
+
+  protected override void OnTutorialScreenEnter()
+  {
+    onTutorialScreenEnter.Invoke();
+
+    if (tutorialScreenScene != null)
+    {
+      SceneManager.LoadScene(tutorialScreenScene);
     }
   }
 }

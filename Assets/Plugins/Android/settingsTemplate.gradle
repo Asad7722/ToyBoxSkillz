@@ -34,6 +34,16 @@ dependencyResolutionManagement {
             maven {
                 url "https://maven.singular.net/" // Assets/Skillz/Editor/SkillzDependencies.xml:8
             }
+// Android Resolver Repos Start
+        def unityProjectPath = $/file:///**DIR_UNITYPROJECT**/$.replace("\\", "/")
+        maven {
+            url "https://nexus.skillz.com/content/groups/public/" // Assets/Skillz/Editor/SkillzDependencies.xml:5
+        }
+        maven {
+            url "https://maven.singular.net/" // Assets/Skillz/Editor/SkillzDependencies.xml:8
+        }
+        mavenLocal()
+// Android Resolver Repos End
         flatDir {
             dirs "${project(':unityLibrary').projectDir}/libs"
         }

@@ -68,7 +68,8 @@ namespace SkillzSDK
         this Dictionary<string, object> dict,
         string key)
       {
-        return Helpers.SafeUlongParse(dict.SafeGetStringValue(key));
+        ulong? result = Helpers.SafeUlongParse(dict.SafeGetStringValue(key));
+        return result;
       }
 
       public static string SafeGetStringValue(

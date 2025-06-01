@@ -158,36 +158,36 @@ public class UI_Booster : MonoBehaviour
             {
                 case BOOSTER_TYPE.BEGIN_FIVE_MOVES:
                     CoreData.instance.SaveBeginFiveMoves(amount);
-                    AnalyticsEvent.Custom("BuyBeginXBreaker "+ amount.ToString());
+                  
                     break;
                 case BOOSTER_TYPE.BEGIN_RAINBOW_BREAKER:
                     CoreData.instance.SaveBeginRainbow(amount);
-                    AnalyticsEvent.Custom("BuyBeginColorHunter " + amount.ToString());
+                   
                     break;
                 case BOOSTER_TYPE.BEGIN_BOMB_BREAKER:
                     CoreData.instance.SaveBeginBombBreaker(amount);
-                    AnalyticsEvent.Custom("BuyBeginBomb " + amount.ToString());
+                  
                     break;
 
                 case BOOSTER_TYPE.SINGLE_BREAKER:
                     CoreData.instance.SaveSingleBreaker(amount);
-                    AnalyticsEvent.Custom("BuySingleBreaker " + amount.ToString());
+                   
                     break;
                 case BOOSTER_TYPE.ROW_BREAKER:
                     CoreData.instance.SaveRowBreaker(amount);
-                    AnalyticsEvent.Custom("BuyRowBreaker " + amount.ToString());
+                  
                     break;
                 case BOOSTER_TYPE.COLUMN_BREAKER:
                     CoreData.instance.SaveColumnBreaker(amount);
-                    AnalyticsEvent.Custom("BuyColumnBreaker " + amount.ToString());
+                    
                     break;
                 case BOOSTER_TYPE.RAINBOW_BREAKER:
                     CoreData.instance.SaveRainbowBreaker(amount);
-                    AnalyticsEvent.Custom("BuyColorHunter " + amount.ToString());
+                    
                     break;
                 case BOOSTER_TYPE.OVEN_BREAKER:
                     CoreData.instance.SaveOvenBreaker(amount);
-                    AnalyticsEvent.Custom("BuyMixer " + amount.ToString());
+                   
                     break;
             }
 
@@ -332,39 +332,8 @@ public class UI_Booster : MonoBehaviour
         // not enough coin
         else
         {
-            
-               
-                shopPopup.OpenPopup();
-                switch (booster)
-                {
-                    case BOOSTER_TYPE.BEGIN_FIVE_MOVES:
-                        AnalyticsEvent.Custom("BuyBeginXBreakerToShop");
-                        break;
-                    case BOOSTER_TYPE.BEGIN_RAINBOW_BREAKER:
-                        AnalyticsEvent.Custom("BuyBeginColorHunterToShop");
-                        break;
-                    case BOOSTER_TYPE.BEGIN_BOMB_BREAKER:
-                        AnalyticsEvent.Custom("BuyBeginBombToShop");
-                        break;
-
-                    case BOOSTER_TYPE.SINGLE_BREAKER:
-                        AnalyticsEvent.Custom("BuySingleBreakerToShop");
-                        break;
-                    case BOOSTER_TYPE.ROW_BREAKER:
-                        AnalyticsEvent.Custom("BuyRowBreakerToShop");
-                        break;
-                    case BOOSTER_TYPE.COLUMN_BREAKER:
-                        AnalyticsEvent.Custom("BuyColumnBreakerToShop");
-                        break;
-                    case BOOSTER_TYPE.RAINBOW_BREAKER:
-                        AnalyticsEvent.Custom("BuyColorHunterToShop");
-                        break;
-                    case BOOSTER_TYPE.OVEN_BREAKER:
-                        AnalyticsEvent.Custom("BuyMixerToShop");
-                        break;
-                }
-
-            
+            shopPopup.OpenPopup();
+                
         }
     }
 

@@ -6,7 +6,7 @@ using System.IO;
 //sing System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.UI;
 using UnityEngine.Analytics;
-using Unity.RemoteConfig;
+ 
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -319,8 +319,8 @@ public class Configuration : MonoBehaviour
     public bool StarChallengeEvent;
     public bool MissionChallengeEvent;
     public bool LevelChallengeEvent;
-    public bool DailyGiftEvent;
-    public bool GiftWheelEvent;
+   
+   
     public bool GemboxEvent;
     public bool LevelBoxEvent;
     public bool EpisodeBoxEvent;
@@ -331,81 +331,11 @@ public class Configuration : MonoBehaviour
     public bool OfflinePunishment;
     public bool BoostersCorrection;
 
-    [Header("Reward Ads")]
-    public bool LevelBeginReward;
-    public bool GamePlayReward;
-    public bool LifePopupReward;
-    public bool MoreMovesReward;
-    public bool LimitedMoreMovesReward;
-    public bool DoubleStarReward;
-    public bool DoubleScoreReward;
-
-    [Header("Promo Packets")]
-    public bool Promo0;
-    public bool Promo1;
-    public bool Promo2;
+ 
+ 
 
 
-    //[Header("ADS")]
-
-    //public bool MediationInter;
-    //public bool MediationReward;
-    //public int InterAdsKey = 213;
-    //public int RewardAdsKey = 213;
-
-
-    //public bool AdmobAdsInter;
-    //public bool AdmobAdsReward;
-    //public bool AdmobAdsBanner;
-
-    //public bool UnityAdsInter;
-    //public bool UnityAdsReward;
-
-    //public bool ChrAdsInter;
-    //public bool ChrAdsReward;
-
-
-    //public bool AdmobInterFloorA;
-    //public bool AdmobInterFloorB;
-    //public bool AdmobInterFloorC;
-    //public bool AdmobInterFloorD;
-    //public bool AdmobInterFloorE;
-    //public bool AdmobInterFloorF;
-    //public bool AdmobInterFloorG;
-    //public bool AdmobInterFloorH;
-
-    //public bool AdmobRewardFloorA;
-    //public bool AdmobRewardFloorB;
-    //public bool AdmobRewardFloorC;
-    //public bool AdmobRewardFloorD;
-    //public bool AdmobRewardFloorE;
-    //public bool AdmobRewardFloorF;
-    //public bool AdmobRewardFloorG;
-    //public bool AdmobRewardFloorH;
-
-
-    //public bool UnityInterFloorA;
-    //public bool UnityInterFloorB;
-    //public bool UnityInterFloorC;
-    //public bool UnityInterFloorD;
-    //public bool UnityInterFloorE;
-    //public bool UnityInterFloorF;
-    //public bool UnityInterFloorG;
-    //public bool UnityInterFloorH;
-
-    //public bool UnityRewardFloorA;
-    //public bool UnityRewardFloorB;
-    //public bool UnityRewardFloorC;
-    //public bool UnityRewardFloorD;
-    //public bool UnityRewardFloorE;
-    //public bool UnityRewardFloorF;
-    //public bool UnityRewardFloorG;
-    //public bool UnityRewardFloorH;
-
-
-    public bool AmzInterAds = true;
-    public int ShowAdsEvery;
-    public int FirstShowAds;
+ 
     public int FirstGoMap;
 
     [Header("Start Levels")]
@@ -416,15 +346,7 @@ public class Configuration : MonoBehaviour
     public int BeginLevelLevelChallenge = 20;
     public int BeginLevelGembox = 25;
     public int BeginLevelRateUs = 12;
-
-
-
-    [Header("SHOW RATE")]
-    public int ShowRateUsEvery;
-    public bool RateShowed;
-    public bool PromoShowed;
-    public string RateKey = "RatedKey";
-
+     
 
     [Header("STARBOX VE SCOREBOX")]
     public int StarBoxFullAmount;
@@ -472,26 +394,7 @@ public class Configuration : MonoBehaviour
     public bool GemboxActive;
     public bool GemboxDeactive;
     public int reenable;
-
-    [Header("STORE")]
-    public string Pack1_cost = "1.99$";
-    public string Pack2_cost = "5.99$";
-    public string Pack3_cost = "12.99$";
-    public string Pack4_cost = "19.99$";
-
-    public string Gems_60_cost = "0.99";
-    public string Gems_600_cost = "4.99$";
-    public string Gems_1200_cost = "9.99$";
-    public string Gems_2500_cost = "17.99$";
-    public string Gems_5200_cost = "32.99$";
-    public string Gems_12000_cost = "59.99$";
-
-    public string RemoveAds_cost = "2.99$";
-    public string UnlimitedLife_cost = "6.99$";
-
-    public string promo0_cost = "9.99$";
-    public string promo1_cost = "3.99$";
-    public string promo2_cost = "4.99$";
+ 
 
 
     // max level
@@ -594,20 +497,9 @@ public class Configuration : MonoBehaviour
     public int plusMoves = 5;
     public bool showHint;
 
-    [Header("Shop")]
-    public float product1Price;
-    public float product2Price;
-    public float product3Price;
-    public float product4Price;
-    public float product5Price;
+  
 
-    [Header("Product")]
-    public int product1Coin;
-    public int product2Coin;
-    public int product3Coin;
-    public int product4Coin;
-    public int product5Coin;
-    public int watchVideoCoin;
+ 
 
     [Header("Check")]
     // map config
@@ -698,8 +590,7 @@ public class Configuration : MonoBehaviour
         LevelNumber();
        
         //Unity Remote Config        
-        ConfigManager.FetchCompleted += ApplySettings;
-        ConfigManager.FetchConfigs<userAttributes, appAttributes>(new userAttributes(), new appAttributes());
+      
 
         DontDestroyOnLoad(gameObject);
         ReadyFreeBoxesCount = PlayerPrefs.GetInt("ReadyFreeBoxesCount");
@@ -708,9 +599,9 @@ public class Configuration : MonoBehaviour
     
     public int LevelNumber()
     {
-        //bilalbhai
-        LeveltoPlay = 40;//SkillzCrossPlatform.Random.Range(15, 40);
-        //FireBaseAnalytics.instance.Log_Event("Level_Number_" + LeveltoPlay);
+      
+        LeveltoPlay =  SkillzCrossPlatform.Random.Range(15, 40);
+       
         return LeveltoPlay;
     }
 
@@ -729,73 +620,13 @@ public class Configuration : MonoBehaviour
             WinLevel = 0;
         }
     }
-    public void ApplySettings(ConfigResponse response)
-    {
-       
-        FirstGoMap = ConfigManager.appConfig.GetInt("FirstGoMap", 2);
-        Tutorial = ConfigManager.appConfig.GetBool("Tutorial", true);
-        GiftWheelEvent = ConfigManager.appConfig.GetBool("GiftWheelEvent", false);
-        GemboxEvent = ConfigManager.appConfig.GetBool("GemboxEvent", false);
-        DailyGiftEvent = ConfigManager.appConfig.GetBool("DailyGiftEvent", false);
-        LevelChallengeEvent = ConfigManager.appConfig.GetBool("LevelChallengeEvent", false);
-        StarChallengeEvent = ConfigManager.appConfig.GetBool("StarChallengeEvent", false);
-        MissionChallengeEvent = ConfigManager.appConfig.GetBool("MissionChallengeEvent", false);
-        LevelBoxEvent = ConfigManager.appConfig.GetBool("LevelBoxEvent", false);
-        EpisodeBoxEvent = ConfigManager.appConfig.GetBool("EpisodeBoxEvent", false);
-        
-        MessageBoardTitle = ConfigManager.appConfig.GetString("MessageBoardTitle", "Unlimited Life Week!");
-        MessageBoardInfo = ConfigManager.appConfig.GetString("MessageBoardInfo", "Enjoy unlimited lives this week!");
-        MessagePopup = ConfigManager.appConfig.GetBool("MessagePopup", false);       
-        BoostersCorrection = ConfigManager.appConfig.GetBool("AIBoostersCorrection", false);
-        OfflinePunishment = ConfigManager.appConfig.GetBool("AIOfflinePunishment", false);
-        DailyRewardTimeLive = ConfigManager.appConfig.GetBool("LifeDailyRewardTimeLive", false);
-        DailyRewardTime = ConfigManager.appConfig.GetFloat("LifeDailyRewardTime", 7200f);
-        lifeReplenishTime = ConfigManager.appConfig.GetFloat("LifeReplenishTime", 1200f);
-        WaitMenuInitSeconds = ConfigManager.appConfig.GetFloat("WaitMenuInitSeconds", 5f);
-        recoveryCostPerLife = ConfigManager.appConfig.GetInt("LiferecoveryCostPerLife", 20);
-        
-        Promo0 = ConfigManager.appConfig.GetBool("promosyon0", false);
-        Promo1 = ConfigManager.appConfig.GetBool("promosyon1", false);
-        Promo2 = ConfigManager.appConfig.GetBool("promosyon2", false);
-        MenuSceneBypass = ConfigManager.appConfig.GetBool("MenuSceneBypass", false);
-
-        Debug.Log("APPLY SETTINGS");
-        RemoteConfigOk = true;
-
-        Loaded = true;
-    }
-
-    public void FirstInteraction(string id)
-    {
-        AnalyticsEvent.FirstInteraction(id, new Dictionary<string, object>
-        {
-            {"Opened Level ", CoreData.instance.openedLevel},
-            {"Player Gems ", CoreData.instance.playerCoin}
-
-        });
-
-    }
-    public void CustomEvent(string id)
-    {
-        AnalyticsEvent.Custom(id, new Dictionary<string, object>
-        {
-            {"Opened Level ", CoreData.instance.openedLevel},
-            {"Episode ", Configuration.instance.episode},          
-            {"Player Gems ", CoreData.instance.playerCoin},
-        });
-
-    }
+    
+   
+    
 
     void OnDestroy()
     {
-        try
-        {
-            ConfigManager.FetchCompleted -= ApplySettings;
-        }
-        catch (Exception exception)
-        {
-            Debug.Log(exception.Message);
-        }
+      
        
         Debug.Log("--APPLY SETTINGS");
     }

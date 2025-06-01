@@ -6,7 +6,7 @@ using TMPro;
 using SkillzSDK;
 
 namespace SkillzSDK
-{
+{ 
   public class SkillzDebugController : MonoBehaviour
   {
 

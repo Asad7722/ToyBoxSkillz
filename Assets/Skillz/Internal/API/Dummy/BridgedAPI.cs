@@ -65,6 +65,12 @@ namespace SkillzSDK.Internal.API.Dummy
 		{
 		}
 
+		public void InitializeSimulatedMatch(string matchInfoJson, int randomSeed)
+		{
+			// Default implementation (can be empty)
+			throw new System.NotImplementedException("This method is not implemented for this platform.");
+		}
+
 		public void LaunchSkillz()
 		{
 		}

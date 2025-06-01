@@ -34,6 +34,14 @@ public sealed class SkillzDelegate : MonoBehaviour
 		SkillzState.NotifyProgressionRoomEnter();
 	}
 
+	/// <summary>
+	/// This method is called when a user enters the Tutorial Screen
+	/// </summary>
+	private void OnTutorialScreenEnter()
+	{
+		SkillzState.NotifyTutorialScreenEnter();
+	}
+
 	private void OnEventReceived(string receivedEvent)
 	{
 		Dictionary<string, object> receivedEventDict = SkillzSDK.MiniJSON.Json.Deserialize(receivedEvent) as Dictionary<string, object>;
@@ -56,6 +64,11 @@ public sealed class SkillzDelegate : MonoBehaviour
 	private void OnNPUConversion()
   	{
 		SkillzState.NotifyOnNPUConversion();
+  	}
+
+	private void OnReceivedMemoryWarning()
+  	{
+		SkillzState.NotifyOnReceivedMemoryWarning();
   	}
 
     /// <summary>

@@ -121,7 +121,7 @@
     <androidPackage spec="io.csie.kudo.reactnative.v8:react-native-v8:2.2.3">
     </androidPackage>
 
-    <androidPackage spec="com.swmansion.reanimated:react-native-reanimated-v8:3.5.4">
+    <androidPackage spec="com.swmansion.reanimated:react-native-reanimated-v8:3.6.1">
     </androidPackage>
     <androidPackage spec="io.card:card-io:6.0-skillz">
     </androidPackage>
@@ -161,6 +161,6 @@
     </androidPackage>
   </androidPackages>
   <iosPods>
-    <iosPod name="Skillz" minTargetSdk="12.0" addToAllTargets="true" version="2024.0.46"/>
+    <iosPod name="Skillz" minTargetSdk="12.0" addToAllTargets="true" version="2024.1.24"/>
   </iosPods>
 </dependencies>

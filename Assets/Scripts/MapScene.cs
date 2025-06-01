@@ -180,58 +180,7 @@ public class MapScene : MonoBehaviour
                 }
             }
         }
-        #region commented by sameer wheel
-        //Gift Wheel Event
-        //if (Configuration.instance.GiftWheelEvent)
-        //{
-
-        //    if (openedLevel >= Configuration.instance.BeginLevelFortuneWheel)
-        //    {
-        //        var eventfab = Instantiate(Resources.Load("Prefabs/EVENTS/FortuneWheel")) as GameObject;
-        //        eventfab.transform.SetParent(RightIcons.transform, false);
-        //        if (PlayerPrefs.GetInt("ShowHelpFortuneWheel") == 0 && !GameObject.Find("Hand(Clone)"))
-        //        {
-        //            GetGift = true;
-        //            //var diffuse = Instantiate(Resources.Load("Prefabs/HELP/Diffuse")) as GameObject;
-        //            var prefab = Instantiate(Resources.Load("Prefabs/HELP/Hand")) as GameObject;
-        //           // diffuse.transform.SetParent(d_canvas.transform, false);
-        //            //eventfab.transform.SetParent(d_canvas.transform, false);
-        //            prefab.transform.SetParent(eventfab.transform, false);
-        //            PlayerPrefs.SetInt("ShowHelpFortuneWheel", 1);
-        //            PlayerPrefs.Save();
-        //        }
-        //    }
-        //}
-
-        //Daily Gift Event
-        //if (Configuration.instance.DailyGiftEvent)
-        //{
-
-        //    if (openedLevel >= Configuration.instance.BeginLevelDailyBonus)
-        //    {
-        //        var eventfab = Instantiate(Resources.Load("Prefabs/EVENTS/DailyBonus")) as GameObject;
-        //        eventfab.transform.SetParent(RightIcons.transform, false);
-
-        //        if (PlayerPrefs.GetInt("ShowHelpDailyBonus") == 0 && !GameObject.Find("Hand(Clone)"))
-        //        {
-        //            eventfab.GetComponent<EventManager>()._Event1Enable = true;
-        //            eventfab.GetComponent<EventManager>().E1_Icon.SetActive(true);
-
-        //            GetGift = true;
-        //            //var diffuse = Instantiate(Resources.Load("Prefabs/HELP/Diffuse")) as GameObject;
-        //            var prefab = Instantiate(Resources.Load("Prefabs/HELP/Hand")) as GameObject;
-        //            //diffuse.transform.SetParent(d_canvas.transform, false);
-        //            //eventfab.transform.SetParent(d_canvas.transform, false);
-        //            prefab.transform.SetParent(eventfab.transform, false);
-        //            PlayerPrefs.SetInt("ShowHelpDailyBonus", 1);
-        //            PlayerPrefs.Save();
-        //        }
-        //    }
-        //}
-
-        //5 TO 5 Event
-        #endregion
-        if (Configuration.instance.LevelChallengeEvent)
+          if (Configuration.instance.LevelChallengeEvent)
         {
 
             if (openedLevel >= Configuration.instance.BeginLevelLevelChallenge)
@@ -411,63 +360,7 @@ public class MapScene : MonoBehaviour
                     Configuration.instance.CloseClick = true;
                 }
             }
-            else //Promo Popup   
-            {
-                   
-
-                if (Configuration.instance.Promo0 && PlayerPrefs.GetInt("Promo0") == 1 && PlayerPrefs.GetInt("PromoShowed") == 0)
-                {
-                    if (Configuration.instance.MenuToMap && !GetGift)
-                    {
-                        ShowPromo0();
-                        PlayerPrefs.SetInt("PromoShowed", 1);
-                        PlayerPrefs.Save();
-
-                        Configuration.instance.CloseClick = false;
-
-                    }
-                    else
-                    {
-                        Configuration.instance.CloseClick = true;
-                    }
-                }
-                else if (Configuration.instance.Promo1 && PlayerPrefs.GetInt("Promo1") == 1 && PlayerPrefs.GetInt("PromoShowed") == 0)
-                {
-                    if (Configuration.instance.MenuToMap && !GetGift)
-                    {
-                        ShowPromo1();
-                        PlayerPrefs.SetInt("PromoShowed", 1);
-                        PlayerPrefs.Save();
-                        Configuration.instance.CloseClick = false;
-
-                    }
-                    else
-                    {
-                        Configuration.instance.CloseClick = true;
-                    }
-
-                }
-                else if (Configuration.instance.Promo2 && PlayerPrefs.GetInt("Promo2") == 1 && PlayerPrefs.GetInt("PromoShowed") == 0)
-                {
-                    if (Configuration.instance.MenuToMap && !GetGift)
-                    {
-                        ShowPromo2();
-                        PlayerPrefs.SetInt("PromoShowed", 1);
-                        PlayerPrefs.Save();
-                        Configuration.instance.CloseClick = false;
-
-                    }
-                    else
-                    {
-                        Configuration.instance.CloseClick = true;
-                    }
-                }
-                else
-                {
-                    Configuration.instance.CloseClick = true;
-                }
-
-            }
+        
 
 
         }
@@ -1777,7 +1670,7 @@ public class MapScene : MonoBehaviour
     {
         //print("Configuration: On application quit / Exit date time: " + DateTime.Now.ToString() + " / Life: " + life + " / Timer: " + timer);
 
-        AnalyticsEvent.GameOver(CoreData.instance.openedLevel, "Map Scene");       
+       
     }
 
 

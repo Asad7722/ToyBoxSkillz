@@ -132,7 +132,7 @@ public class toy : MonoBehaviour {
         LabelText.text = "" + (PlayerPrefs.GetInt("toy" + ToyNumber)) + " /" + TargetToyAmount;
         //CoreData.instance.SavePlayerCoin(CoreData.instance.playerCoin += GiftGemsAmount);
         Configuration.instance.OpenGiftBoxPopup("Gift Box", REWARD_TYPE.ToyCollectionReward);
-        AnalyticsEvent.Custom("ToyCollectionsWinPopup");
+        
         try
         {
             GameObject.Find("MapScene").GetComponent<MapScene>().UpdateCoinAmountLabel();

@@ -157,7 +157,7 @@ public class MissionChallenge : MonoBehaviour
         {
             //DailyMissionGiftBox.OpenPopup();
             Configuration.instance.OpenGiftBoxPopup("Treasure Box", REWARD_TYPE.MissionChallengeGiftBox);
-            AnalyticsEvent.Custom("MissionWinPopup");
+           
             NewLifeRewardTime.instance.StartRewardLife(Configuration.instance.WinChallengeRewardTime);
 
 

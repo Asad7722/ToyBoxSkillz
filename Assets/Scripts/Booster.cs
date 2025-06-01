@@ -335,7 +335,7 @@ public class Booster : MonoBehaviour
                 // change text
 
                 singleAmount.text = amount.ToString();
-                AnalyticsEvent.Custom("ClickSingleBooster");
+           
                 //achievement
                 Configuration.SaveAchievement("ach_use10singleBreaker",1);
             }
@@ -355,7 +355,7 @@ public class Booster : MonoBehaviour
                 // change text
 
                 rowAmount.text = amount.ToString();
-                AnalyticsEvent.Custom("ClickRowBooster");
+               
 
                 //achievement
                 Configuration.SaveAchievement("ach_use10RowBreaker", 1);
@@ -375,7 +375,7 @@ public class Booster : MonoBehaviour
                 // change text
 
                 columnAmount.text = amount.ToString();
-                AnalyticsEvent.Custom("ClickColumnBooster");
+                
                 //achievement
                 Configuration.SaveAchievement("ach_use10ColumnBreaker", 1);
             }
@@ -394,7 +394,7 @@ public class Booster : MonoBehaviour
                 // change text
 
                 rainbowAmount.text = amount.ToString();
-                AnalyticsEvent.Custom("ClickColorHunterBooster");
+                
                 //achievement
                 Configuration.SaveAchievement("ach_use10ColorBreaker", 1);
             }
@@ -413,7 +413,7 @@ public class Booster : MonoBehaviour
                 // change text
 
                 ovenAmount.text = amount.ToString();
-                AnalyticsEvent.Custom("ClickMixerBooster");
+                 
                 //achievement
                 Configuration.SaveAchievement("ach_use10BlenderBall", 1);
             }

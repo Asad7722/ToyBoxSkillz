@@ -10,8 +10,10 @@ namespace SkillzSDK
     public static event SkillzEventsDelegates.OnMatchWillBeginDelegate OnMatchWillBegin;
     public static event SkillzEventsDelegates.OnSkillzWillExitDelegate OnSkillzWillExit;
     public static event SkillzEventsDelegates.OnProgressionRoomEnterDelegate OnProgressionRoomEnter;
+    public static event SkillzEventsDelegates.OnTutorialScreenEnterDelegate OnTutorialScreenEnter;
     public static event SkillzEventsDelegates.OnEventReceivedDelegate OnEventReceived;
     public static event SkillzEventsDelegates.OnNPUConversion OnNPUConversion;
+    public static event SkillzEventsDelegates.OnReceivedMemoryWarning OnReceivedMemoryWarning;
     
     public static void RaiseOnMatchWillBegin(Match match)
     {
@@ -36,6 +38,14 @@ namespace SkillzSDK
         OnProgressionRoomEnter();
       }
     }
+
+    public static void RaiseOnTutorialScreenEnter()
+    {
+      if (OnTutorialScreenEnter != null)
+      {
+        OnTutorialScreenEnter();
+      }
+    }
     
     public static void RaiseOnEventReceived(string eventName, Dictionary<string, string> eventData)
     {
@@ -50,6 +60,14 @@ namespace SkillzSDK
       if (OnNPUConversion != null)
       {
         OnNPUConversion();
+      }
+    }
+
+    public static void RaiseOnReceivedMemoryWarning()
+    {
+      if (OnReceivedMemoryWarning != null)
+      {
+        OnReceivedMemoryWarning();
       }
     }
   }

@@ -301,7 +301,7 @@ public class RewardBox : MonoBehaviour
             //else
             //{
             CoreData.instance.SaveRowBreaker(CoreData.instance.rowBreaker += 1);
-            AnalyticsEvent.Custom("Reward_RowBooster");
+      
 
             //}
 
@@ -321,14 +321,14 @@ public class RewardBox : MonoBehaviour
             if (DoubleGifts)
             {
                 CoreData.instance.SavePlayerCoin(CoreData.instance.playerCoin += 2 * GemAmount);
-                AnalyticsEvent.Custom("Reward_Double_Coin");
+            
 
 
             }
             else
             {
                 CoreData.instance.SavePlayerCoin(CoreData.instance.playerCoin += GemAmount);
-                AnalyticsEvent.Custom("Reward_Coin");
+                
 
             }
 
@@ -358,7 +358,7 @@ public class RewardBox : MonoBehaviour
             //else
             //{
             CoreData.instance.SaveBeginBombBreaker(CoreData.instance.beginBombBreaker += 1);
-            AnalyticsEvent.Custom("Reward_beginBomb");
+          
 
             //}
 
@@ -384,7 +384,7 @@ public class RewardBox : MonoBehaviour
             //else
             //{
             CoreData.instance.SaveBeginFiveMoves(CoreData.instance.beginFiveMoves += 1);
-            AnalyticsEvent.Custom("Reward_BeginXbreaker");
+           
 
             //}
 
@@ -449,7 +449,7 @@ public class RewardBox : MonoBehaviour
             //else
             //{
             CoreData.instance.SaveBeginRainbow(CoreData.instance.beginRainbow += 1);
-            AnalyticsEvent.Custom("Reward_beginRainbow");
+        
 
             //}
 
@@ -476,7 +476,7 @@ public class RewardBox : MonoBehaviour
             //else
             //{
             NewLifeRewardTime.instance.StartRewardLife(1200);
-            AnalyticsEvent.Custom("reward_20m_unlimited_life");
+          
 
             //}
 
@@ -505,7 +505,7 @@ public class RewardBox : MonoBehaviour
             //else
             //{
             NewLifeRewardTime.instance.StartRewardLife(3600);
-            AnalyticsEvent.Custom("reward_1h_unlimited_life");
+           
 
             //}
 
@@ -534,7 +534,7 @@ public class RewardBox : MonoBehaviour
             //else
             //{
             NewLifeRewardTime.instance.StartRewardLife(7200);
-            AnalyticsEvent.Custom("reward_2h_unlimited_life");
+            
 
             // }
 
@@ -561,7 +561,7 @@ public class RewardBox : MonoBehaviour
             //else
             //{
             CoreData.instance.SaveOvenBreaker(CoreData.instance.ovenBreaker += 1);
-            AnalyticsEvent.Custom("Reward_MixerBooster");
+            
 
             //}
 
@@ -591,7 +591,7 @@ public class RewardBox : MonoBehaviour
             //else
             //{
             CoreData.instance.SaveRainbowBreaker(CoreData.instance.rainbowBreaker += 1);
-            AnalyticsEvent.Custom("Reward_ColorHunter");
+          
             AudioManager.instance.giftsound();
 
             CoreData.instance.SaveGiftAmount(CoreData.instance.giftAmount += 1);
@@ -616,7 +616,7 @@ public class RewardBox : MonoBehaviour
             //else
             //{
             CoreData.instance.SaveSingleBreaker(CoreData.instance.singleBreaker += 1);
-            AnalyticsEvent.Custom("Reward_SingleBooster");
+          
 
 
             //}
@@ -643,7 +643,7 @@ public class RewardBox : MonoBehaviour
             //else
             //{
             CoreData.instance.SaveColumnBreaker(CoreData.instance.columnBreaker += 1);
-            AnalyticsEvent.Custom("Reward_ColumnBooster");
+          
 
             //}
 

@@ -121,6 +121,12 @@ namespace SkillzSDK.Internal.API
 			actualAPI.Initialize(gameID, environment, orientation);
 		}
 
+		public void InitializeSimulatedMatch(string matchInfoJson, int randomSeed)
+		{
+			// Default implementation (can be empty)
+			actualAPI.InitializeSimulatedMatch(matchInfoJson, randomSeed);
+		}
+
 		public void LaunchSkillz()
 		{
 			actualAPI.LaunchSkillz();

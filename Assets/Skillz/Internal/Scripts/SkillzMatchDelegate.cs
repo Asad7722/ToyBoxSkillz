@@ -26,10 +26,27 @@ public interface SkillzMatchDelegate
     /// </summary>
     void OnProgressionRoomEnter();
 
-     /// <summary>
+    /// <summary>
     /// This method is called when a new paying user enters their first cash match
     /// This method is optional to implement. 
     /// </summary>
     void OnNPUConversion();
+
+    /// <summary>
+    /// This method is called when your game receives a memory warning.
+    /// This method is optional to implement, and is only implemented on the Web
+    /// </summary>
+    void OnReceivedMemoryWarning();
+
+	/// <summary>
+	/// This method is called when a user enters the Tutorial Screen
+    /// This method is optional to implement. This method should only be implemented if your game has
+    /// own game tutorial.
+	/// </summary>
+    void OnTutorialScreenEnter()
+    {
+        // Default implementation - goes back to skillz if there's no tutorial screen.
+        SkillzCrossPlatform.ReturnToSkillz();
+    }
 }
 

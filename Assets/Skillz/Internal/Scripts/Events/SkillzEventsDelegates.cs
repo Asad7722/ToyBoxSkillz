@@ -10,7 +10,9 @@ namespace SkillzSDK
     public delegate void OnMatchWillBeginDelegate(Match match);
     public delegate void OnSkillzWillExitDelegate();
     public delegate void OnProgressionRoomEnterDelegate();
+    public delegate void OnTutorialScreenEnterDelegate();
     public delegate void OnEventReceivedDelegate(string eventName, Dictionary<string,string> eventData);
     public delegate void OnNPUConversion();
+    public delegate void OnReceivedMemoryWarning();
   }
 }

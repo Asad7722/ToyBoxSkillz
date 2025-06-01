@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using SkillzSDK.Internal.API;
 using SkillzSDK.Settings;
+using SkillzSDK.Internal.API.Web;
 using UnityEngine;
 
 namespace SkillzSDK
@@ -36,6 +37,25 @@ namespace SkillzSDK
 
 			try
 			{
+#if UNITY_WEBGL
+				try
+				{
+					if (!Debug.isDebugBuild)
+					{
+						string randomSeedString = JsBridge.SyncTask("GetRandom");
+						Debug.Log($"Random Seed: {randomSeedString}");
+
+						RandomSeed randomSeed = JsonUtility.FromJson<RandomSeed>(randomSeedString);
+						Debug.Log($"Random Seed obj: {randomSeedString}");
+
+						ClangBridge.SeedRandomWithArray(randomSeed.seed);
+					}
+				}
+				catch (System.Exception ex)
+				{
+					Debug.LogError($"Error initializing seed: {ex.Message}\n{ex.StackTrace}");
+				}
+#endif
 				Match matchInfo = new Match(matchInfoDict);
 
 				if (asyncDelegate != null)
@@ -84,6 +104,20 @@ namespace SkillzSDK
 			}
 		}
 
+        public static void NotifyTutorialScreenEnter()
+        {
+            if (asyncDelegate != null)
+            {
+                SkillzDebug.Log(SkillzDebug.Type.SKILLZ, "Calling SkillzMatchDelegate NotifyTutorialScreenEnter() callback");
+                asyncDelegate.OnTutorialScreenEnter();
+            }
+            else
+            {
+                SkillzDebug.Log(SkillzDebug.Type.SKILLZ, "Calling SkillzEvents.RaiseOnTutorialScreenEnter event");
+                SkillzEvents.RaiseOnTutorialScreenEnter();
+            }
+        }
+
 		public static void NotifyOnNPUConversion()
 		{
 			if (asyncDelegate != null)
@@ -95,6 +129,20 @@ namespace SkillzSDK
 			{
 				SkillzDebug.Log(SkillzDebug.Type.SKILLZ, "Calling SkillzEvents.OnNPUConversion event");
 				SkillzEvents.RaiseOnNPUConversion();
+			}
+		}
+
+		public static void NotifyOnReceivedMemoryWarning()
+		{
+			if (asyncDelegate != null)
+			{
+				SkillzDebug.Log(SkillzDebug.Type.SKILLZ, "Calling SkillzMatchDelegate OnReceivedMemoryWarning() callback");
+				asyncDelegate.OnReceivedMemoryWarning();
+			}
+			else
+			{
+				SkillzDebug.Log(SkillzDebug.Type.SKILLZ, "Calling SkillzEvents.OnReceivedMemoryWarning event");
+				SkillzEvents.RaiseOnReceivedMemoryWarning();
 			}
 		}
 
@@ -136,7 +184,7 @@ namespace SkillzSDK
 
 			gameObject.AddComponent<SkillzDelegate>();
 
-#if UNITY_IOS || UNITY_ANDROID
+#if UNITY_IOS || UNITY_ANDROID || UNITY_WEBGL
 			UnityEngine.Object.DontDestroyOnLoad(gameObject);
 #endif
 		}

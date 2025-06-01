@@ -160,7 +160,7 @@ public class itemGrid : MonoBehaviour
             {
                 int currentStage = StageLoader.instance.Stage + 1448;
                 //Unity Analytic Level Start Rapor        
-                AnalyticsEvent.LevelStart(currentStage.ToString());
+               
 
              
 
@@ -170,7 +170,7 @@ public class itemGrid : MonoBehaviour
             else
             {
                 //Unity Analytic Level Start Rapor        
-                AnalyticsEvent.LevelStart(StageLoader.instance.Stage.ToString());
+               
 
          
             } 
@@ -2339,7 +2339,7 @@ public class itemGrid : MonoBehaviour
                 explosion.transform.position = cookie.transform.position;
             }
 
-            AnalyticsEvent.Custom("beginXBreaker");
+           
 
         }
 
@@ -2357,7 +2357,7 @@ public class itemGrid : MonoBehaviour
             CoreData.instance.SaveBeginRainbow(CoreData.instance.GetBeginRainbow() - 1);
 
             AddBoostersColorHunter(1);
-            AnalyticsEvent.Custom("beginColorHunter");
+          
 
 
         }
@@ -2397,7 +2397,7 @@ public class itemGrid : MonoBehaviour
                 explosion.transform.position = cookie.transform.position;
             }
 
-            AnalyticsEvent.Custom("beginBomb");
+           
 
         }
 
@@ -5546,7 +5546,7 @@ public class itemGrid : MonoBehaviour
                     explosion.transform.position = cookie3.transform.position;
                 }
             }
-            AnalyticsEvent.Custom("AdsBeginReward");
+         
 
 
         }
@@ -5688,7 +5688,7 @@ public class itemGrid : MonoBehaviour
                 explosion.transform.position = cookie3.transform.position;
             }
         }
-        AnalyticsEvent.Custom("buyingextra5moves");
+       
 
 
     }
@@ -7815,7 +7815,7 @@ public class itemGrid : MonoBehaviour
             {
                 RewardBoosterNum--;
                 RewardBoosterNumText.text = "" + RewardBoosterNum;
-                AnalyticsEvent.Custom("AdsGamePlayAddBoosters");
+          
 
             }
 
@@ -7831,7 +7831,7 @@ public class itemGrid : MonoBehaviour
     {
         //print("Configuration: On application quit / Exit date time: " + DateTime.Now.ToString() + " / Life: " + life + " / Timer: " + timer);
 
-        AnalyticsEvent.GameOver(CoreData.instance.openedLevel, "Game Play Scene");
+       
     }
 
 

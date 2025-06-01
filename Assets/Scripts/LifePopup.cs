@@ -90,7 +90,7 @@ public class LifePopup : MonoBehaviour
             // open shop popup
             //GameObject.Find("MapScene").GetComponent<MapScene>().CoinButtonClick();           
             StartCoroutine(Goshop());
-            AnalyticsEvent.Custom("ClickRecoveryLifeButtonToShop");
+            
             
 
 
@@ -114,7 +114,7 @@ public class LifePopup : MonoBehaviour
             lifeRemain.text = "" + NewLife.instance.maxLives.ToString() + "/" + NewLife.instance.maxLives.ToString();
             recoveryButton.SetActive(false);
             recoveryCost.gameObject.transform.parent.gameObject.SetActive(false);
-            AnalyticsEvent.Custom("ClickRecoveryLifeButton");
+         
             
 
         }
@@ -160,7 +160,7 @@ public class LifePopup : MonoBehaviour
         AudioManager.instance.ButtonClickAudio();
         Configuration.instance.OneTimePlay = true;
         Transition.LoadLevel("Play", 0.1f, Color.black);
-        AnalyticsEvent.Custom("ClickAdsLifeButton");
+      
         
         //REWARD 
         //AdsManager.LoadReward();

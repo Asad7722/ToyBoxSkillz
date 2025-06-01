@@ -7,13 +7,14 @@ using SkillzSDK.Extensions;
 
 using JSONDict = System.Collections.Generic.Dictionary<string, object>;
 using System.Linq;
+using SkillzSDK.Internal.Encryption;
 
 namespace SkillzSDK
 {
     /// <summary>
     /// A Skillz user.
     /// </summary>
-    public class Player
+    public class Player : IPlayer
     {
         /// <summary>
         /// The user's display name.
@@ -28,7 +29,7 @@ namespace SkillzSDK
         /// <summary>
         /// A Tournament Player ID unique to this user.
         /// </summary>
-        public readonly UInt64? TournamentPlayerID;
+        public UInt64? TournamentPlayerID { get; }
 
         /// <summary>
         /// A link to the user's avatar image.
@@ -43,7 +44,7 @@ namespace SkillzSDK
         /// <summary>
         /// This Player represents the current user if this is true.
         /// </summary>
-        public readonly bool IsCurrentPlayer;
+        public bool IsCurrentPlayer { get; }
 
         /// <summary>
         /// This Player was already an New Paying User
@@ -53,38 +54,37 @@ namespace SkillzSDK
 
         public Player(JSONDict playerJSON)
         {
-          if (Application.isEditor)
-          {
-            ID = playerJSON.SafeGetUintValue("id");
-            DisplayName = playerJSON.SafeGetStringValue("displayName");
-            AvatarURL = playerJSON.SafeGetStringValue("avatarURL");
-            FlagURL = playerJSON.SafeGetStringValue("flagURL");
-            IsCurrentPlayer = (bool)playerJSON.SafeGetBoolValueDefaultFalse("isCurrentPlayer");
-            TournamentPlayerID = playerJSON.SafeGetUintValue("tournamentPlayerId");
-            IsNewPayingUser = (bool)playerJSON.SafeGetBoolValueDefaultFalse("isNewPayingUser");
-          }
-          else
-          {
-#if UNITY_IOS
-            ID = playerJSON.SafeGetUintValue("id");
-            DisplayName = playerJSON.SafeGetStringValue("displayName");
-            AvatarURL = playerJSON.SafeGetStringValue("avatarURL");
-            FlagURL = playerJSON.SafeGetStringValue("flagURL");
-            IsCurrentPlayer = (bool)playerJSON.SafeGetBoolValue("isCurrentPlayer");
-            TournamentPlayerID = playerJSON.SafeGetUintValue("playerMatchId");
-            IsNewPayingUser = (bool)playerJSON.SafeGetBoolValueDefaultFalse("isNewPayingUser");
+            if (Application.isEditor)
+            {
+                ID = playerJSON.SafeGetUintValue("id");
+                DisplayName = playerJSON.SafeGetStringValue("displayName");
+                AvatarURL = playerJSON.SafeGetStringValue("avatarURL");
+                FlagURL = playerJSON.SafeGetStringValue("flagURL");
+                IsCurrentPlayer = (bool)playerJSON.SafeGetBoolValueDefaultFalse("isCurrentPlayer");
+                TournamentPlayerID = playerJSON.SafeGetUintValue("tournamentPlayerId");
+                IsNewPayingUser = (bool)playerJSON.SafeGetBoolValueDefaultFalse("isNewPayingUser");
+            }
+            else
+            {
+#if UNITY_IOS || UNITY_WEBGL
+                ID = playerJSON.SafeGetUintValue("id");
+                DisplayName = playerJSON.SafeGetStringValue("displayName");
+                AvatarURL = playerJSON.SafeGetStringValue("avatarURL");
+                FlagURL = playerJSON.SafeGetStringValue("flagURL");
+                IsCurrentPlayer = (bool)playerJSON.SafeGetBoolValue("isCurrentPlayer");
+                TournamentPlayerID = playerJSON.SafeGetUlongValue("playerMatchId");
+                IsNewPayingUser = (bool)playerJSON.SafeGetBoolValueDefaultFalse("isNewPayingUser");
 #elif UNITY_ANDROID
-            ID = playerJSON.SafeGetUintValue("userId");
-            DisplayName = playerJSON.SafeGetStringValue("userName");
-            AvatarURL = playerJSON.SafeGetStringValue("avatarUrl");
-            FlagURL = playerJSON.SafeGetStringValue("flagUrl");
-            IsCurrentPlayer = (bool)playerJSON.SafeGetBoolValue("isCurrentPlayer");
-            TournamentPlayerID = playerJSON.SafeGetUintValue("playerMatchId");
-            IsNewPayingUser = (bool)playerJSON.SafeGetBoolValueDefaultFalse("isNewPayingUser");
+                ID = playerJSON.SafeGetUintValue("userId");
+                DisplayName = playerJSON.SafeGetStringValue("userName");
+                AvatarURL = playerJSON.SafeGetStringValue("avatarUrl");
+                FlagURL = playerJSON.SafeGetStringValue("flagUrl");
+                IsCurrentPlayer = (bool)playerJSON.SafeGetBoolValue("isCurrentPlayer");
+                TournamentPlayerID = playerJSON.SafeGetUintValue("playerMatchId");
+                IsNewPayingUser = (bool)playerJSON.SafeGetBoolValueDefaultFalse("isNewPayingUser");
 #endif
-          }
+            }
         }
-
 
         public override string ToString()
         {
@@ -101,7 +101,7 @@ namespace SkillzSDK
     /// <summary>
     /// A Skillz match.
     /// </summary>
-    public class Match
+    public class Match : IMatch
     {
         /// <summary>
         /// Gets a value indicating whether this <see cref="T:SkillzSDK.Match"/> represents a custom synchronous match.
@@ -130,12 +130,12 @@ namespace SkillzSDK
         /// <summary>
         /// The unique ID for this match.
         /// </summary>
-        public readonly ulong? ID;
+        public ulong? ID { get; } 
 
         /// <summary>
         /// The unique ID for the tournament template this match is based on.
         /// </summary>
-        public readonly int? TemplateID;
+        public ulong? TemplateID { get; }
 
         /// <summary>
         /// If this game supports "Automatic Difficulty" (specified in the Developer Portal --
@@ -169,7 +169,7 @@ namespace SkillzSDK
         /// <summary>
         /// The user playing this match.
         /// </summary>
-        public readonly List<Player> Players;
+        public List<IPlayer> Players { get; }
 
         /// <summary>
         /// The connection info to a custom server that coordinates a real-time match.
@@ -211,7 +211,7 @@ namespace SkillzSDK
             EntryCash = (float)jsonData.SafeGetDoubleValue("entryCash");
             EntryPoints = jsonData.SafeGetIntValue("entryPoints");
             ID = jsonData.SafeGetUlongValue("id");
-            TemplateID = jsonData.SafeGetIntValue("templateId");
+            TemplateID = jsonData.SafeGetUlongValue("templateId");
             Name = jsonData.SafeGetStringValue("name");
             IsCash = jsonData.SafeGetBoolValue("isCash");
             IsSynchronous = (bool)jsonData.SafeGetBoolValueDefaultFalse("isSynchronous");
@@ -221,7 +221,7 @@ namespace SkillzSDK
             IsVideoAdEntry = jsonData.SafeGetBoolValue("isVideoAdEntry");
 
             object players = jsonData.SafeGetValue("players");
-            Players = new List<Player>();
+            Players = new List<IPlayer>();
 
             List<object> playerArray = (List<object>)players;
             foreach (object player in playerArray)
@@ -230,31 +230,25 @@ namespace SkillzSDK
             }
 
             var connectionInfoJson = jsonData.SafeGetValue("connectionInfo") as JSONDict;
-            CustomServerConnectionInfo = connectionInfoJson != null
-                ? new CustomServerConnectionInfo(connectionInfoJson)
-                : null;
+
+            // Check if connectionInfoJson is null or has null values.
+            if (connectionInfoJson == null ||
+                string.IsNullOrEmpty(connectionInfoJson.SafeGetValue("matchId") as string) ||
+                string.IsNullOrEmpty(connectionInfoJson.SafeGetValue("serverIP") as string) ||
+                string.IsNullOrEmpty(connectionInfoJson.SafeGetValue("matchToken") as string))
+            {
+                CustomServerConnectionInfo = null;
+            }
+            else
+            {
+                CustomServerConnectionInfo = new CustomServerConnectionInfo(connectionInfoJson);
+            }
 
             if (Application.isEditor)
             {
-                SkillzDifficulty = jsonData.SafeGetUintValue("skillzDifficulty");
-
                 GameParams = new Dictionary<string, string>();
-                object simulatedParameters = jsonData.SafeGetValue("gameParameters");
+                SkillzDifficulty = initializeMockData(jsonData);
 
-                if (simulatedParameters != null)
-                {
-                    foreach (object pairs in ((List<object>)simulatedParameters))
-                    {
-                        string key = (string)((JSONDict)pairs)["key"];
-                        string value = (string)((JSONDict)pairs)["value"];
-
-                        if (value == null || key == null)
-                        {
-                            continue;
-                        }
-                        GameParams.Add(key, value);
-                    }
-                }
                 bool? isCustomSync = jsonData.SafeGetBoolValueDefaultFalse("isCustomSynchronousMatch");
                 if (!(isCustomSync.HasValue && isCustomSync.Value)) //If not marked as a custom syncronous match
                 {
@@ -263,28 +257,74 @@ namespace SkillzSDK
             }
             else
             {
-#if UNITY_IOS
                 GameParams = new Dictionary<string, string>();
-                object parameters = jsonData.SafeGetValue("gameParameters");
-                if (parameters != null && parameters.GetType() == typeof(JSONDict)) {
-                    foreach (KeyValuePair<string, object> kvp in (JSONDict)parameters) {
-                        if (kvp.Value == null) {
-                            continue;
-                        }
-
-                        string val = kvp.Value.ToString();
-                        if (kvp.Key == "skillz_difficulty") {
-                            SkillzDifficulty = Helpers.SafeUintParse(val);
-                        } else {
-                            GameParams.Add(kvp.Key, val);
-                        }
-                    }
+#if UNITY_IOS
+                SkillzDifficulty = initializeWebOrIOSData(jsonData);
+#elif UNITY_WEBGL
+                if (Debug.isDebugBuild)
+                {   
+                    SkillzDifficulty = initializeMockData(jsonData);
+                }
+                else
+                {
+                    SkillzDifficulty = initializeWebOrIOSData(jsonData);
                 }
 #elif UNITY_ANDROID
                 GameParams = HashtableToDictionary(SkillzCrossPlatform.GetMatchRules());
                 SkillzDifficulty = jsonData.SafeGetUintValue("skillzDifficulty");
 #endif
             }
+        }
+
+        private uint? initializeMockData(JSONDict jsonData)
+        {
+            uint? skillzDiffFetched = jsonData.SafeGetUintValue("skillzDifficulty");
+
+            object simulatedParameters = jsonData.SafeGetValue("gameParameters");
+
+            if (simulatedParameters != null)
+            {
+                foreach (object pairs in ((List<object>)simulatedParameters))
+                {
+                    string key = (string)((JSONDict)pairs)["key"];
+                    string value = (string)((JSONDict)pairs)["value"];
+
+                    if (value == null || key == null)
+                    {
+                        continue;
+                    }
+                    GameParams.Add(key, value);
+                }
+            }
+            return skillzDiffFetched;
+        }
+
+        private uint? initializeWebOrIOSData(JSONDict jsonData)
+        {
+            uint? skillzDiffFetched = 0;
+            object parameters = jsonData.SafeGetValue("gameParameters");
+            if (parameters != null && parameters.GetType() == typeof(JSONDict))
+            {
+                foreach (KeyValuePair<string, object> kvp in (JSONDict)parameters)
+                {
+                    if (kvp.Value == null)
+                    {
+                        continue;
+                    }
+
+                    string val = kvp.Value.ToString();
+                    if (kvp.Key == "skillz_difficulty")
+                    {
+                        skillzDiffFetched = Helpers.SafeUintParse(val);
+                    }
+                    else
+                    {
+                        GameParams.Add(kvp.Key, val);
+                    }
+                }
+            }
+
+            return skillzDiffFetched;
         }
 
         public override string ToString()

@@ -69,6 +69,12 @@ namespace SkillzSDK.Internal.API.iOS
 			SkillzSyncProxy.Initialize();
 		}
 
+		public void InitializeSimulatedMatch(string matchInfoJson, int randomSeed)
+		{
+			// Default implementation (can be empty)
+			throw new System.NotImplementedException("This method is not implemented for this platform.");
+		}
+
 		public void LaunchSkillz()
 		{
 			InteropMethods._launchSkillz();

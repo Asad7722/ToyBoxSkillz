@@ -5,6 +5,7 @@ using SkillzSDK.Settings;
 using SkillzSDK.MiniJSON;
 using UnityEngine;
 using System.Collections.Generic;
+using JSONDict = System.Collections.Generic.Dictionary<string, object>;
 
 namespace SkillzSDK.Internal.API.UnityEditor
 {
@@ -90,7 +91,15 @@ namespace SkillzSDK.Internal.API.UnityEditor
 
 		public void LaunchSkillz()
 		{
-			SDKScenesLoader.Load(SDKScenesLoader.TournamentSelectionScene);
+			Debug.Log("[SkillzSDK] launch skillz");
+			try
+			{
+				CoroutineRunner.Instance.RunCoroutine(SDKScenesLoader.Load(SDKScenesLoader.TournamentSelectionScene));
+			}
+			catch (Exception e)
+			{
+				Debug.Log("Tried to load scene, failed: " + e);
+			}
 		}
 
 		public Hashtable GetMatchRules()
@@ -113,7 +122,7 @@ namespace SkillzSDK.Internal.API.UnityEditor
 				// while Android will throw an NRE because it assumes there is a match to
 				// get match info from.
 				SkillzDebug.Log(SkillzDebug.Type.SKILLZ, "Cannot get match info, match is not in progress");
-				throw new InvalidOperationException("No simulated match in progress");
+				return null;
 			}
 
 			SkillzDebug.Log(SkillzDebug.Type.SKILLZ, $"Match Info: '{matchInfo.ToString()}'");
@@ -124,7 +133,14 @@ namespace SkillzSDK.Internal.API.UnityEditor
 		{
 			FinishSimulatedMatch();
 			inMatch = false;
-			SDKScenesLoader.Load(SDKScenesLoader.MatchAbortedScene);
+			try
+			{
+				CoroutineRunner.Instance.RunCoroutine(SDKScenesLoader.Load(SDKScenesLoader.MatchAbortedScene));
+			}
+			catch (Exception e)
+			{
+				Debug.Log("Tried to load scene, failed: " + e);
+			}
 		}
 
 		public void AbortBotMatch(string botScore)
@@ -160,7 +176,14 @@ namespace SkillzSDK.Internal.API.UnityEditor
 		public void DisplayTournamentResultsWithScore(string score)
 		{
 			FinishSimulatedMatch();
-			SDKScenesLoader.Load(SDKScenesLoader.MatchCompletedScene);
+			try
+			{
+				CoroutineRunner.Instance.RunCoroutine(SDKScenesLoader.Load(SDKScenesLoader.MatchCompletedScene));
+			}
+			catch (Exception e)
+			{
+				Debug.Log("Tried to load scene, failed: " + e);
+			}
 		}
 
 		public void DisplayTournamentResultsWithScore(int score)
@@ -186,7 +209,14 @@ namespace SkillzSDK.Internal.API.UnityEditor
 		public void ReportFinalScoreForBotMatch(float playerScore, float botScore)
 		{
 			FinishSimulatedMatch();
-      SDKScenesLoader.Load(SDKScenesLoader.MatchCompletedScene);
+			try
+			{
+				CoroutineRunner.Instance.RunCoroutine(SDKScenesLoader.Load(SDKScenesLoader.MatchCompletedScene));
+			}
+			catch (Exception e)
+			{
+				Debug.Log("Tried to load scene, failed: " + e);
+			}
 		}
 
 		public void SubmitScore(string score, Action successCallback, Action<string> failureCallback)
@@ -223,7 +253,14 @@ namespace SkillzSDK.Internal.API.UnityEditor
 			//If in Progression or Season room return to the tournament selection screen
 			if (!inMatch)
 			{
-				SDKScenesLoader.Load(SDKScenesLoader.TournamentSelectionScene);
+				try
+				{
+					CoroutineRunner.Instance.RunCoroutine(SDKScenesLoader.Load(SDKScenesLoader.TournamentSelectionScene));
+				}
+				catch (Exception e)
+				{
+					Debug.Log("Tried to load scene, failed: " + e);
+				}
 				return false;
 			}
 
@@ -231,7 +268,14 @@ namespace SkillzSDK.Internal.API.UnityEditor
 
 			if (hasSubmittedScore)
 			{
-				SDKScenesLoader.Load(SDKScenesLoader.MatchCompletedScene);
+				try
+				{
+					CoroutineRunner.Instance.RunCoroutine(SDKScenesLoader.Load(SDKScenesLoader.MatchCompletedScene));
+				}
+				catch (Exception e)
+				{
+					Debug.Log("Tried to load scene, failed: " + e);
+				}
 			}
 			return hasSubmittedScore;
 		}
@@ -245,37 +289,50 @@ namespace SkillzSDK.Internal.API.UnityEditor
 		public Player GetPlayer()
 		{
 			SkillzDebug.Log(SkillzDebug.Type.SKILLZ, "Player: 'null'");
-			return null;
+			var mockPlayerJSON = new JSONDict {
+				{ "id", 12345 },
+				{ "displayName", "MockPlayer" },
+				{ "avatarURL", "https://example.com/mock-avatar.png" },
+				{ "flagURL", "https://example.com/mock-flag.png" },
+				{ "isCurrentPlayer", true },
+				{ "playerMatchId", 987654321UL }, // Note the UL suffix for ulong
+                { "isNewPayingUser", false }
+			};
+			return new Player(mockPlayerJSON);
 		}
 
 		public void AddMetadataForMatchInProgress(string metadataJson, bool forMatchInProgress)
 		{
 			// Do nothing. It appears this is an old API that doesn't have a corresponding getter.
-			SkillzDebug.LogWarning(SkillzDebug.Type.SKILLZ, "AddMetadataForMatchInProgress is an outdated API that doesn't have a corresponding getter");
+			SkillzDebug.LogWarning(SkillzDebug.Type.SKILLZ, "AddMetadataForMatchInProgress does not have a getter, it is used to pass analytics data for Skillz to analyze for you");
 		}
 
 		public void SetSkillzBackgroundMusic(string fileName)
 		{
-			SkillzDebug.Log(SkillzDebug.Type.SKILLZ, "SetSkillzBackgroundMusicthis is not supported in Unity Editor");
+			SkillzDebug.Log(SkillzDebug.Type.SKILLZ, "SetSkillzBackgroundMusic this is not supported in the Unity Editor");
 		}
 
 		public void GetProgressionUserData(string progressionNamespace, List<string> userDataKeys, Action<Dictionary<string, ProgressionValue>> successCallback, Action<string> failureCallback)
 		{
 			if (successCallback != null)
 			{
-				responseSimulator.SimulateGetProgressionUserData(progressionNamespace,
-																												 userDataKeys,
-																												 successCallback,
-																												 failureCallback);
+				responseSimulator.SimulateGetProgressionUserData(
+					progressionNamespace,
+					userDataKeys,
+					successCallback,
+					failureCallback
+				);
 			}
 		}
 
 		public void UpdateProgressionUserData(string progressionNamespace, Dictionary<string, object> userDataUpdates, Action successCallback, Action<string> failureCallback)
 		{
-			responseSimulator.SimulateUpdateProgressionUserData(progressionNamespace,
-																													userDataUpdates,
-																													successCallback,
-																													failureCallback);
+			responseSimulator.SimulateUpdateProgressionUserData(
+				progressionNamespace,
+				userDataUpdates,
+				successCallback,
+				failureCallback
+			);
 		}
 
 		public void GetCurrentSeason(Action<Season> successCallback, Action<string> failureCallback)
@@ -293,7 +350,7 @@ namespace SkillzSDK.Internal.API.UnityEditor
 			responseSimulator.GetNextSeasons(count, successCallback, failureCallback);
 		}
 
-		internal void InitializeSimulatedMatch(string matchInfoJson, int randomSeed)
+		public void InitializeSimulatedMatch(string matchInfoJson, int randomSeed)
 		{
 			SkillzSettings.Instance.Score = "null";
 			matchInProgress = true;

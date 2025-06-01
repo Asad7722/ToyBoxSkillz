@@ -38,10 +38,6 @@ public class SceneFieldPropertyDrawer : PropertyDrawer
       {
         sceneName.stringValue = (sceneAsset.objectReferenceValue as SceneAsset).name;
       }
-      else
-      {
-        sceneName.stringValue = "";
-      }
     }
     EditorGUI.EndProperty();
   }

@@ -14,34 +14,12 @@ public class EventCanvas : MonoBehaviour {
     void Start ()
     {
            if (!e_canvas) e_canvas = GameObject.Find("Canvaspromo").GetComponent<Canvas>();
-           StartCoroutine(StartGetPrefabs());
+      
     }
     // Update is called once per frame
 
    
-    IEnumerator StartGetPrefabs()
-    {
-        yield return new WaitForSeconds(0.01f);      
-        //for (int i = 0; i < Events.Length; i++)
-        //{
-            if(Configuration.instance.Promo0)               
-            {
-                GetPrefab(0);
-            }
-            if (Configuration.instance.Promo1)
-            {
-                GetPrefab(1);
-            }
-            if (Configuration.instance.Promo2)
-            {
-                GetPrefab(2);
-            }
-
-
-       // }
-
-    }
-  
+   
 
     public void GetPrefab(int prefabnumber)
     {

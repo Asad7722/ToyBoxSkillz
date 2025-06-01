@@ -1,5 +1,5 @@
 # Skillz SDK Cross Platform Unity API
-# Version 2024.0.46
+# Version 2024.1.24
 
 This is the CrossPlatform Unity wrapper. Refer to the [developer portal instructions](https://cdn.skillz.com/doc/developer/) for help with how to use these scripts. All functions that you will in your game use the SkillzCrossPlatform namespace. You will also have to implement two methods found inside the SkillzDelegate class.
 

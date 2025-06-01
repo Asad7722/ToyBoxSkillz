@@ -109,7 +109,7 @@ public class BostersBox : MonoBehaviour
             AudioManager.instance.CoinPayAudio();
             GameObject.Find("MapScene").GetComponent<MapScene>().UpdateCoinAmountLabel();
             updateBoostersLabels();
-            AnalyticsEvent.Custom("BuyRowBreaker 1");
+      
         }
     }
     public void b2()
@@ -122,7 +122,7 @@ public class BostersBox : MonoBehaviour
             AudioManager.instance.CoinPayAudio();
             GameObject.Find("MapScene").GetComponent<MapScene>().UpdateCoinAmountLabel();
             updateBoostersLabels();
-            AnalyticsEvent.Custom("BuyColumnBreaker 1");
+          
         }
     }
     public void b3()
@@ -135,7 +135,7 @@ public class BostersBox : MonoBehaviour
             AudioManager.instance.CoinPayAudio();
             GameObject.Find("MapScene").GetComponent<MapScene>().UpdateCoinAmountLabel();
             updateBoostersLabels();
-            AnalyticsEvent.Custom("BuyColorHunter 1");
+         
         }
     }
     public void b4()
@@ -148,7 +148,7 @@ public class BostersBox : MonoBehaviour
             AudioManager.instance.CoinPayAudio();
             GameObject.Find("MapScene").GetComponent<MapScene>().UpdateCoinAmountLabel();
             updateBoostersLabels();
-            AnalyticsEvent.Custom("BuyMixer 1");
+            
         }
     }
     public void b5()
@@ -161,7 +161,7 @@ public class BostersBox : MonoBehaviour
             AudioManager.instance.CoinPayAudio();
             GameObject.Find("MapScene").GetComponent<MapScene>().UpdateCoinAmountLabel();
             updateBoostersLabels();
-            AnalyticsEvent.Custom("BuySingleBreaker 1");
+        
         }
     }
     public void b6()
@@ -175,7 +175,7 @@ public class BostersBox : MonoBehaviour
             AudioManager.instance.CoinPayAudio();
             GameObject.Find("MapScene").GetComponent<MapScene>().UpdateCoinAmountLabel();
             updateBoostersLabels();
-            AnalyticsEvent.Custom("BuyBeginBomb 1");
+           
 
         }
     }
@@ -189,7 +189,7 @@ public class BostersBox : MonoBehaviour
             AudioManager.instance.CoinPayAudio();
             GameObject.Find("MapScene").GetComponent<MapScene>().UpdateCoinAmountLabel();
             updateBoostersLabels();
-            AnalyticsEvent.Custom("BuyBeginColorHunter 1");
+        
 
         }
     }
@@ -203,7 +203,7 @@ public class BostersBox : MonoBehaviour
             AudioManager.instance.CoinPayAudio();
             GameObject.Find("MapScene").GetComponent<MapScene>().UpdateCoinAmountLabel();
             updateBoostersLabels();
-            AnalyticsEvent.Custom("BuyBeginXBreaker 1");
+            
         }
     }
 

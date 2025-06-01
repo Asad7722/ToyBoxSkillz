@@ -6,6 +6,7 @@ using SkillzSDK;
 public class SkillzExampleMatchDelegate : SkillzMatchDelegate
 {
   private string ProgressionRoomScene = "";
+  private string AsyncTutorialScene = "";
   private string StartMenuScene = "";
   private string GameScene = "";
 
@@ -24,6 +25,13 @@ public class SkillzExampleMatchDelegate : SkillzMatchDelegate
     SceneManager.LoadScene(ProgressionRoomScene);
   }
 
+  // Called when a player confirm phone with otp
+  public void OnTutorialScreenEnter()
+  {
+    Debug.Log("Loading Progression Room Scene: " + AsyncTutorialScene);
+    SceneManager.LoadScene(AsyncTutorialScene);
+  }
+
   // Called when a player chooses Exit Skillz from the side menu
   public void OnSkillzWillExit()
   {
@@ -34,6 +42,11 @@ public class SkillzExampleMatchDelegate : SkillzMatchDelegate
   public void OnNPUConversion()
   {
     Debug.Log("Skillz received NPU conversion event");
+  }
+
+  public void OnReceivedMemoryWarning()
+  {
+    Debug.Log("Skillz received memory warning event");
   }
 
   public void SetScenes(string startMenuScene, string gameScene, string progressionRoomScene)

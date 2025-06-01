@@ -136,7 +136,7 @@ public class EventTimer : MonoBehaviour
         PlayerPrefs.Save();
         Configuration.instance.ReadyFreeBoxesCount--;
         eventState = EVENT_STATE.IDLE;
-        AnalyticsEvent.Custom("FreeBox" + EventID + " opened");
+        
     }
 
 
@@ -193,7 +193,7 @@ public class EventTimer : MonoBehaviour
             eventState = EVENT_STATE.RUNING;
 
             activeFreeBox();
-            AnalyticsEvent.Custom("FreeBox" + EventID + " start_unlock");
+          
 
 
         }

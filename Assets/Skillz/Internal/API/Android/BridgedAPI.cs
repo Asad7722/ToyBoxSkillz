@@ -84,6 +84,12 @@ namespace SkillzSDK.Internal.API.Android
 			}
 		}
 
+		public void InitializeSimulatedMatch(string matchInfoJson, int randomSeed)
+		{
+			// Default implementation (can be empty)
+			throw new System.NotImplementedException("This method is not implemented for this platform.");
+		}
+
 		public ReceivedEventCallback MakeRecievedEventCallback()
 		{
 			ReceivedEventCallback callback = new ReceivedEventCallback((eventName, eventData) => {

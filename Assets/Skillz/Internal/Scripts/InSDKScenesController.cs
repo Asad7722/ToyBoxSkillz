@@ -7,7 +7,7 @@ namespace SkillzSDK
 	{
 		public void LoadTournamentSelectionScene()
 		{
-			SDKScenesLoader.Load(SDKScenesLoader.TournamentSelectionScene);
+			CoroutineRunner.Instance.RunCoroutine(SDKScenesLoader.Load(SDKScenesLoader.TournamentSelectionScene));
 		}
 	}
 }

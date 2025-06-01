@@ -69,14 +69,12 @@ public class UILosePopup : MonoBehaviour
             if (openedLevel > Configuration.instance.maxLevel)
             {
                 int currentStage = StageLoader.instance.Stage + 1448;
-                AnalyticsEvent.LevelFail(currentStage.ToString());
+                
 
              
             }            
             else
-            {
-                //Unity Analytic Level Complete Rapor        
-                AnalyticsEvent.LevelFail(StageLoader.instance.Stage.ToString());
+            { 
 
             
             }
@@ -212,7 +210,7 @@ public class UILosePopup : MonoBehaviour
 
             }
 
-            AnalyticsEvent.Custom("BuyMoreMoves");
+         
            
         }
         // not enough coin
@@ -252,7 +250,7 @@ public class UILosePopup : MonoBehaviour
             board.checkHintCall = 0;
             board.Hint();
             itemGrid.RewardMoreMoveUsed = true;
-            AnalyticsEvent.Custom("AdsMoreMoves");
+           
            
 
         }

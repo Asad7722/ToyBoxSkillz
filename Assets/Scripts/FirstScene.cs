@@ -86,13 +86,13 @@ public class FirstScene : MonoBehaviour
             Debug.Log("CancelAllPendingLocalNotifications");
         }
 
-        AnalyticsEvent.GameStart();
+     
 
         if (!PlayerPrefs.HasKey("FirstInteraction") && CoreData.instance.openedLevel <= 1)
         {
             PlayerPrefs.SetInt("FirstInteraction", 1);
             PlayerPrefs.Save();
-            AnalyticsEvent.Custom("FirstInteraction");
+         
         }
 
         StartCoroutine(Bypass());
@@ -349,21 +349,12 @@ public class FirstScene : MonoBehaviour
     }
     public void StartGame()
     {
-     
+
         //FireBaseAnalytics.instance.Log_Event("Play_Button_Clicked");
-        if (SafeStartLive)
-        {
-            goto SafeStart;
-        }
-        //Load Friend Data        
-        if (!Ready())
-        {
-            PlayButon.SetActive(true);
-            return;
-        }
-        SafeStartLive = false;
+
+       
     //print("this coming here ");
-    SafeStart:
+   // SafeStart:
         //if (PlayerPrefs.GetInt("FirstTime") == 0)//  (CoreData.instance.openedLevel <= 1 && Configuration.instance.FirstGoMap != 0)
         //{
         //    Configuration.instance.CurrentEpisode = 1;            
@@ -418,7 +409,7 @@ public class FirstScene : MonoBehaviour
 
     void OnApplicationQuit()
     {
-        AnalyticsEvent.GameOver(CoreData.instance.openedLevel, "Menu Scene");
+    
 
     }
 
