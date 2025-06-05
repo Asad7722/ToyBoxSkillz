@@ -2,9 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
-/// <summary>
-/// Audio manager.
-/// </summary>
+ 
 [RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
 {

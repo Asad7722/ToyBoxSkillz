@@ -183,7 +183,9 @@ void Awake()
             movesTotalsc.text = "0";
           
         }
-        TotalScoreText.text = "Total Score: " +_totalScore.ToString();
+        Debug.LogError("Before Animate score ");
+        AnimateScore(TotalScoreText,_totalScore);
+     //   TotalScoreText.text = "Total Score: " +_totalScore.ToString();
         skillzscore = _totalScore;
         print("BOARDSCORE"+board.score);
       
@@ -195,24 +197,28 @@ void Awake()
         //Episode Box
       
     }
-    private IEnumerator CountToScore(Text scoreText, int target)
-    {
-        int currentScore = 0;
-        float elapsed = 0f;
 
-        while (elapsed < countDuration)
+    private IEnumerator AnimateScore(Text scoreText, int targetScore)
+    {
+        int currentValue = 0;
+        float duration = 0.5f; // Duration of the animation
+        float elapsedTime = 0f;
+        Debug.LogError("Before While Animate score ");
+        while (elapsedTime < duration)
         {
-            elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / countDuration);
-            currentScore = Mathf.RoundToInt(Mathf.Lerp(0, target, t));
-            scoreText.text = currentScore.ToString();
+            elapsedTime += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsedTime / duration);
+            currentValue = Mathf.RoundToInt(Mathf.Lerp(0, targetScore, t));
+            scoreText.text = currentValue.ToString();
+
+            Debug.LogError("Set Animate score "+ currentValue);
             yield return null;
         }
-
-        // Ensure exact final score
-        scoreText.text = target.ToString();
+        Debug.LogError("After Animate score ");
+        // Ensure the final value is set correctly
+        scoreText.text = targetScore.ToString();
     }
-
+   
     int skillzscore;
     private void OnSuccess()
     {
@@ -298,107 +304,7 @@ void Awake()
         //StartCoroutine(StartMapAutoPopup());
     }
 
-    IEnumerator StartMapAutoPopup()
-    {
-        //PlayerPrefs.SetInt("FirstTime", 1);
-        Configuration.instance.LeveltoPlay = UnityEngine.Random.Range(0, 5);
-        PlayerPrefs.SetInt("SkilzzEnd", 0);
-        //PlayerPrefs.SetInt("SkillzLevel", 0);
-        //Transition.LoadLevel("Menu", 0.1f, Color.black);
-        //thiscomment
-        SkillzCrossPlatform.ReturnToSkillz();
-        yield return new WaitForSeconds(3f);
-        loadingScreen.SetActive(false);
-        
-        yield return new WaitForEndOfFrame();
-
-        //if(Configuration.instance.Tutorial)
-        //{
-        //    //skillzscreen
-        //    //Transition.LoadLevel("Map", 0.1f, Color.black);
-        //}
-        //else
-        //{
-        //    //Transition.LoadLevel("Menu", 0.1f, Color.black);
-        //}
-        //int openedLevel = CoreData.instance.GetOpendedLevel();
-
-        //if (openedLevel <= Configuration.instance.FirstGoMap && openedLevel > 0)
-        //{
-        //    StageLoader.instance.Stage = openedLevel; 
-        //    StageLoader.instance.LoadLevel(StageLoader.instance.Stage);
-        //    yield return new WaitForEndOfFrame();
-
-        //    while (!StageLoader.instance.StageReady)
-        //    {
-        //        yield return null;
-        //    }
-        //    Transition.LoadLevel("Map", 0.1f, Color.black);
-        //    //Transition.LoadLevel("Play", 0.1f, Color.black);
-        //}
-        //else
-        //{
-        //    // BackgroundMusic.instance.MapMusic();
-        //    bool giftboxbool = Configuration.instance.GiftBox;
-        //    bool randomplaybool = Configuration.instance.RandomPlay;
-        //    bool arenaplay = Configuration.instance.ArenaMode;
-        //    int arenanumber = PlayerPrefs.GetInt("arenanumber");
-        //    AudioManager.instance.ButtonClickAudio();
-#region Commented for Reason Sameer
-            //if (Configuration.instance.RandomPlay)
-            //{
-            //    int MaxLevel = Configuration.instance.maxLevel;
-            //    var level = Random.Range(40, MaxLevel);
-            //    StageLoader.instance.Stage = level;
-            //    Configuration.instance.autoPopup = level;
-            //}
-            //else if (Configuration.instance.GiftBox)
-            //{
-            //    int MaxLevel = Configuration.instance.maxLevel;
-
-            //    int GiftBoxWinNum = Configuration.instance.GiftBoxWinNum;
-
-            //    //for (int i = 0; i < Configuration.instance.GiftBoxRequiredWinLevel; i++)
-            //    //{
-            //    //    if (GiftBoxWinNum == i)
-            //    //    {
-            //    var level = Random.Range(Configuration.instance.LevelGiftBoxRangeA[GiftBoxWinNum], Configuration.instance.LevelGiftBoxRangeB[GiftBoxWinNum]);
-            //    StageLoader.instance.Stage = level;
-            //    StageLoader.instance.LoadLevel(StageLoader.instance.Stage);
-            //    Configuration.instance.autoPopup = level;
-            //    //    }
-
-            //    //}
-            //}
-            //else if (Configuration.instance.ArenaMode)
-            //{
-
-            //    int MaxLevel = Configuration.instance.maxLevel;
-            //    var level = Random.Range(Configuration.instance.LevelArenaRangeA[arenanumber], Configuration.instance.LevelArenaRangeB[arenanumber]);
-            //    StageLoader.instance.Stage = level;
-            //    StageLoader.instance.LoadLevel(StageLoader.instance.Stage);
-            //    Configuration.instance.autoPopup = level;
-
-            //}
-            //else
-#endregion
-            //if (StageLoader.instance.Stage >= Configuration.instance.EpisodemaxLevel && !giftboxbool && !randomplaybool && !arenaplay)
-            //{
-            //    int MaxLevel = Configuration.instance.maxLevel;
-            //    var level = Random.Range(40, MaxLevel);
-            //    StageLoader.instance.Stage = level;
-            //    Configuration.instance.autoPopup = level;
-            //    Configuration.instance.RandomPlay = true;
-            //}
-            //else
-            //{
-            //    Configuration.instance.autoPopup = StageLoader.instance.Stage + 1;
-            //}
-
-            //Transition.LoadLevel("Map", 0.1f, Color.black);
-        //}
-    }
-
+  
     public void doubleScore()
     {
         AudioManager.instance.ButtonClickAudio();
@@ -419,51 +325,7 @@ void Awake()
         //AdsManager.instance.ShowReward();
     }
 
-    public void RewardAdsReward()
-    {
-        Configuration.SaveAchievement("ach_watchAds", 1);
-        //if (x2Score)
-        //{
-        //    var board = GameObject.Find("Board").GetComponent<itemGrid>();
-        //    int score = board.score;
-        //    int scoredouble = score + score;
-        //    scoreText.text = "Score: " + scoredouble.ToString();
-        //    int toplamscore = CoreData.instance.GetPlayerPuan();
-        //    CoreData.instance.SavePlayerPuan(toplamscore + score);
-        //    DoubleScore.SetActive(false);
-        //    AnalyticsEvent.Custom("DoubleScoreReceived");
-        //    Configuration.instance.WinScoreAmount = Configuration.instance.WinScoreAmount+ Configuration.instance.WinScoreAmount;
-
-        //}
-        //if (x2Star)
-        //{
-
-        //    var board = GameObject.Find("Board").GetComponent<itemGrid>();
-        //    int star = board.star;
-        //    int stardouble = star + star;
-        //    DoubleStarSimge.gameObject.SetActive(true);
-        //    int toplamstar = CoreData.instance.GetPlayerStars();
-        //    CoreData.instance.SavePlayerStars(toplamstar + star);
-        //    if (Configuration.instance.StarChallenge)
-        //    {
-        //        int StarChallengeNum = PlayerPrefs.GetInt("StarChallengeNum");
-        //        PlayerPrefs.SetInt("StarChallengeNum", StarChallengeNum + star);
-        //        PlayerPrefs.Save();
-
-        //        try {
-        //            GameObject.Find("STARCHALLENGE").GetComponent<StarChallengeAmount>().UpdateAmountText();
-        //        }
-        //        catch { }             
-        //    }
-        //    DoubleStar.SetActive(false);
-        //    AnalyticsEvent.Custom("DoubleStarReceived");
-        //    Configuration.instance.WinStarAmount = Configuration.instance.WinStarAmount + Configuration.instance.WinStarAmount ;
-
-        //}
-        AudioManager.instance.ButtonClickAudio();        
-
-    }
-    IEnumerator ShowStars()
+     IEnumerator ShowStars()
     {
         yield return new WaitForSeconds(0.5f);
         var board = GameObject.Find("Board").GetComponent<itemGrid>();

@@ -597,6 +597,14 @@ public class Configuration : MonoBehaviour
         ActiveFreeBoxesCount = PlayerPrefs.GetInt("ActiveFreeBoxesCount");
     }
     
+    public void resetData()
+    {
+        CoreData.instance.singleBreaker = 3;
+        CoreData.instance.columnBreaker = 3;
+        CoreData.instance.rowBreaker = 3;
+        CoreData.instance.rainbowBreaker = 3;
+        CoreData.instance.ovenBreaker = 3;
+    }
     public int LevelNumber()
     {
       

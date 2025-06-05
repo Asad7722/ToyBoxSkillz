@@ -41,6 +41,8 @@ public sealed class SkillzGameController : MonoBehaviour
         Debug.Log("Opened Level" + openedLevel);
         PlayerPrefs.SetFloat("SkillzTimer", 180);
         Transition.LoadLevel("Play", 0.2f, Color.black);
+
+        Configuration.instance.resetData();
     }
 
 public void OnProgressionRoomEnter()

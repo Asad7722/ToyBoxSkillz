@@ -1662,7 +1662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &274683994
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1991,7 +1991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &289638907
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3011,7 +3011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &425050901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4767,7 +4767,7 @@ SpriteRenderer:
   m_Size: {x: 7.2, y: 8.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!222 &716549433
@@ -7899,6 +7899,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ac2bdf47d010945a4255cf0bc84346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchRippleEffect: {fileID: 185136, guid: b9b4044e8b4d99844bd17cde7b753658, type: 3}
+  poolSize: 10
   helpBoard: 0
   CallReset: 0
   ResetBoardApply: 0
@@ -10146,7 +10148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1492514457
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10650,7 +10652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1664401989
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11585,7 +11587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1862259427
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12642,7 +12644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1990139191
 RectTransform:
   m_ObjectHideFlags: 0

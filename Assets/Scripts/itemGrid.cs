@@ -11,6 +11,12 @@ public class itemGrid : MonoBehaviour
 {
     public static itemGrid instance = null;
     protected Canvas m_canvas;
+    public GameObject touchRippleEffect;
+ 
+    public int poolSize = 10;
+
+
+    private List<GameObject> pool;
     public bool helpBoard;
     public int CallReset;
     public bool ResetBoardApply;
@@ -133,6 +139,8 @@ public class itemGrid : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
     }
 
     void Start()
@@ -147,7 +155,14 @@ public class itemGrid : MonoBehaviour
         Configuration.instance.WinScoreAmount = 0;
         Configuration.instance.MenuToMap = false;
         Configuration.instance.PlayedLevel++;
+        pool = new List<GameObject>();
 
+        for (int i = 0; i < poolSize; i++)
+        {
+            GameObject ripple = Instantiate(touchRippleEffect);
+            ripple.SetActive(false);  // deactivate initially
+            pool.Add(ripple);
+        }
         //for (int i = 0; i < 500; i++)
         //{
         //    int q = SkillzCrossPlatform.Random.Range(0, 0);
@@ -226,7 +241,22 @@ public class itemGrid : MonoBehaviour
         }
 
     }
+    public GameObject GetRipple()
+    {
+        foreach (GameObject ripple in pool)
+        {
+            if (!ripple.activeInHierarchy)
+            {
+                ripple.SetActive(true);
+                return ripple;
+            }
+        }
 
+        // Optional: if all are active, instantiate new one or return null
+        GameObject newRipple = Instantiate(touchRippleEffect);
+        pool.Add(newRipple);
+        return newRipple;
+    }
     ////LEVEL EVENTS
     //public void appsFlyerLevelStart(string levelNum)
     //{
@@ -1734,6 +1764,25 @@ public class itemGrid : MonoBehaviour
                     // mouse down
                     if (Input.GetMouseButtonDown(0))
                     {
+                        Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        worldPos.z = 0; // Ensure it's visible on correct Z layer
+/*
+GameObject rippleEffect=                        Instantiate(touchRippleEffect, worldPos, Quaternion.identity);
+
+                        Destroy(rippleEffect,5f);*/
+
+                        GameObject ripple = GetRipple();
+                        ripple.transform.position = worldPos;
+                        ripple.transform.rotation = Quaternion.identity;
+
+                        ParticleSystem ps = ripple.GetComponent<ParticleSystem>();
+                        if (ps != null)
+                        {
+                            ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                            ps.Play();
+                            StartCoroutine(DeactivateAfterParticle(ps, ripple));
+                        }
+
                         // hit the collier
                         Collider2D hit = Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
                         if (hit != null)
@@ -1821,7 +1870,11 @@ public class itemGrid : MonoBehaviour
         #endregion
 
     }
-
+    private IEnumerator DeactivateAfterParticle(ParticleSystem ps, GameObject ripple)
+    {
+        yield return new WaitUntil(() => !ps.IsAlive(true));
+        ripple.SetActive(false);
+    }
     public void GameEnd()
     {
         GameOver = true;
@@ -2699,12 +2752,21 @@ public class itemGrid : MonoBehaviour
                 {
                     Timer.timerIsRunning = false;
                     GameOver = true;
-                    StartCoroutine(PreWinAutoPlay());
+                 //Asad   StartCoroutine(PreWinAutoPlay());
                     int sound = UnityEngine.Random.Range(0, 11);
                     AudioManager.instance.GirlWowSound(sound);
                     // AudioManager.instance.GingerbreadExplodeAudio();
 
                     //  BackMusic.SetActive(false);
+
+                    PlayerPrefs.SetInt("LevelWin", 0);
+
+                 
+                   
+                    StageLoader.instance.LoadLevel(Configuration.instance.LevelNumber());
+                  
+                   
+                    Transition.LoadLevel("Play", 0.2f, Color.black);
                 }
                 else
                 {

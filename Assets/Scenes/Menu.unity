@@ -4120,6 +4120,26 @@ PrefabInstance:
       propertyPath: rewardb
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4607792032740024255, guid: 1f689bd1b2ab8b449802f0a1bf16466f,
+        type: 3}
+      propertyPath: LegoChangeLevels
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607792032740024255, guid: 1f689bd1b2ab8b449802f0a1bf16466f,
+        type: 3}
+      propertyPath: BubblesChangeLevels
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607792032740024255, guid: 1f689bd1b2ab8b449802f0a1bf16466f,
+        type: 3}
+      propertyPath: BreakableChangeLevels
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607792032740024255, guid: 1f689bd1b2ab8b449802f0a1bf16466f,
+        type: 3}
+      propertyPath: ChocolateChangeLevels
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8173594062600240171, guid: 1f689bd1b2ab8b449802f0a1bf16466f, type: 3}
     - {fileID: 5491976515227033603, guid: 1f689bd1b2ab8b449802f0a1bf16466f, type: 3}

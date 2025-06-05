@@ -60,12 +60,12 @@ public class Booster : MonoBehaviour
 
     void Start () 
     {
-        singleBooster.SetActive(false);
-        rowBooster.SetActive(false);
-        columnBooster.SetActive(false);
-        rainbowBooster.SetActive(false);
-        ovenBooster.SetActive(false);
-
+        singleBooster.SetActive(true);
+        rowBooster.SetActive(true);
+        columnBooster.SetActive(true);
+        rainbowBooster.SetActive(true);
+        ovenBooster.SetActive(true);
+        Debug.LogError("Booster update");
         // single breaker
         if (StageLoader.instance.Stage >= 8)
         {
@@ -105,9 +105,17 @@ public class Booster : MonoBehaviour
             ovenBooster.SetActive(true);
             ovenAmount.text = CoreData.instance.GetOvenBreaker().ToString();
         }
-       
+        rainbowAmount.text = CoreData.instance.GetRainbowBreaker().ToString();
+        columnAmount.text = CoreData.instance.GetColumnBreaker().ToString();
+        rowAmount.text = CoreData.instance.GetRowBreaker().ToString();
+        singleAmount.text = CoreData.instance.GetSingleBreaker().ToString();
+
+        ovenAmount.text = CoreData.instance.GetOvenBreaker().ToString();
+
     }
 
+
+    
     #region Single
 
     public void SingleBoosterClick()
@@ -132,7 +140,7 @@ public class Booster : MonoBehaviour
         if (CoreData.instance.GetSingleBreaker() <= 0)
         {
             // show booster popup
-            ShowPopup(BOOSTER_TYPE.SINGLE_BREAKER);
+             ShowPopup(BOOSTER_TYPE.SINGLE_BREAKER);
 
             return;
         }
@@ -177,7 +185,7 @@ public class Booster : MonoBehaviour
         if (CoreData.instance.GetRowBreaker() <= 0)
         {
             // show booster popup
-            ShowPopup(BOOSTER_TYPE.ROW_BREAKER);
+       //     ShowPopup(BOOSTER_TYPE.ROW_BREAKER);
 
             return;
         }
@@ -218,7 +226,7 @@ public class Booster : MonoBehaviour
         if (CoreData.instance.GetColumnBreaker() <= 0)
         {
             // show booster popup
-            ShowPopup(BOOSTER_TYPE.COLUMN_BREAKER);
+        //    ShowPopup(BOOSTER_TYPE.COLUMN_BREAKER);
 
             return;
         }
@@ -258,7 +266,7 @@ public class Booster : MonoBehaviour
         if (CoreData.instance.GetRainbowBreaker() <= 0)
         {
             // show booster popup
-            ShowPopup(BOOSTER_TYPE.RAINBOW_BREAKER);
+        //    ShowPopup(BOOSTER_TYPE.RAINBOW_BREAKER);
 
             return;
         }
@@ -298,7 +306,7 @@ public class Booster : MonoBehaviour
         if (CoreData.instance.GetOvenBreaker() <= 0)
         {
             // show booster popup
-            ShowPopup(BOOSTER_TYPE.OVEN_BREAKER);
+        //    ShowPopup(BOOSTER_TYPE.OVEN_BREAKER);
 
             return;
         }

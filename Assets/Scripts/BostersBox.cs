@@ -48,6 +48,7 @@ public class BostersBox : MonoBehaviour
 
     public void updateBoostersLabels()
     {
+        Debug.LogError("Update booster ");
         Booster1.text = CoreData.instance.GetRowBreaker().ToString();
         Booster2.text = CoreData.instance.GetColumnBreaker().ToString();
         Booster3.text = CoreData.instance.GetRainbowBreaker().ToString();
