@@ -36,10 +36,11 @@ public sealed class SkillzGameController : MonoBehaviour
         PlayerPrefs.SetInt("LevelWin", 0);
 
         openedLevel = Configuration.instance.LevelNumber();
-        Debug.Log("Skillz Level: "+ openedLevel);
+       
         StageLoader.instance.LoadLevel(openedLevel);
         Debug.Log("Opened Level" + openedLevel);
         PlayerPrefs.SetFloat("SkillzTimer", 180);
+        PlayerPrefs.SetInt("BaseScore", 0);
         Transition.LoadLevel("Play", 0.2f, Color.black);
 
         Configuration.instance.resetData();
