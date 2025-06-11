@@ -80,13 +80,14 @@ public class UIWinPopup : MonoBehaviour
         rainbowBreakerMultipliertxt.text = "x" + rainbowBreakerScoreMultiplier.ToString();
         ovenBreakerMultipliertxt.text = "x" + ovenBreakerScoreMultiplier.ToString();
 
-        baseScore = PlayerPrefs.GetInt("BaseScore")*baseScoreMultiplier;
+        baseScore = PlayerPrefs.GetInt("BaseScore",0)*baseScoreMultiplier;
         singleBreakerScore = CoreData.instance.singleBreaker*singleBreakerScoreMultiplier;
         columnBreakerScore = CoreData.instance.columnBreaker*columnBreakerScoreMultiplier;
         rowBreakerScore = CoreData.instance.rowBreaker*rowBreakerScoreMultiplier;
         rainbowBreakerScore = CoreData.instance.rainbowBreaker*rainbowBreakerScoreMultiplier;
         ovenBreakerScore = CoreData.instance.ovenBreaker*ovenBreakerScoreMultiplier;
 
+        baseScoretxt.text =baseScore.ToString();
         singleBreakertxt.text = singleBreakerScore.ToString();
         columnBreakertxt.text = columnBreakerScore.ToString();
         rowBreakertxt.text = rowBreakerScore.ToString();
@@ -103,9 +104,11 @@ public class UIWinPopup : MonoBehaviour
         baseTotalsc.text = baseScore.ToString();
 
 
-
-     //   timetextsc.text = secondsrem + "";
-        timeTotalsc.text = remaingTime.ToString();
+        int baseScoreFromPrefs = PlayerPrefs.GetInt("BaseScore");
+        Debug.Log("Base Score from PlayerPrefs: " + baseScoreFromPrefs);
+        Debug.Log("Base Score Multiplier: " + baseScoreMultiplier);
+        //   timetextsc.text = secondsrem + "";
+    //    timeTotalsc.text = remaingTime.ToString();
     //    movesrem.text = itemGrid.instance.moveLeft.ToString();
         int movesmult = itemGrid.instance.moveLeft * 10;
     //    movesTotalsc.text = movesmult.ToString();
