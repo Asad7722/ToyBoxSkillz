@@ -2760,9 +2760,9 @@ GameObject rippleEffect=                        Instantiate(touchRippleEffect, w
                     //  BackMusic.SetActive(false);
 
                     PlayerPrefs.SetInt("LevelWin", 0);
+                    PlayerPrefs.SetInt("BaseScore", PlayerPrefs.GetInt("BaseScore")+ score);
 
-                 
-                   
+                    //next level loaded
                     StageLoader.instance.LoadLevel(Configuration.instance.LevelNumber());
                   
                    

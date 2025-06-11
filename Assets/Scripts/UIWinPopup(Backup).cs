@@ -6,7 +6,7 @@ using UnityEngine.Analytics;
 using UnityEngine.UIElements;
 
 
-public class UIWinPopup : MonoBehaviour
+public class UIWinPopupBackup : MonoBehaviour
 {
     public float countDuration = 1.5f;
 
@@ -15,22 +15,15 @@ public class UIWinPopup : MonoBehaviour
     public Text TimeBonusText = null;
     public Text TotalScoreText = null;
     public Text timetextsc, blockssc, movesrem, baseTotalsc, timeTotalsc, movesTotalsc;
-    [Header("ScoresTexts")]
 
-    public Text baseScoretxt, singleBreakertxt,
-         columnBreakertxt,
-          rowBreakertxt,
-          rainbowBreakertxt,
-          ovenBreakertxt;
-    [Header("ScoresMultiplierTexts")]
-    public Text baseScoreMultipliertxt, singleBreakerMultipliertxt,
-         columnBreakerMultipliertxt,
-          rowBreakerMultipliertxt,
-          rainbowBreakerMultipliertxt,
-          ovenBreakerMultipliertxt;
+   public Text  singleBreakertxt,
+        columnBreakertxt,
+         rowBreakertxt,
+         rainbowBreakertxt,
+         ovenBreakertxt;
     public Text StarAmountText = null;
     public Text TotalStarAmountText = null;
-
+   
     public GameObject loadingScreen;
 
 
@@ -46,11 +39,8 @@ public class UIWinPopup : MonoBehaviour
     public bool x2Star = false;
     public bool x2Score = false;
 
-    [Header("Scores")]
-    public int baseScore, singleBreakerScore, columnBreakerScore, rowBreakerScore, rainbowBreakerScore, ovenBreakerScore, totalScore;
 
-    [Header("Scores Multiplier")]
-    public int baseScoreMultiplier, singleBreakerScoreMultiplier, columnBreakerScoreMultiplier, rowBreakerScoreMultiplier, rainbowBreakerScoreMultiplier, ovenBreakerScoreMultiplier;
+    public int baseScore,singleBreakerScore, columnBreakerScore, rowBreakerScore, rainbowBreakerScore,ovenBreakerScore,totalScore;
 
     void Awake()
     {
@@ -62,61 +52,55 @@ public class UIWinPopup : MonoBehaviour
 
 
     void Start()
-    {
+    { 
         var board = GameObject.Find("Board").GetComponent<itemGrid>();
-
+         
         BackgroundMusic.instance.WinMusic();
         int openedLevel = CoreData.instance.GetOpendedLevel();
 
         var star = board.star;
         int StarChallengeNum = PlayerPrefs.GetInt("StarChallengeNum");
         int arenanumber = PlayerPrefs.GetInt("arenanumber");
+         
+        
 
+        baseScore = PlayerPrefs.GetInt("BaseScore");
+        singleBreakerScore = CoreData.instance.singleBreaker;
+        columnBreakerScore = CoreData.instance.columnBreaker;
+        rowBreakerScore = CoreData.instance.rowBreaker;
+        rainbowBreakerScore = CoreData.instance.rainbowBreaker;
+        ovenBreakerScore = CoreData.instance.ovenBreaker;
 
-        baseScoreMultipliertxt.text = "x"+ baseScoreMultiplier.ToString();
-        singleBreakerMultipliertxt.text = "x" + singleBreakerScoreMultiplier.ToString();
-        columnBreakerMultipliertxt.text = "x" + columnBreakerScoreMultiplier.ToString();
-        rowBreakerMultipliertxt.text = "x" + rowBreakerScoreMultiplier.ToString();
-        rainbowBreakerMultipliertxt.text = "x" + rainbowBreakerScoreMultiplier.ToString();
-        ovenBreakerMultipliertxt.text = "x" + ovenBreakerScoreMultiplier.ToString();
-
-        baseScore = PlayerPrefs.GetInt("BaseScore")*baseScoreMultiplier;
-        singleBreakerScore = CoreData.instance.singleBreaker*singleBreakerScoreMultiplier;
-        columnBreakerScore = CoreData.instance.columnBreaker*columnBreakerScoreMultiplier;
-        rowBreakerScore = CoreData.instance.rowBreaker*rowBreakerScoreMultiplier;
-        rainbowBreakerScore = CoreData.instance.rainbowBreaker*rainbowBreakerScoreMultiplier;
-        ovenBreakerScore = CoreData.instance.ovenBreaker*ovenBreakerScoreMultiplier;
-
-        singleBreakertxt.text = singleBreakerScore.ToString();
-        columnBreakertxt.text = columnBreakerScore.ToString();
-        rowBreakertxt.text = rowBreakerScore.ToString();
-        rainbowBreakertxt.text = rainbowBreakerScore.ToString();
-        ovenBreakertxt.text = ovenBreakerScore.ToString();
-
+        singleBreakertxt.text=  singleBreakerScore.ToString()  ;
+        columnBreakertxt.text = columnBreakerScore.ToString()  ;
+        rowBreakertxt.text = rowBreakerScore.ToString()  ;
+        rainbowBreakertxt.text = rainbowBreakerScore.ToString()  ;
+        ovenBreakertxt.text = ovenBreakerScore.ToString()  ;
+         
         int remaingTime = (int)Timer.instance.timeRemaining * 25;
         int secondsrem = (int)Timer.instance.timeRemaining;
 
+      
 
-
-
+        
         blockssc.text = baseScore.ToString();
         baseTotalsc.text = baseScore.ToString();
 
 
 
-     //   timetextsc.text = secondsrem + "";
+        timetextsc.text = secondsrem + "";
         timeTotalsc.text = remaingTime.ToString();
-    //    movesrem.text = itemGrid.instance.moveLeft.ToString();
+        movesrem.text = itemGrid.instance.moveLeft.ToString();
         int movesmult = itemGrid.instance.moveLeft * 10;
-    //    movesTotalsc.text = movesmult.ToString();
-        totalScore = baseScore + singleBreakerScore + columnBreakerScore + rowBreakerScore + rainbowBreakerScore + ovenBreakerScore;
+        movesTotalsc.text = movesmult.ToString();
+        totalScore = baseScore + singleBreakerScore + columnBreakerScore+rowBreakerScore+ rainbowBreakerScore+ovenBreakerScore;
 
 
-        Debug.LogError("Before Animate score "+baseScore);
-    //    AnimateScore(TotalScoreText, totalScore);
+        Debug.LogError("Before Animate score ");
+        AnimateScore(TotalScoreText, totalScore);
 
-        TotalScoreText.text="Total Score: "+ totalScore.ToString();
-
+        
+       
 
         SkillzCrossPlatform.SubmitScore(totalScore, OnSuccess, OnFailure);
 
@@ -146,7 +130,7 @@ public class UIWinPopup : MonoBehaviour
         scoreText.text = targetScore.ToString();
     }
 
-
+ 
     private void OnSuccess()
     {
         ButtonPlay.SetActive(true);
