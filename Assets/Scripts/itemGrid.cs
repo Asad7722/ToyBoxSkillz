@@ -1545,14 +1545,13 @@ public class itemGrid : MonoBehaviour
     }
     public void HelpGoster()
     {
-        try
-        {
+     
+        
             Canvas m_canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
             var nesne = Instantiate(Resources.Load(Configuration.Help())) as GameObject;
             nesne.transform.SetParent(m_canvas.transform, false);
-            //FireBaseAnalytics.instance.Log_Event("Tutorial_Opened");
-        }
-        catch { }
+   Debug.LogError("Help clicked");
+     
     }
     #endregion
 

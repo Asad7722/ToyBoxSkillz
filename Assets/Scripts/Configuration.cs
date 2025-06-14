@@ -1815,7 +1815,7 @@ public class Configuration : MonoBehaviour
     }
     public static string Help()
     {
-        return "Prefabs/Promo/MergeBoosterTutorial";
+        return "Prefabs/TutorialScreens";
     }
     //PAGES
 
