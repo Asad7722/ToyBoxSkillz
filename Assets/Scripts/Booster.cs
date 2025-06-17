@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Analytics;
@@ -606,14 +606,6 @@ public class Booster : MonoBehaviour
 
 
        itemGrid.instance.HelpPrefab(GameObject.Find("TOPCENTER"), 340, false);
-
-        //while (!Input.GetMouseButtonUp(0))
-        //{
-        //    yield return null;
-        //}
-
-        //yield return StartCoroutine(StartCloseHelp());
-        //Configuration.instance.pause = false;
-
+ 
     }
 }

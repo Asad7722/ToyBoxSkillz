@@ -102,6 +102,8 @@ public class itemGrid : MonoBehaviour
     // Popup
     [Header("Popup")]
     public PopupOpener targetPopup;
+    public PopupOpener timeupPopup;
+
     public PopupOpener completedPopup;
     public PopupOpener winPopup;
     public PopupOpener losePopup;
@@ -228,7 +230,12 @@ public class itemGrid : MonoBehaviour
         GenerateBoard();
         state = GAME_STATE.WAITING_USER_SWAP;
         TargetPopup();
+        Timer.instance.SetTimeoutAction(()=>
+        {
+         
+            TimeupPopup();
 
+         });
         //Life CALL
         if (Configuration.instance.LifeCall && PlayerPrefs.GetInt("isNotifEnabled") == 1 && GameObject.Find("NewLife"))
         {
@@ -1537,17 +1544,13 @@ public class itemGrid : MonoBehaviour
     }
     public void HandBoardPrefab(GameObject Target = null, float angle = 0f)
     {
-
         var prefab = Instantiate(Resources.Load("Prefabs/HELP/HandBoard")) as GameObject;
         prefab.transform.localEulerAngles = new Vector3(0, 0, angle);
         prefab.transform.SetParent(Target.transform, false);
-
     }
     public void HelpGoster()
     {
-     
-        
-            Canvas m_canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+     Canvas m_canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
             var nesne = Instantiate(Resources.Load(Configuration.Help())) as GameObject;
             nesne.transform.SetParent(m_canvas.transform, false);
    Debug.LogError("Help clicked");
@@ -1738,15 +1741,7 @@ public class itemGrid : MonoBehaviour
             }
 
         }
-        //skillztimer
-        //if(PlayerPrefs.GetInt("FirstTime") == 1)
-        //{
-        if (Timer.timeOut == true)
-        {
-            Timer.timeOut = false;
-            GameEnd();
-        }
-        //}
+ 
 
 
         if (moveLeft > 0 && !GameOver)
@@ -1768,7 +1763,9 @@ public class itemGrid : MonoBehaviour
 /*
 GameObject rippleEffect=                        Instantiate(touchRippleEffect, worldPos, Quaternion.identity);
 
-                        Destroy(rippleEffect,5f);*/
+                        Destroy(rippleEffect,5f);
+                        
+                        */
 
                         GameObject ripple = GetRipple();
                         ripple.transform.position = worldPos;
@@ -2792,45 +2789,14 @@ GameObject rippleEffect=                        Instantiate(touchRippleEffect, w
                     Timer.timerIsRunning = false;
                     GameOver = true;
                     SaveLevelInfo();
-
-                    #region Arena Mode
-                    //if (Configuration.instance.ArenaMode)
-                    //{
-                    //    int staramount = PlayerPrefs.GetInt("staramount");
-                    //    int starloseamount = PlayerPrefs.GetInt("starloseamount");
-                    //    PlayerPrefs.SetInt("staramount", staramount + starloseamount);
-                    //    PlayerPrefs.Save();
-                    //    int arenanumber = PlayerPrefs.GetInt("arenanumber");
-                    //    if (arenanumber > 1 && PlayerPrefs.GetInt("arenapopupgosterildi" + arenanumber, 0) == 0)
-                    //    {
-                    //        Canvas m_canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-                    //        var nesne = Instantiate(Resources.Load(Configuration.NewArenaPopup())) as GameObject;
-                    //        nesne.transform.SetParent(m_canvas.transform, false);
-                    //        PlayerPrefs.SetInt("arenapopupgosterildi" + arenanumber, 1);
-                    //        PlayerPrefs.Save();
-                    //        AudioManager.instance.giftbuton();
-                    //    }
-                    //}
-                    #endregion
-
                     AudioManager.instance.PopupWinAudio();
                     int sound = UnityEngine.Random.Range(0, 11);
                     AudioManager.instance.GirlWowSound(sound);
-
                     // show win popup
                     state = GAME_STATE.OPENING_POPUP;
                     PlayerPrefs.SetInt("LevelWin", 1);
                     winPopup.OpenPopup();
-                    //if (PlayerPrefs.GetInt("FirstTime") == 0)
-                    //{
-                    //    SkillzCrossPlatform.LaunchSkillz(new SkillzGameController());
-                    //    PlayerPrefs.SetInt("FirstTime", 1);
-                    //}
-                    //else
-                    //{
-                    //    PlayerPrefs.SetInt("LevelWin", 1);
-                    //    winPopup.OpenPopup();
-                    //}
+                  
                 }
                 else if (!GameOver)
                 {
@@ -2898,14 +2864,10 @@ GameObject rippleEffect=                        Instantiate(touchRippleEffect, w
     void Drop()
     {
         SetDropTargets();
-
         GenerateNewItems(true, Vector3.zero);
-
         Move();
         DropItems();
         dropTime = 0;
-
-
     }
 
     // set drop target to the remain items
@@ -5461,6 +5423,50 @@ GameObject rippleEffect=                        Instantiate(touchRippleEffect, w
     #endregion
 
     #region Popup
+
+   void TimeupPopup()
+    {
+        StartCoroutine(StartTimeupPopup());
+    }
+
+    IEnumerator StartTimeupPopup()
+    {
+        state = GAME_STATE.OPENING_POPUP;
+
+        yield return new WaitForSeconds(0.3f);
+
+        AudioManager.instance.PopupTargetAudio();
+        Debug.LogError("Time up pop up");
+        timeupPopup.OpenPopup();
+
+        yield return new WaitForSeconds(2.5f);
+
+        var popup = GameObject.Find("TimeUp(Clone)");
+
+        if (popup)
+        {
+            popup.GetComponent<Popup>().Close();
+        }
+
+
+        yield return new WaitForSeconds(0.7f);
+
+
+
+        Configuration.instance.MenuScene = false;
+        state = GAME_STATE.WAITING_USER_SWAP;
+        StartCoroutine(CheckHint());
+        
+           if (Timer.instance.timeOut == true)
+        {
+            Timer.instance.timeOut = false;
+            GameEnd();
+        }
+
+    }
+
+
+
 
     void TargetPopup()
     {

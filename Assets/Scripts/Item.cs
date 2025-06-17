@@ -1,15 +1,13 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
 public class Item : MonoBehaviour
-{
-
+{ 
     public SpriteRenderer ShapeSprite;
     public Sprite[] Shape;
     public GameObject MergeBoosterEffect;
-
-
+ 
     [Header("Parent")]
     public itemGrid board;
     public Node node;

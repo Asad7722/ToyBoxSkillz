@@ -187,11 +187,6 @@ public class UIWinPopup : MonoBehaviour
     {
         AudioManager.instance.ButtonClickAudio();
     }
-
-
-
-
-
     public void zipla()
     {
         AudioManager.instance.DropAudio();
@@ -238,7 +233,5 @@ public class UIWinPopup : MonoBehaviour
         x2Star = true;
 
     }
-
-
 
 }

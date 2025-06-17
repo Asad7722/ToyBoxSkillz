@@ -1,13 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Timer : MonoBehaviour
 {
     public float timeRemaining = 150;
     public static bool timerIsRunning = false;
-    public static bool timeOut;
+    public  bool timeOut;
     public Text timeText;
     public static Timer instance;
+
+    // Private action reference
+    private static Action timeoutAction;
 
     private void Awake()
     {
@@ -15,16 +19,11 @@ public class Timer : MonoBehaviour
         {
             instance = this;
         }
-        //if (PlayerPrefs.GetInt("FirstTime") == 0)
-        //{
-        //    gameObject.SetActive(false);
-        //}
     }
+
     private void Start()
     {
-        
-        
-        timeRemaining = PlayerPrefs.GetFloat("SkillzTimer");
+        timeRemaining = PlayerPrefs.GetFloat("SkillzTimer", 150); // Default value if not set
         timerIsRunning = true;
         timeOut = false;
     }
@@ -42,17 +41,31 @@ public class Timer : MonoBehaviour
             else
             {
                 timeOut = true;
-                Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                DisplayTime(timeRemaining);
+                TriggerTimeOutAction(); // 🔔 Call the action
             }
         }
     }
+
     void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    void TriggerTimeOutAction()
+    {
+        Debug.Log("Time has run out! Triggering timeout action.");
+        timeoutAction?.Invoke(); // Safely invoke if not null
+    }
+
+    // 🔧 Public method to set the action
+    public  void SetTimeoutAction(Action action)
+    {
+        timeoutAction = action;
     }
 }

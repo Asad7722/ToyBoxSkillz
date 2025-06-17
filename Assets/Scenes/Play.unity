@@ -2371,6 +2371,51 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &340060362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340060364}
+  - component: {fileID: 340060363}
+  m_Layer: 0
+  m_Name: timeupPopup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &340060363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340060362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bab0477aa08f542aa14b73d62e58ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupPrefab: {fileID: 197090, guid: 59d78c01688924693bd126b8573194f0, type: 3}
+--- !u!4 &340060364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340060362}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 470.82272, y: 1404.6803, z: 3.6934152}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &344118808
 GameObject:
   m_ObjectHideFlags: 0
@@ -7958,6 +8003,7 @@ MonoBehaviour:
   UITarget: {fileID: 483986796}
   UITop: {fileID: 1062028108}
   targetPopup: {fileID: 1207901290}
+  timeupPopup: {fileID: 340060363}
   completedPopup: {fileID: 1207901291}
   winPopup: {fileID: 1207901292}
   losePopup: {fileID: 1207901293}
@@ -13724,3 +13770,4 @@ SceneRoots:
   - {fileID: 1190915291}
   - {fileID: 1298485445}
   - {fileID: 1478541566}
+  - {fileID: 340060364}
