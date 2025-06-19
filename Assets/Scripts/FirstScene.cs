@@ -10,51 +10,35 @@ using UnityEngine.SceneManagement;
 public class FirstScene : MonoBehaviour
 {
     //private FirebaseApp app;
-    public GameObject PlayButon,tutInfbutton, Play_2Butt,tutbuttonMIne;
+    public GameObject PlayButon,tutorialbutton ;
+    public GameObject tutorialPanel;
     public GameObject loadingScreen;
     private bool SafeStartLive;
+
+    public Button continueButton;
     void Awake()
     {
 
-        if (!PlayerPrefs.HasKey("Bildirim"))
-        {
-            PlayerPrefs.SetInt("Bildirim", 1);
-            PlayerPrefs.Save();
-        }
-        if (!PlayerPrefs.HasKey("NoSleep"))
-        {
-            PlayerPrefs.SetInt("NoSleep", 1);
-            PlayerPrefs.Save();
-        }
-        if (!PlayerPrefs.HasKey("isNotifEnabled"))
-        {
-            PlayerPrefs.SetInt("isNotifEnabled", 1);
-            PlayerPrefs.Save();
-        }
-        if (!PlayerPrefs.HasKey("CurrentEpisode"))
-        {
-            PlayerPrefs.SetInt("CurrentEpisode", 1);
-            PlayerPrefs.Save();
-        }
+      
     }
     // Use this for initialization
     void Start()
     {
 
-        if(PlayerPrefs.GetInt("oNclick")==0)
+        if ( !PlayerPrefs.HasKey("TutorialShown"))
         {
-            tutbuttonMIne.SetActive(true);
+          
             PlayButon.SetActive(true);
-            tutInfbutton.SetActive(false);
-            Play_2Butt.SetActive(false);
+            tutorialbutton.SetActive(false);
+           
 
         }
         else
         {
-            tutbuttonMIne.SetActive(false);
+           
             PlayButon.SetActive(false);
-            tutInfbutton.SetActive(true);
-            Play_2Butt.SetActive(true);
+            tutorialbutton.SetActive(true);
+          
         }
         Application.targetFrameRate = 60;
         PlayButon.SetActive(false);
@@ -349,56 +333,39 @@ public class FirstScene : MonoBehaviour
     }
     public void StartGame()
     {
-
-        //FireBaseAnalytics.instance.Log_Event("Play_Button_Clicked");
-
-       
-    //print("this coming here ");
-   // SafeStart:
-        //if (PlayerPrefs.GetInt("FirstTime") == 0)//  (CoreData.instance.openedLevel <= 1 && Configuration.instance.FirstGoMap != 0)
-        //{
-        //    Configuration.instance.CurrentEpisode = 1;            
-        //    StageLoader.instance.Stage = 1;
-        //    StageLoader.instance.LoadLevel(1);
-
-        //    if (StageLoader.instance.StageReady)
-        //    {
-        //        Transition.LoadLevel("Play", 0.1f, Color.black);
-        //    }
-        //    else
-        //    {
-        //        PlayButon.SetActive(true);
-        //    }
-        //}
-        //else
-        //skillzlevelstart
-
-        //PlayerPrefs.SetInt("LevelWin", 0);
-        //openedLevel = Configuration.instance.LeveltoPlay;
-        //StageLoader.instance.LoadLevel(openedLevel);
-        //Debug.Log("Opened Level" + openedLevel);
-        //PlayerPrefs.SetFloat("SkillzTimer", 180);
-        //Transition.LoadLevel("Play", 0.2f, Color.black);
-//#if  UNITY_EDITOR
- //thiscomment
-
-        SkillzCrossPlatform.LaunchSkillz();
-        loadingScreen.SetActive(true);
-/*#else
-        loadingScreen.SetActive(true);
-        PlayerPrefs.SetInt("LevelWin", 0);
-        openedLevel = Configuration.instance.LevelNumber();
-        Debug.Log("Skillz Level: " + openedLevel);
-        StageLoader.instance.LoadLevel(openedLevel);
-        Debug.Log("Opened Level" + openedLevel);
-        PlayerPrefs.SetFloat("SkillzTimer", 180);
-        Transition.LoadLevel("Play", 0.2f, Color.black);
-#endif*/
-        //Configuration.instance.CurrentEpisode = PlayerPrefs.GetInt("CurrentEpisode");
-        //Transition.LoadLevel("Map", 0.1f, Color.black);
+        if (!PlayerPrefs.HasKey("TutorialShown"))
+        {
+            ShowTutorial();  
+            PlayerPrefs.SetInt("TutorialShown", 1);  
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            LaunchGame();  
+        }
+    
+ 
 
     }
+
+    private void LaunchGame()
+    {
+        SkillzCrossPlatform.LaunchSkillz();
+        loadingScreen.SetActive(true);
+    }
+
+    void ShowTutorial()
+    {
+        tutorialPanel.SetActive(true); // Show your tutorial UI
+        continueButton.onClick.AddListener(() =>
+        {
+            tutorialPanel.SetActive(false);
+            LaunchGame();
+        });
+    }
     int openedLevel;
+ 
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

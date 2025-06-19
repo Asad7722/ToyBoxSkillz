@@ -37,7 +37,8 @@ public class UITop : MonoBehaviour
             instance = this;
         }
 		levelText.text = "Level " + StageLoader.instance.Stage.ToString();
-        scoreText.text = "0";
+        scoreText.text =    PlayerPrefs.GetInt("BaseScore").ToString();
+      
 
         moves = StageLoader.instance.moves;
 

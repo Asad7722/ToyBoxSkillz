@@ -544,7 +544,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 420764527}
+      - m_Target: {fileID: 1560758420}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1689,6 +1689,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550715183}
   m_CullTransparentMesh: 1
+--- !u!114 &680731221 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6753116927627722235, guid: ce96ae4f6a068493a9b69b6d13c2cdc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 515478603}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &744011374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2409,7 +2421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1081688293
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2632,7 +2644,7 @@ GameObject:
   - component: {fileID: 1254784559}
   - component: {fileID: 1254784558}
   m_Layer: 5
-  m_Name: INFORMATION BUTTON
+  m_Name: TutorialBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2655,8 +2667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -87.237305, y: -269}
-  m_SizeDelta: {x: 123.4074, y: 128.44}
+  m_AnchoredPosition: {x: -371.81, y: -1133}
+  m_SizeDelta: {x: 450, y: 162}
   m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!114 &1254784558
 MonoBehaviour:
@@ -2678,7 +2690,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8f1224e3ecaa23c44a176c0132af72ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e68af81e545b421479d611894162256c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2968,10 +2980,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayButon: {fileID: 1382656195}
-  tutInfbutton: {fileID: 1254784556}
-  Play_2Butt: {fileID: 1081688292}
-  tutbuttonMIne: {fileID: 213729375}
+  tutorialbutton: {fileID: 1254784556}
+  tutorialPanel: {fileID: 1560758420}
   loadingScreen: {fileID: 1815112802}
+  continueButton: {fileID: 680731221}
 --- !u!1 &1370663262
 GameObject:
   m_ObjectHideFlags: 0

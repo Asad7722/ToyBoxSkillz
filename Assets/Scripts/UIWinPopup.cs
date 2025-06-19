@@ -74,19 +74,19 @@ public class UIWinPopup : MonoBehaviour
         int arenanumber = PlayerPrefs.GetInt("arenanumber");
 
 
-        baseScoreMultipliertxt.text = "x"+ baseScoreMultiplier.ToString();
+        baseScoreMultipliertxt.text = "x" + baseScoreMultiplier.ToString();
         singleBreakerMultipliertxt.text = "x" + singleBreakerScoreMultiplier.ToString();
         columnBreakerMultipliertxt.text = "x" + columnBreakerScoreMultiplier.ToString();
         rowBreakerMultipliertxt.text = "x" + rowBreakerScoreMultiplier.ToString();
         rainbowBreakerMultipliertxt.text = "x" + rainbowBreakerScoreMultiplier.ToString();
         ovenBreakerMultipliertxt.text = "x" + ovenBreakerScoreMultiplier.ToString();
 
-        baseScore = PlayerPrefs.GetInt("BaseScore",0)*baseScoreMultiplier;
-        singleBreakerScore = CoreData.instance.singleBreaker*singleBreakerScoreMultiplier;
-        columnBreakerScore = CoreData.instance.columnBreaker*columnBreakerScoreMultiplier;
-        rowBreakerScore = CoreData.instance.rowBreaker*rowBreakerScoreMultiplier;
-        rainbowBreakerScore = CoreData.instance.rainbowBreaker*rainbowBreakerScoreMultiplier;
-        ovenBreakerScore = CoreData.instance.ovenBreaker*ovenBreakerScoreMultiplier;
+        baseScore = PlayerPrefs.GetInt("BaseScore", 0) * baseScoreMultiplier;
+        singleBreakerScore = CoreData.instance.singleBreaker * singleBreakerScoreMultiplier;
+        columnBreakerScore = CoreData.instance.columnBreaker * columnBreakerScoreMultiplier;
+        rowBreakerScore = CoreData.instance.rowBreaker * rowBreakerScoreMultiplier;
+        rainbowBreakerScore = CoreData.instance.rainbowBreaker * rainbowBreakerScoreMultiplier;
+        ovenBreakerScore = CoreData.instance.ovenBreaker * ovenBreakerScoreMultiplier;
 
         // baseScoretxt.text =baseScore.ToString();
         // singleBreakertxt.text = singleBreakerScore.ToString();
@@ -101,38 +101,38 @@ public class UIWinPopup : MonoBehaviour
 
         if (PlayerPrefs.GetInt("LeaveMatch", 0) == 1)
         {
-            
+
             singleBreakerScore = 0;
             columnBreakerScore = 0;
             rowBreakerScore = 0;
             rainbowBreakerScore = 0;
             ovenBreakerScore = 0;
-}
+        }
 
         blockssc.text = baseScore.ToString();
         baseTotalsc.text = baseScore.ToString();
- StartCoroutine (AnimateScore(baseScoretxt, baseScore));
-  StartCoroutine (AnimateScore(singleBreakertxt, singleBreakerScore));
-    StartCoroutine (AnimateScore(columnBreakertxt, columnBreakerScore));
-      StartCoroutine (AnimateScore(rowBreakertxt, rowBreakerScore));
-        StartCoroutine (AnimateScore(rainbowBreakertxt, rainbowBreakerScore));
-          StartCoroutine (AnimateScore(ovenBreakertxt, ovenBreakerScore));
+        StartCoroutine(AnimateScore(baseScoretxt, baseScore));
+        StartCoroutine(AnimateScore(singleBreakertxt, singleBreakerScore));
+        StartCoroutine(AnimateScore(columnBreakertxt, columnBreakerScore));
+        StartCoroutine(AnimateScore(rowBreakertxt, rowBreakerScore));
+        StartCoroutine(AnimateScore(rainbowBreakertxt, rainbowBreakerScore));
+        StartCoroutine(AnimateScore(ovenBreakertxt, ovenBreakerScore));
 
         int baseScoreFromPrefs = PlayerPrefs.GetInt("BaseScore");
         Debug.Log("Base Score from PlayerPrefs: " + baseScoreFromPrefs);
         Debug.Log("Base Score Multiplier: " + baseScoreMultiplier);
         //   timetextsc.text = secondsrem + "";
-    //    timeTotalsc.text = remaingTime.ToString();
-    //    movesrem.text = itemGrid.instance.moveLeft.ToString();
+        //    timeTotalsc.text = remaingTime.ToString();
+        //    movesrem.text = itemGrid.instance.moveLeft.ToString();
         int movesmult = itemGrid.instance.moveLeft * 10;
-    //    movesTotalsc.text = movesmult.ToString();
+        //    movesTotalsc.text = movesmult.ToString();
         totalScore = baseScore + singleBreakerScore + columnBreakerScore + rowBreakerScore + rainbowBreakerScore + ovenBreakerScore;
 
 
-        Debug.LogError("Before Animate score "+totalScore);
-      StartCoroutine (AnimateScore(TotalScoreText, totalScore));
+        Debug.LogError("Before Animate score " + totalScore);
+        StartCoroutine(AnimateScore(TotalScoreText, totalScore));
 
-        TotalScoreText.text="Total Score: "+ totalScore.ToString();
+        TotalScoreText.text = "Total Score: " + totalScore.ToString();
 
 
         SkillzCrossPlatform.SubmitScore(totalScore, OnSuccess, OnFailure);
@@ -144,15 +144,15 @@ public class UIWinPopup : MonoBehaviour
 
     private IEnumerator AnimateScore(Text scoreText, int targetScore)
     {
-       int currentValue = 0;
-            yield return DOTween.To(() => currentValue, x => currentValue = x, targetScore, 0.5f)
-                .SetEase(Ease.Linear)
-           .SetUpdate(true) 
-                .OnUpdate(() =>
-                {
-                      Debug.LogError("Animate score "+currentValue);
-                    scoreText.text = currentValue.ToString();
-                });
+        int currentValue = 0;
+        yield return DOTween.To(() => currentValue, x => currentValue = x, targetScore, 0.5f)
+            .SetEase(Ease.Linear)
+       .SetUpdate(true)
+            .OnUpdate(() =>
+            {
+                Debug.LogError("Animate score " + currentValue);
+                scoreText.text = currentValue.ToString();
+            });
     }
 
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Item : MonoBehaviour
 { 
@@ -1795,6 +1796,11 @@ public class Item : MonoBehaviour
 
     public void OnCompleteDestroy()
     {
+
+        if ( PlayerPrefs.HasKey("BaseScore"))
+        {
+            board.score+=  PlayerPrefs.GetInt("BaseScore") ;
+        }
         if (board.state == GAME_STATE.PRE_WIN_AUTO_PLAYING)
         {
             board.score += Configuration.instance.finishedScoreItem * board.dropTime;

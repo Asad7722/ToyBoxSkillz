@@ -103,7 +103,7 @@ public class itemGrid : MonoBehaviour
     [Header("Popup")]
     public PopupOpener targetPopup;
     public PopupOpener timeupPopup;
-
+    public PopupOpener noMovePopup;
     public PopupOpener completedPopup;
     public PopupOpener winPopup;
     public PopupOpener losePopup;
@@ -226,7 +226,11 @@ public class itemGrid : MonoBehaviour
                 NotificationsSetup.NotificationLifeCall();
             }
         }
-
+        if (PlayerPrefs.HasKey("BaseScore"))
+        {
+            
+            score += PlayerPrefs.GetInt("BaseScore");
+        }
     }
     public GameObject GetRipple()
     {
@@ -2834,7 +2838,9 @@ GameObject rippleEffect=                        Instantiate(touchRippleEffect, w
         Timer.timerIsRunning = false;
         Configuration.instance.playing = false;
         yield return new WaitForSeconds(0.3f);
-        winPopup.OpenPopup();
+    //    winPopup.OpenPopup();
+
+        NoMovePopup();
     }
 
     #endregion
@@ -5447,6 +5453,44 @@ GameObject rippleEffect=                        Instantiate(touchRippleEffect, w
 
     }
 
+    void NoMovePopup()
+    {
+        StartCoroutine(StartNoMovePopup());
+    }
+
+    IEnumerator StartNoMovePopup()
+    {
+        state = GAME_STATE.OPENING_POPUP;
+
+        yield return new WaitForSeconds(0.3f);
+
+        AudioManager.instance.PopupTargetAudio();
+        
+        noMovePopup.OpenPopup();
+
+        yield return new WaitForSeconds(2.5f);
+
+        var popup = GameObject.Find("NoMoreMovesLeftPopup(Clone)");
+
+        if (popup)
+        {
+            popup.GetComponent<Popup>().Close();
+        }
+
+
+        yield return new WaitForSeconds(0.7f);
+
+
+
+        Configuration.instance.MenuScene = false;
+        state = GAME_STATE.WAITING_USER_SWAP;
+        StartCoroutine(CheckHint());
+
+        
+            GameEnd();
+         
+
+    }
 
 
 
@@ -5460,7 +5504,10 @@ GameObject rippleEffect=                        Instantiate(touchRippleEffect, w
         state = GAME_STATE.OPENING_POPUP;
 
         yield return new WaitForSeconds(0.3f);
-
+        if (PlayerPrefs.HasKey("BaseScore"))
+        {
+          score += PlayerPrefs.GetInt("BaseScore");
+        }
         AudioManager.instance.PopupTargetAudio();
 
         targetPopup.OpenPopup();

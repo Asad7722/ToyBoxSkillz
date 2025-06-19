@@ -19,7 +19,7 @@ public sealed class SkillzGameController : MonoBehaviour
     {
         
         PlayerPrefs.SetInt("LevelWin", 0);
-
+        PlayerPrefs.SetInt("EndGame", 0);
         openedLevel = Configuration.instance.LevelNumber();
        
         StageLoader.instance.LoadLevel(openedLevel);

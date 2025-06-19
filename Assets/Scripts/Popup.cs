@@ -35,9 +35,7 @@ public class Popup : MonoBehaviour
     }
 
     public void Closeilk()
-    {
-        
-
+    { 
         RemoveBackgroundilk();
         StartCoroutine(RunPopupDestroy());
     }
