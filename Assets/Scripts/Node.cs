@@ -900,10 +900,6 @@ public class Node : MonoBehaviour
                 color = 206;
                 break;
 
-
-
-
-
         }
 
         if (piece != null)

@@ -27,7 +27,7 @@ public sealed class SkillzGameController : MonoBehaviour
         PlayerPrefs.SetFloat("SkillzTimer", 180);
         PlayerPrefs.SetInt("BaseScore", 0);
         Transition.LoadLevel("Play", 0.2f, Color.black);
-
+ PlayerPrefs.SetInt("LeaveMatch", 0);
         Configuration.instance.resetData();
     }
 

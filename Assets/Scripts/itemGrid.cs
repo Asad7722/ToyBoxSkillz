@@ -171,27 +171,7 @@ public class itemGrid : MonoBehaviour
         //}
 
         int openedLevel = CoreData.instance.GetOpendedLevel();
-        if (Configuration.instance.EpisodePlay)
-        {
-            if (openedLevel > Configuration.instance.maxLevel)
-            {
-                int currentStage = StageLoader.instance.Stage + 1448;
-                //Unity Analytic Level Start Rapor        
-               
-
-             
-
-               
-
-            }
-            else
-            {
-                //Unity Analytic Level Start Rapor        
-               
-
-         
-            } 
-        }
+        
 
         Configuration.instance.SetWinLevel();
         BackgroundMusic.instance.GamePlayMusic();
@@ -3070,7 +3050,6 @@ GameObject rippleEffect=                        Instantiate(touchRippleEffect, w
     {
         var row = StageLoader.instance.row;
         var column = StageLoader.instance.column;
-
         for (int i = row - 1; i >= 0; i--)
         {
             //need to enumerate rows from bottom to top
@@ -3123,7 +3102,7 @@ GameObject rippleEffect=                        Instantiate(touchRippleEffect, w
     }
 
     // drop item to new position
-    void DropItems()
+     void DropItems()
     {
         //print("COOKIE: Drop items");
 
@@ -3138,6 +3117,8 @@ GameObject rippleEffect=                        Instantiate(touchRippleEffect, w
                 {
                     if (GetNode(i, j).item != null)
                     {
+                                Debug.LogError($"Drop row {i} and {j} column  {GetNode(i, j).item.gameObject.name}");
+
                         GetNode(i, j).item.Drop();
 
                     }
@@ -3146,6 +3127,7 @@ GameObject rippleEffect=                        Instantiate(touchRippleEffect, w
         }
 
     }
+
 
     #endregion
 

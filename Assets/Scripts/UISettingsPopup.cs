@@ -8,6 +8,8 @@ public class UISettingsPopup : MonoBehaviour
     public SceneTransition toMap;   
     public void GoToMap()
     {
+
+        PlayerPrefs.SetInt("LeaveMatch", 1);
         itemGrid.instance.GameEnd();
         //AudioManager.instance.ButtonClickAudio();
         //Configuration.instance.WinLevel = 0; 

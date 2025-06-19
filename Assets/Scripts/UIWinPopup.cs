@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.Analytics;
 using UnityEngine.UIElements;
+using DG.Tweening;
 
 
 public class UIWinPopup : MonoBehaviour
@@ -87,22 +88,35 @@ public class UIWinPopup : MonoBehaviour
         rainbowBreakerScore = CoreData.instance.rainbowBreaker*rainbowBreakerScoreMultiplier;
         ovenBreakerScore = CoreData.instance.ovenBreaker*ovenBreakerScoreMultiplier;
 
-        baseScoretxt.text =baseScore.ToString();
-        singleBreakertxt.text = singleBreakerScore.ToString();
-        columnBreakertxt.text = columnBreakerScore.ToString();
-        rowBreakertxt.text = rowBreakerScore.ToString();
-        rainbowBreakertxt.text = rainbowBreakerScore.ToString();
-        ovenBreakertxt.text = ovenBreakerScore.ToString();
+        // baseScoretxt.text =baseScore.ToString();
+        // singleBreakertxt.text = singleBreakerScore.ToString();
+        // columnBreakertxt.text = columnBreakerScore.ToString();
+        // rowBreakertxt.text = rowBreakerScore.ToString();
+        // rainbowBreakertxt.text = rainbowBreakerScore.ToString();
+        // ovenBreakertxt.text = ovenBreakerScore.ToString();
 
         int remaingTime = (int)Timer.instance.timeRemaining * 25;
         int secondsrem = (int)Timer.instance.timeRemaining;
 
 
-
+        if (PlayerPrefs.GetInt("LeaveMatch", 0) == 1)
+        {
+            
+            singleBreakerScore = 0;
+            columnBreakerScore = 0;
+            rowBreakerScore = 0;
+            rainbowBreakerScore = 0;
+            ovenBreakerScore = 0;
+}
 
         blockssc.text = baseScore.ToString();
         baseTotalsc.text = baseScore.ToString();
-
+ StartCoroutine (AnimateScore(baseScoretxt, baseScore));
+  StartCoroutine (AnimateScore(singleBreakertxt, singleBreakerScore));
+    StartCoroutine (AnimateScore(columnBreakertxt, columnBreakerScore));
+      StartCoroutine (AnimateScore(rowBreakertxt, rowBreakerScore));
+        StartCoroutine (AnimateScore(rainbowBreakertxt, rainbowBreakerScore));
+          StartCoroutine (AnimateScore(ovenBreakertxt, ovenBreakerScore));
 
         int baseScoreFromPrefs = PlayerPrefs.GetInt("BaseScore");
         Debug.Log("Base Score from PlayerPrefs: " + baseScoreFromPrefs);
@@ -115,8 +129,8 @@ public class UIWinPopup : MonoBehaviour
         totalScore = baseScore + singleBreakerScore + columnBreakerScore + rowBreakerScore + rainbowBreakerScore + ovenBreakerScore;
 
 
-        Debug.LogError("Before Animate score "+baseScore);
-    //    AnimateScore(TotalScoreText, totalScore);
+        Debug.LogError("Before Animate score "+totalScore);
+      StartCoroutine (AnimateScore(TotalScoreText, totalScore));
 
         TotalScoreText.text="Total Score: "+ totalScore.ToString();
 
@@ -130,23 +144,15 @@ public class UIWinPopup : MonoBehaviour
 
     private IEnumerator AnimateScore(Text scoreText, int targetScore)
     {
-        int currentValue = 0;
-        float duration = 0.5f; // Duration of the animation
-        float elapsedTime = 0f;
-        Debug.LogError("Before While Animate score ");
-        while (elapsedTime < duration)
-        {
-            elapsedTime += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsedTime / duration);
-            currentValue = Mathf.RoundToInt(Mathf.Lerp(0, targetScore, t));
-            scoreText.text = currentValue.ToString();
-
-            Debug.LogError("Set Animate score " + currentValue);
-            yield return null;
-        }
-        Debug.LogError("After Animate score ");
-
-        scoreText.text = targetScore.ToString();
+       int currentValue = 0;
+            yield return DOTween.To(() => currentValue, x => currentValue = x, targetScore, 0.5f)
+                .SetEase(Ease.Linear)
+           .SetUpdate(true) 
+                .OnUpdate(() =>
+                {
+                      Debug.LogError("Animate score "+currentValue);
+                    scoreText.text = currentValue.ToString();
+                });
     }
 
 
