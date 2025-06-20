@@ -3123,7 +3123,7 @@ GameObject rippleEffect=                        Instantiate(touchRippleEffect, w
                 {
                     if (GetNode(i, j).item != null)
                     {
-                                Debug.LogError($"Drop row {i} and {j} column  {GetNode(i, j).item.gameObject.name}");
+                        // Debug.LogError($"Drop row {i} and {j} column  {GetNode(i, j).item.gameObject.name}");
 
                         GetNode(i, j).item.Drop();
 
